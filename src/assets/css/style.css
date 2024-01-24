@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input-field {
+    border: 2px solid #FED52A; /* Set the border color and width */
+    outline: none; /* Remove focus outline */
+}
+
+.input-field:focus {
+    /* Optional: Customize the focus style */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: white;
+    border: 2px solid #FED52A;
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  /* input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3490dc 0%, #3490dc ${rangeValue}%, #ddd ${rangeValue}%, #ddd 100%);
+  } */
+
+  /* Default styling for the modal */
+
+
+/* Adjustments for screens from 320px to 400px */
+@media (min-width: 320px) and (max-width: 400px) {
+  .modal-border {
+      width: 96%;
+      border-radius: 30px !important;
+  }
+}
+
+/* Adjustments for screens from 401px to 470px */
+@media (min-width: 401px) and (max-width: 480px) {
+  .modal-border {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20px !important;
+  }
+}
+
+.bg_barcode{
+  background-image: url('../img/bg_bar.png');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.modal {
+  /* top: 37% !important; */
+}
+:root {
+  --swiper-theme-color: #fed52a !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 0.111rem;
+  height: 0rem;
+}
+
+::-webkit-scrollbar-track {
+  background: theme-color("site-secondary1");
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CECECE;
+  border-radius: 1.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
+}
+
+
+/* Custom styles for the radio button */
+input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+/* Custom styles for labels */
+label.radio-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d5d5d5;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Custom styles for checked labels */
+input[type="radio"]:checked + label.radio-label {
+  background-color: #FED52A;
+}
+
+.range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #FED52A; 
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FED52A; 
+   cursor: pointer;
+}
+
+.bg_product{
+  background-image: url('../img/bg_product.png');
+  background-position: center;
+  background-size: cover;
+
+}
