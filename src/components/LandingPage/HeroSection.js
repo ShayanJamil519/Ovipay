@@ -164,21 +164,18 @@ const HeroSection = () => {
                         slidesPerView={1}
                         pagination={true}
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                        className="flex items-center justify-center w-full mb-[60px] "
+                        className=" w-full mb-[60px] "
                     >
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
-                            <div className="h-[20px] border-2"></div>
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
-                            <div className="h-[20px]"></div>
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
-                            <div className="h-[20px]"></div>
                         </SwiperSlide>
-                        <div className="h-[20px] border-2"></div>
+                        <div className="h-[30px] "></div>
                     </Swiper>
                 </div>
             </div>
