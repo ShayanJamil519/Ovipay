@@ -131,7 +131,7 @@ const Login = () => {
                         {error && <Alert color="danger">{error}</Alert>}
 
                         {/* Sign in button */}
-                        <div className="mt-12 text-center">
+                        <div className="mt-12 text-center flex flex-col">
                             <Button
                                 type="submit"
                                 className="bg-[#FED52A] font-bold text-[18px] px-24 py-[12px] rounded-full hover:bg-[#f2ce3e] text-black"
