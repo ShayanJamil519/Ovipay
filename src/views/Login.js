@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/img/authentication-logo.png";
 import {
     Container,
@@ -49,17 +49,26 @@ const Login = () => {
         dispatch(login(formData, () => {}));
     };
 
+    useEffect(() => {
+        return () => {
+            console.log("Component will unmount! (Cleanup)");
+            localStorage.removeItem("isRegistered");
+        };
+    }, []);
+
     return (
         <Container>
             <Row className="pt-8 pb-16 ">
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
                     <img src={logo} alt="logo" className="pt-5 pb-2 mx-auto" />
 
-                    <div className="bg-[#FED52A] w-[100%] rounded-md py-[25px] text-center my-4">
-                        <p className="text-[#373535] font-bold text-base">
-                            회원가입 완료!
-                        </p>
-                    </div>
+                    {localStorage.getItem("isRegistered") && (
+                        <div className="bg-[#FED52A] w-[100%] rounded-md py-[25px] text-center my-4">
+                            <p className="text-[#373535] font-bold text-base">
+                                회원가입 완료!
+                            </p>
+                        </div>
+                    )}
 
                     {/* Form start from here */}
                     <Form onSubmit={handleSubmit} className="px-3 mx-auto">

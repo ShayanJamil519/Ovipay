@@ -136,6 +136,7 @@ const Signup = () => {
             // console.log('data gone: ', obj)
             dispatch(
                 signUpWithEmail_Password(obj, formData?.password, () => {
+                    localStorage.setItem("isRegistered", true);
                     history.push("/saved-login");
                 })
             );
