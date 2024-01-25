@@ -11,7 +11,7 @@ export const login =
                 .auth()
                 .signInWithEmailAndPassword(detail.username, detail.password)
                 .then((userCredential) => {
-                  var user = userCredential.user.uid;
+                    var user = userCredential.user.uid;
                     firebase
                         .firestore()
                         .collection("users")
@@ -26,7 +26,7 @@ export const login =
                                     },
                                 });
                                 onSuccess();
-                                alert('Login successfully')
+                                alert("Login successfully");
                             } else
                                 alert(
                                     "Your account data have been deleted from database. But the good news is, your account is still alive. Please contact your admin to create a new slot for you to store data then you will be able to login."
@@ -120,23 +120,23 @@ export const signUpWithEmail_Password =
                 );
             });
     };
-    export const doLogOut = (onSuccess) => async (dispatch) => {
-      try {
+export const doLogOut = (onSuccess) => async (dispatch) => {
+    try {
         localStorage.clear();
         firebase
-          .auth()
-          .signOut()
-          .then((data) => {
-            dispatch({ type: "LOGOUT", uid: "" });
-            onSuccess();
-          })
-          .catch((err) => {
-            alert(err.message);
-          });
-      } catch (error) {
+            .auth()
+            .signOut()
+            .then((data) => {
+                dispatch({ type: "LOGOUT", uid: "" });
+                onSuccess();
+            })
+            .catch((err) => {
+                alert(err.message);
+            });
+    } catch (error) {
         alert(error.message);
-      }
-    };
+    }
+};
 const Loader = (data) => async (dispatch) => {
     dispatch({
         type: "LOADER",

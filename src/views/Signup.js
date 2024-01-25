@@ -16,7 +16,12 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
-import { signInWithGoogle, signUpWithEmail_Password } from "../store/actions/authAction";
+import talk from "../assets/img/talk.svg";
+
+import {
+    signInWithGoogle,
+    signUpWithEmail_Password,
+} from "../store/actions/authAction";
 import { useHistory } from "react-router-dom";
 
 const Signup = () => {
@@ -31,21 +36,18 @@ const Signup = () => {
     const dispatch = useDispatch();
     const history = useHistory();
 
-
     const [formData, setFormData] = useState({
         username: "",
         email: "",
         password: "",
         confirmPassword: "",
-        profile: '',
+        profile: "",
         number: null,
         number2: null,
         digit1: null,
         digit2: null,
         digit3: null,
         passcode: null,
-
-
     });
 
     const handleNumber = (e) => {
@@ -53,42 +55,45 @@ const Signup = () => {
             ...prevFormData,
             number: parseInt(e.target.value, 10),
         }));
-    }
+    };
     const handleNumber2 = (e) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
             number2: parseInt(e.target.value, 10),
         }));
-    }
+    };
     const handleDigit1 = (e) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
             digit1: parseInt(e.target.value, 10),
         }));
-    }
+    };
     const handleDigit2 = (e) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
             digit2: parseInt(e.target.value, 10),
         }));
-    }
+    };
     const handleDigit3 = (e) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
             digit3: parseInt(e.target.value, 10),
         }));
-    }
+    };
     const handlePasscode = (e) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
             passcode: e.target.value,
         }));
-    }
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
 
         // For numeric inputs, parse the value to a number
-        const updatedValue = name.includes("digit") || name === "number" ? parseInt(value) : value;
+        const updatedValue =
+            name.includes("digit") || name === "number"
+                ? parseInt(value)
+                : value;
 
         setFormData((prevFormData) => ({
             ...prevFormData,
@@ -126,8 +131,7 @@ const Signup = () => {
                 digit1: formData.digit1,
                 digit2: formData.digit2,
                 digit3: formData.digit3,
-                passcode: formData.passcode
-
+                passcode: formData.passcode,
             };
             // console.log('data gone: ', obj)
             dispatch(
@@ -148,12 +152,10 @@ const Signup = () => {
         }));
     };
 
-
     return (
         <Container>
             <Row className="pt-8 pb-16">
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
-
                     {/* Form start from here */}
                     <Form onSubmit={handleSubmit} className="px-3 py-3">
                         {/* Input fields one by one */}
@@ -295,14 +297,13 @@ const Signup = () => {
 
                         {/* Four Buttons */}
 
-
-
                         <div className="my-4 md:w-[75%] mx-auto">
-                            <h2 className="mb-2 font-bold text-[18px]">전화번호 인증</h2>
+                            <h2 className="mb-2 font-bold text-[18px]">
+                                전화번호 인증
+                            </h2>
 
                             <div className="flex justiy-between">
                                 <input
-
                                     type="number"
                                     className="mx-1  bg-[#F4F4F4] hover:bg-gray-200 border-[#FED52A] text-black rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
                                     value={formData.digit1}
@@ -310,7 +311,6 @@ const Signup = () => {
                                     placeholder="000"
                                 />
                                 <input
-
                                     type="number"
                                     className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 focuse:outline-none border-[#FED52A] text-black rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
                                     value={formData.digit2}
@@ -318,17 +318,14 @@ const Signup = () => {
                                     placeholder="000"
                                 />
                                 <input
-
                                     type="number"
                                     className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-[#FED52A] text-black rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
                                     value={formData.digit3}
                                     onChange={handleDigit3}
                                     placeholder="000"
                                 />
-
                             </div>
                         </div>
-
 
                         {/* Below 4 buttons  like a swapable thing half blue color half gray */}
                         <div className="border-[#FED52A] md:w-[75%] mx-auto mt-3 mb-2">
@@ -346,7 +343,9 @@ const Signup = () => {
                         </div>
 
                         <div className="border-[#FED52A] md:w-[75%] mx-auto mb-5">
-                            <label className="block font-bold">추천인 닉네임</label>
+                            <label className="block font-bold">
+                                추천인 닉네임
+                            </label>
                             <input
                                 type="number"
                                 className="bg-[#F4F4F4] border-[#FED52A] relative pl-[12px]  focus:outline-none py-2  rounded-xl"
@@ -378,20 +377,38 @@ const Signup = () => {
                     </div>
 
                     {/* Google Button  for sign up*/}
-                    <div className="text-center ">
-                        <Button
-                            onClick={() => dispatch(signInWithGoogle()) }
-                            type="submit"
-                            className=" font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[18px] py-[10px] rounded-full"
-                        >
-                            <IoLogoGoogle
+                    <div className="flex flex-col gap-5">
+                        <div className="text-center ">
+                            <Button
+                                onClick={() => dispatch(signInWithGoogle())}
+                                type="submit"
+                                className=" font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[18px] py-[10px] rounded-full"
+                            >
+                                <IoLogoGoogle
+                                    size={20}
+                                    className="inline mx-2 mb-2"
+                                />
+                                구글 계정으로 로그인
+                            </Button>
+                        </div>
+
+                        {/* Button for sign in with KakaoTalk */}
+                        <div className="text-center ">
+                            <Button
+                                // onClick={() => {
+                                //     dispatch(signInWithGoogle());
+                                // }}
+                                className=" font-bold text-[18px] bg-[#FEE800]  hover:text-black text-black px-[22px] py-[12px] rounded-full"
+                            >
+                                {/* <IoLogoGoogle
                                 size={20}
                                 className="inline mx-2 mb-2"
-                            />
-                            구글 계정으로 로그인
-                        </Button>
+                            /> */}
+                                <img src={talk} className="inline mx-2 mb-2" />
+                                카카오톡으로 로그인
+                            </Button>
+                        </div>
                     </div>
-
                 </Col>
             </Row>
         </Container>
