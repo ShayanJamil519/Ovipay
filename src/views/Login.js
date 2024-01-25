@@ -51,7 +51,7 @@ const Login = () => {
 
     useEffect(() => {
         return () => {
-            console.log("Component will unmount! (Cleanup)");
+            // console.log("Component will unmount! (Cleanup)");
             localStorage.removeItem("isRegistered");
         };
     }, []);
