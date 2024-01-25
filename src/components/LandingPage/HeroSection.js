@@ -30,26 +30,30 @@ const HeroSection = () => {
     return (
         <>
             <div className="flex flex-col items-center justify-center w-full px-3 pt-3 text-black rounded-t-3xl ">
-                {/* <div className='flex items-center justify-center w-full'>
-          <div className='relative px-[15%] py-3 bg-white border rounded-lg shadow-inner top-4'>
-            <div className='px-4 py-2 bg_barcode'>
-              <button className='bg-[#fed52a] py-3 px-4 font-extrabold rounded-lg '>바코드 보기</button>
-            </div>
-          </div>
-        </div> */}
-                <div className="rounded-[20px] bg-[#fed52a] shadow pt-10 pb-3 w-[98%]">
-                    <div className="flex items-center justify-end w-full px-2 gap-x-2">
+                <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-3 pt-4 px-6">
+                    <div className="relative w-full  py-3 bg-white border rounded-lg shadow-inner">
+                        <div className="px-4 py-2 flex justify-center items-center bg_barcode">
+                            <button
+                                style={{
+                                    boxShadow:
+                                        "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+                                }}
+                                className="bg-[#fed52a] text-[13px] py-3  px-4 font-bold rounded-[8px] "
+                            >
+                                바코드 보기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center mt-3 justify-end w-full gap-x-2">
                         <Link
                             to="/charge/bar-input"
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
                             {" "}
-                            <div className="flex items-center px-3 py-1 bg-white rounded-xl gap-x-1">
-                                <AiFillPlusSquare
-                                    size={16}
-                                    className="text-[#fed52a]"
-                                />
-                                <p className="text-[12px] font-extrabold">
+                            <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
+                                <img src="/charge.png" alt="logo" />
+                                <p className="text-[8px] font-bold text-[#525252]">
                                     충 전
                                 </p>
                             </div>
@@ -59,12 +63,12 @@ const HeroSection = () => {
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
                             {" "}
-                            <div className="flex items-center px-3 py-1 bg-white rounded-xl gap-x-1">
-                                <GiRotaryPhone
-                                    size={16}
-                                    className="text-[#fed52a]"
+                            <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
+                                <img
+                                    src="/solar_cash-out-bold.png"
+                                    alt="logo"
                                 />
-                                <p className="text-[12px] font-extrabold">
+                                <p className="text-[8px] font-bold text-[#525252]">
                                     출 금
                                 </p>
                             </div>
@@ -73,118 +77,94 @@ const HeroSection = () => {
                             to="/charge/confirm-form"
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
-                            <div className="flex items-center px-3 py-1 bg-white rounded-xl gap-x-1">
-                                <FaGift size={15} className="text-[#fed52a]" />
-                                <p className="text-[12px] font-bold">
+                            <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
+                                <img src="/p__logo.png" alt="logo" />
+                                <p className="text-[8px] font-bold text-[#525252]">
                                     포인트 선물
                                 </p>
                             </div>
                         </Link>
                     </div>
 
-                    <div className="flex items-center justify-between w-full px-4 mt-3 text-black/75">
-                        <div className="flex items-center gap-x-2">
-                            <p className="font-bold">잔 액</p>
-                            <FaRegEyeSlash size={17} className="" />
+                    <div className="flex items-center justify-between w-full  mt-3 text-black/75">
+                        <div className="flex items-center ">
+                            <img src="/ovipay__logo__small.png" alt="logo" />
+                            <p className="font-medium text-[12px]">OviPay</p>
                         </div>
                         <h5 className="text-[25px] text-[#292929] font-bold">
                             100,682 원
                         </h5>
                     </div>
                 </div>
-                <div className="flex items-center justify-around w-full mt-12 ">
+                <div className="flex items-center justify-around w-full mt-9 ">
                     <Link to="/shopping-home" className="hover:no-underline ">
                         <div>
-                            <MdShoppingBag
-                                size={70}
-                                className="p-3 rounded-full bg-[#fed52a] text-white "
-                            />
-                            <p className="mt-1 text-[15px] font-semibold text-center text-black">
+                            <img src="/shopping.png" alt="logo" />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 쇼 핑
                             </p>
                         </div>
                     </Link>
                     <Link to="/shopping-home" className="hover:no-underline ">
-                        <TbCash
-                            size={70}
-                            className="p-3 rounded-full bg-[#fed52a] text-white "
-                        />
-                        <p className="mt-1 text-[15px] font-semibold text-center">
+                        <img src="/reservation.png" alt="logo" />
+                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             숙박 예약
                         </p>
                     </Link>
                     <Link to="/gift-home" className="hover:no-underline ">
                         {" "}
                         <div>
-                            <HiGiftTop
-                                size={70}
-                                className="p-3 rounded-full bg-[#fed52a] text-white "
-                            />
-                            <p className="mt-1 text-[15px] font-semibold text-center text-black">
+                            <img src="/gift.png" alt="logo" />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 GIFT
                             </p>
                         </div>
                     </Link>
                     <div>
-                        <AiOutlineShop
-                            size={70}
-                            className="p-3 rounded-full bg-[#fed52a] text-white "
-                        />
-                        <p className="mt-1 text-[15px] font-semibold text-center">
+                        <img src="/store.png" alt="logo" />
+                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             OVI가맹점
                         </p>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-around w-full mt-12 ">
+                <div className="flex items-center justify-around w-full mt-3 ">
                     <Link to="" className="hover:no-underline ">
                         <div>
-                            <CiWallet
-                                size={70}
-                                className="p-3 rounded-full bg-[#fed52a] text-white "
-                            />
-                            <p className="mt-1 text-[15px] font-semibold text-center text-black">
+                            <img src="/my_opivay.png" alt="logo" />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 MyOvipay
                             </p>
                         </div>
                     </Link>
                     <div>
-                        <RiCoupon3Line
-                            size={70}
-                            className="p-3 rounded-full bg-[#fed52a] text-white "
-                        />
-                        <p className="mt-1 text-[15px] font-semibold text-center">
-                            MyCoupon
+                        <img src="/my__gift.png" alt="logo" />
+                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                            MyGift
                         </p>
                     </div>
                     <Link to="" className="hover:no-underline ">
                         {" "}
                         <div>
-                            <HiGiftTop
-                                size={70}
-                                className="p-3 rounded-full bg-[#fed52a] text-white "
-                            />
-                            <p className="mt-1 text-[15px] font-semibold text-center text-black">
-                                MyGift
+                            <img src="/my__coupon.png" alt="logo" />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                MyCoupon
                             </p>
                         </div>
                     </Link>
                     <div>
-                        <RiShoppingBagLine
-                            size={70}
-                            className="p-3 rounded-full bg-[#fed52a] text-white "
-                        />
-                        <p className="mt-1 text-[15px] font-semibold text-center">
+                        <img src="/my__shopping.png" alt="logo" />
+                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             MyShopping
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center justify-center w-full mt-12 ">
+                <div className="flex items-center justify-center w-full mt-9 ">
                     <Swiper
                         slidesPerView={1}
                         pagination={true}
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                        className="flex items-center justify-center w-full mb-[60px] "
+                        className=" w-full mb-[60px] "
                     >
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
@@ -195,6 +175,7 @@ const HeroSection = () => {
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
                         </SwiperSlide>
+                        <div className="h-[30px] "></div>
                     </Swiper>
                 </div>
             </div>
