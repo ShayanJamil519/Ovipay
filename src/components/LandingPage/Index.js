@@ -1,21 +1,22 @@
-import React from 'react'
-import HeroSection from './HeroSection'
-import Header from './Header'
-import Footer from './Footer'
+import React from "react";
+import HeroSection from "./HeroSection";
+import PopularProducts from "./PopularProducts";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Index = () => {
-  return (
-    <>
-    <Header/>
+    return (
+        <div className="relative h-full">
+            <Header />
 
-    
+            <HeroSection />
+            <PopularProducts />
 
-    <HeroSection/>
-    <div className='mt-[100px]'></div>
-    <Footer/>
-    
-    </>
-  )
-}
+            <div className="mb-[140px]"></div>
 
-export default Index
+            <Footer />
+        </div>
+    );
+};
+
+export default Index;
