@@ -29,17 +29,11 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const HeroSection = () => {
     return (
         <>
-            <div className="flex flex-col items-center justify-center w-full px-3 pt-3 text-black rounded-t-3xl ">
+            <div className="flex flex-col  items-center justify-center w-full px-3 pt-3 text-black rounded-t-3xl ">
                 <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-3 pt-4 px-6">
                     <div className="relative w-full  py-3 bg-white border rounded-lg shadow-inner">
                         <div className="px-4 py-2 flex justify-center items-center bg_barcode">
-                            <button
-                                style={{
-                                    boxShadow:
-                                        "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-                                }}
-                                className="bg-[#fed52a] text-[13px] py-3  px-4 font-bold rounded-[8px] "
-                            >
+                            <button className="bg-[#fed52a] shadow-sm text-[13px] py-3  px-4 font-bold rounded-[8px] ">
                                 바코드 보기
                             </button>
                         </div>
@@ -164,7 +158,7 @@ const HeroSection = () => {
                         slidesPerView={1}
                         pagination={true}
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                        className=" w-full mb-[60px] "
+                        className=" w-full  "
                     >
                         <SwiperSlide className="flex items-center justify-center">
                             <img src={img1} alt="Slide 1" />
