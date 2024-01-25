@@ -100,10 +100,17 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                                 <h6 className="text-black">MY Coupon</h6>
                             </div>
                         </Link>
-                        <div className="flex items-center gap-x-4 px-4 py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
-                            <IoCartOutline size={28} className="text-[" />
-                            <h6 className="text-black">MY Shopping</h6>
-                        </div>
+
+                        <Link
+                            to="/shopping-home"
+                            onClick={handleToggle}
+                            className="hover:no-underline hover:text-white"
+                        >
+                            <div className="flex items-center gap-x-4 px-4 py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
+                                <IoCartOutline size={28} className="text-[" />
+                                <h6 className="text-black">MY Shopping</h6>
+                            </div>
+                        </Link>
                     </div>
                     <div
                         onClick={toggle}
