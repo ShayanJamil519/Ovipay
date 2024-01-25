@@ -33,7 +33,7 @@ export default function Header() {
     return (
         <>
             <div className="fixed top-0 z-40 w-full ">
-                <nav className="w-full px-3 py-3 bg-white md:py-9 md:px-6 ">
+                <nav className="w-full px-3 py-2 bg-white md:py-9 md:px-6 ">
                     <div className="container flex items-center justify-between p-0">
                         <div className="flex items-center text-black/70 t">
                             <Link to="/">
