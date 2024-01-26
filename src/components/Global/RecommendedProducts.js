@@ -55,8 +55,8 @@ const RecommendedProducts = () => {
                     <div
                         key={index}
                         style={{
-                            flex: "0 0 80%", // 80% width for each product
-                            marginRight: "1rem", // Adjust as needed for the gap
+                            flex: "0 0 70%", // 80% width for each product
+                            marginRight: "0.7rem", // Adjust as needed for the gap
                             boxShadow: "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
                         }}
                         className="flex flex-col  items-center rounded-[12px] justify-center px-3 pt-4 pb-3"
@@ -71,7 +71,7 @@ const RecommendedProducts = () => {
                         </div>
                         <img
                             src={item.image}
-                            className="h-[200px] w-full object-cover rounded-[10px]"
+                            className="h-[180px] w-full object-cover rounded-[10px]"
                             alt="Product"
                         />
                     </div>

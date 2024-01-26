@@ -29,9 +29,15 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const HeroSection = () => {
     return (
         <>
-            <div className="flex flex-col  items-center justify-center w-full px-3 pt-3 text-black rounded-t-3xl ">
+            <div className="flex flex-col  items-center justify-center w-full px-3 pt-2 text-black rounded-t-3xl ">
                 <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-3 pt-4 px-6">
-                    <div className="relative w-full  py-3 bg-white border rounded-lg shadow-inner">
+                    <div
+                        style={{
+                            boxShadow:
+                                "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
+                        }}
+                        className="relative w-full  py-3 bg-white border rounded-lg"
+                    >
                         <div className="px-4 py-2 flex justify-center items-center bg_barcode">
                             <button className="bg-[#fed52a] shadow-sm text-[13px] py-3  px-4 font-bold rounded-[8px] ">
                                 바코드 보기
@@ -39,7 +45,7 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center mt-3 justify-end w-full gap-x-2">
+                    <div className="flex items-center mt-2 justify-end w-full gap-x-2">
                         <Link
                             to="/charge/bar-input"
                             className="hover:no-underline hover:text-[#fed52a]"
@@ -80,7 +86,7 @@ const HeroSection = () => {
                         </Link>
                     </div>
 
-                    <div className="flex items-center justify-between w-full  mt-3 text-black/75">
+                    <div className="flex items-center justify-between w-full  mt-2 text-black/75">
                         <div className="flex items-center ">
                             <img src="/ovipay__logo__small.png" alt="logo" />
                             <p className="font-medium text-[12px]">OviPay</p>
@@ -90,70 +96,101 @@ const HeroSection = () => {
                         </h5>
                     </div>
                 </div>
-                <div className="flex items-center justify-around w-full mt-9 ">
+                <div className="flex items-center justify-between px-3 w-full mt-6 ">
                     <Link to="/shopping-home" className="hover:no-underline ">
-                        <div>
-                            <img src="/shopping.png" alt="logo" />
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                src="/shopping.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 쇼 핑
                             </p>
                         </div>
                     </Link>
-                    <Link to="/shopping-home" className="hover:no-underline ">
-                        <img src="/reservation.png" alt="logo" />
+                    <Link
+                        to="/listing-page"
+                        className="hover:no-underline flex flex-col justify-center items-center"
+                    >
+                        <img
+                            src="/reservation.png"
+                            alt="logo"
+                            className="w-[45px]"
+                        />
                         <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             숙박 예약
                         </p>
                     </Link>
-                    <Link to="/gift-home" className="hover:no-underline ">
+                    <Link to="/gift-home" className="hover:no-underline  ">
                         {" "}
-                        <div>
-                            <img src="/gift.png" alt="logo" />
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                src="/gift.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 GIFT
                             </p>
                         </div>
                     </Link>
-                    <div>
-                        <img src="/store.png" alt="logo" />
+                    <div className="flex flex-col justify-center items-center">
+                        <img src="/store.png" alt="logo" className="w-[45px]" />
                         <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             OVI가맹점
                         </p>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-around w-full mt-3 ">
+                <div className="flex items-center justify-between pl-2 w-full mt-2 ">
                     <Link to="" className="hover:no-underline ">
-                        <div>
-                            <img src="/my_opivay.png" alt="logo" />
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                src="/my_opivay.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 MyOvipay
                             </p>
                         </div>
                     </Link>
-                    <div>
-                        <img src="/my__gift.png" alt="logo" />
+                    <div className="flex flex-col justify-center items-center">
+                        <img
+                            src="/my__gift.png"
+                            alt="logo"
+                            className="w-[45px]"
+                        />
                         <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             MyGift
                         </p>
                     </div>
                     <Link to="" className="hover:no-underline ">
                         {" "}
-                        <div>
-                            <img src="/my__coupon.png" alt="logo" />
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                src="/my__coupon.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 MyCoupon
                             </p>
                         </div>
                     </Link>
-                    <div>
-                        <img src="/my__shopping.png" alt="logo" />
+                    <div className="flex flex-col justify-center items-center -ml-[11px] mr-[7px]">
+                        <img
+                            src="/my__shopping.png"
+                            alt="logo"
+                            className="w-[45px]"
+                        />
                         <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                             MyShopping
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center justify-center w-full mt-9 ">
+                <div className="flex items-center justify-center w-full mt-6 ">
                     <Swiper
                         slidesPerView={1}
                         pagination={true}
@@ -161,13 +198,25 @@ const HeroSection = () => {
                         className=" w-full  "
                     >
                         <SwiperSlide className="flex items-center justify-center">
-                            <img src={img1} alt="Slide 1" />
+                            <img
+                                src={img1}
+                                alt="Slide 1"
+                                className="h-[175px] w-full"
+                            />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
-                            <img src={img1} alt="Slide 1" />
+                            <img
+                                src={img1}
+                                alt="Slide 1"
+                                className="h-[175px] w-full"
+                            />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
-                            <img src={img1} alt="Slide 1" />
+                            <img
+                                src={img1}
+                                alt="Slide 1"
+                                className="h-[175px] w-full"
+                            />
                         </SwiperSlide>
                         <div className="h-[30px] "></div>
                     </Swiper>

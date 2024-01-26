@@ -13,7 +13,10 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const SidebarContain = ({ menuToggle, setMenuToggle }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => {
+        setMenuToggle(false);
+        setIsOpen(!isOpen);
+    };
 
     const handleToggle = () => {
         setMenuToggle(!menuToggle);
@@ -24,18 +27,22 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
             <div
                 className={`${
                     menuToggle ? "right-0" : "-right-[100vh]"
-                }   sidebar-container bg-[#fed52a] overflow-hidden fixed z-50 top-0 transition-all duration-300 w-[75%] sm:w-[300px] pt-[90px]  h-full `}
+                }   sidebar-container bg-[#fed52a] overflow-hidden fixed z-50 top-0 transition-all duration-300 w-[75%] sm:w-[300px]  h-full `}
             >
-                <div className="flex items-center w-full pl-10 text-lg">
+                <div className="flex items-center w-full pl-10 text-lg h-[25vh]">
                     <img src={logo} alt="" />
                     <div>
-                        <h6 className="font-[900]">오비페이와 함께</h6>
-                        <p className="font-[900] text-white">선지연 고객님</p>
+                        <h6 className="font-[900] text-[17px]">
+                            오비페이와 함께
+                        </h6>
+                        <p className="font-[900] text-white text-[15px]">
+                            선지연 고객님
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex flex-col h-[538px] pb-4 mt-5 overflow-y-scroll bg-white gap-y-5">
-                    <div className="flex flex-col justify-center pt-4 w-full shadow shadow-black font-semibold text-[#fed52a] gap-y-4 ">
+                <div className="flex flex-col h-[75vh] pb-4  overflow-y-scroll bg-white gap-y-3">
+                    <div className="flex flex-col justify-center pt-4 w-full  shadow-black font-semibold text-[#fed52a] gap-y-3 ">
                         <Link
                             to="/"
                             onClick={handleToggle}
@@ -44,7 +51,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                             {" "}
                             <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                                 <GoHome size={28} className="text-[" />
-                                <h6 className="text-black">HOME</h6>
+                                <h6 className="text-black text-[14px]">HOME</h6>
                             </div>
                         </Link>
                         <Link
@@ -54,31 +61,39 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                         >
                             <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                                 <MdShoppingBag size={28} className="text-[" />
-                                <h6 className="text-black">쇼핑</h6>
+                                <h6 className="text-black text-[14px]">쇼핑</h6>
                             </div>
                         </Link>
                         <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <MdCoffee size={28} className="text-[" />
-                            <h6 className="text-black">커피</h6>
+                            <h6 className="text-black text-[14px]">커피</h6>
                         </div>
                         <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <AiOutlineShop size={28} className="text-[" />
-                            <h6 className="text-black">오비페이 가맹점</h6>
+                            <h6 className="text-black text-[14px]">
+                                오비페이 가맹점
+                            </h6>
                         </div>
                         <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <ImCoinDollar size={28} className="text-[" />
-                            <h6 className="text-black">입점 및 제휴 문의</h6>
+                            <h6 className="text-black text-[14px]">
+                                입점 및 제휴 문의
+                            </h6>
                         </div>
                         <div className="flex items-center gap-x-4 py-2  px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <TbCash size={28} className="text-[" />
-                            <h6 className="text-black">숙박 예약</h6>
+                            <h6 className="text-black text-[14px]">
+                                숙박 예약
+                            </h6>
                         </div>
                     </div>
 
-                    <div className="flex flex-col shadow py-3 justify-center w-full  font-semibold text-[#fed52a] gap-y-4 ">
+                    <div className="flex flex-col  py-3 justify-center w-full  font-semibold text-[#fed52a] gap-y-3 ">
                         <div className="flex items-center px-4 gap-x-4  py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <MdOutlinePayment size={28} className="text-[" />
-                            <h6 className="text-black">MY Ovipay</h6>
+                            <h6 className="text-black text-[14px]">
+                                MY Ovipay
+                            </h6>
                         </div>
                         <Link
                             to="/gift-home"
@@ -87,7 +102,9 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                         >
                             <div className="flex items-center px-4 gap-x-4  py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                                 <HiGiftTop size={28} className="text-[" />
-                                <h6 className="text-black">MY Gift</h6>
+                                <h6 className="text-black text-[14px]">
+                                    MY Gift
+                                </h6>
                             </div>
                         </Link>
                         <Link
@@ -97,7 +114,9 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                         >
                             <div className="flex items-center px-4 gap-x-4  py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                                 <RiCoupon2Line size={28} className="text-[" />
-                                <h6 className="text-black">MY Coupon</h6>
+                                <h6 className="text-black text-[14px]">
+                                    MY Coupon
+                                </h6>
                             </div>
                         </Link>
 
@@ -108,7 +127,9 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                         >
                             <div className="flex items-center gap-x-4 px-4 py-2 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                                 <IoCartOutline size={28} className="text-[" />
-                                <h6 className="text-black">MY Shopping</h6>
+                                <h6 className="text-black text-[14px]">
+                                    MY Shopping
+                                </h6>
                             </div>
                         </Link>
                     </div>
@@ -123,7 +144,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                     </div>
                 </div>
             </div>
-            <ShutdownModal isOpen={isOpen} toggle={toggle} />
+            {isOpen && <ShutdownModal isOpen={isOpen} toggle={toggle} />}
         </>
     );
 };
