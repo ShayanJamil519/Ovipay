@@ -52,13 +52,13 @@ export default function Header() {
                         {/* menu icon */}
 
                         <div className="flex items-center gap-x-2">
-                            <span className="rounded-full p-[8px] bg-[#f6f6f6] cursor-pointer">
+                            <span className="rounded-full p-[9px] bg-[#f1f1f1] cursor-pointer">
                                 <img src="/notification-bing.png" alt="logo" />
                             </span>
 
                             <span
                                 onClick={handleMenu}
-                                className="rounded-full p-[6px] bg-[#f6f6f6] cursor-pointer"
+                                className="rounded-full p-[7px] bg-[#f1f1f1] cursor-pointer"
                             >
                                 <img src="/mi_menu.png" alt="logo" />
                             </span>
