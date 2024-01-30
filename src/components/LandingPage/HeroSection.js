@@ -96,100 +96,120 @@ const HeroSection = () => {
                         </h5>
                     </div>
                 </div>
-                <div className="flex items-center justify-between px-3 w-full mt-6 ">
-                    <Link to="/shopping-home" className="hover:no-underline ">
-                        <div className="flex flex-col justify-center items-center">
+
+                {/* ========== */}
+                <div className="flex justify-between items-center  px-1 w-full mt-6 ">
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Link
+                            to="/shopping-home"
+                            className="hover:no-underline "
+                        >
+                            <div className="flex flex-col justify-center items-center">
+                                <img
+                                    src="/shopping.png"
+                                    alt="logo"
+                                    className="w-[45px]"
+                                />
+                                <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                    쇼 핑
+                                </p>
+                            </div>
+                        </Link>
+                        <Link to="" className="hover:no-underline ">
+                            <div className="flex flex-col justify-center items-center">
+                                <img
+                                    src="/my_opivay.png"
+                                    alt="logo"
+                                    className="w-[45px]"
+                                />
+                                <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                    MyOvipay
+                                </p>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Link
+                            to="/listing-page"
+                            className="hover:no-underline flex flex-col justify-center items-center"
+                        >
                             <img
-                                src="/shopping.png"
+                                src="/reservation.png"
                                 alt="logo"
                                 className="w-[45px]"
                             />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                                쇼 핑
+                                숙박 예약
                             </p>
-                        </div>
-                    </Link>
-                    <Link
-                        to="/listing-page"
-                        className="hover:no-underline flex flex-col justify-center items-center"
-                    >
-                        <img
-                            src="/reservation.png"
-                            alt="logo"
-                            className="w-[45px]"
-                        />
-                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                            숙박 예약
-                        </p>
-                    </Link>
-                    <Link to="/gift-home" className="hover:no-underline  ">
-                        {" "}
+                        </Link>
                         <div className="flex flex-col justify-center items-center">
                             <img
-                                src="/gift.png"
+                                src="/my__gift.png"
                                 alt="logo"
                                 className="w-[45px]"
                             />
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                                GIFT
+                                MyGift
                             </p>
                         </div>
-                    </Link>
-                    <div className="flex flex-col justify-center items-center">
-                        <img src="/store.png" alt="logo" className="w-[45px]" />
-                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                            OVI가맹점
-                        </p>
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Link to="/gift-home" className="hover:no-underline  ">
+                            {" "}
+                            <div className="flex flex-col justify-center items-center">
+                                <img
+                                    src="/gift.png"
+                                    alt="logo"
+                                    className="w-[45px]"
+                                />
+                                <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                    GIFT
+                                </p>
+                            </div>
+                        </Link>
+                        <Link to="" className="hover:no-underline ">
+                            {" "}
+                            <div className="flex flex-col justify-center items-center">
+                                <img
+                                    src="/my__coupon.png"
+                                    alt="logo"
+                                    className="w-[45px]"
+                                />
+                                <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                    MyCoupon
+                                </p>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center gap-2 -ml-3">
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                src="/store.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                OVI가맹점
+                            </p>
+                        </div>
+                        <div className="flex flex-col justify-center items-center ">
+                            <img
+                                src="/my__shopping.png"
+                                alt="logo"
+                                className="w-[45px]"
+                            />
+                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
+                                MyShopping
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between pl-2 w-full mt-2 ">
-                    <Link to="" className="hover:no-underline ">
-                        <div className="flex flex-col justify-center items-center">
-                            <img
-                                src="/my_opivay.png"
-                                alt="logo"
-                                className="w-[45px]"
-                            />
-                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                                MyOvipay
-                            </p>
-                        </div>
-                    </Link>
-                    <div className="flex flex-col justify-center items-center">
-                        <img
-                            src="/my__gift.png"
-                            alt="logo"
-                            className="w-[45px]"
-                        />
-                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                            MyGift
-                        </p>
-                    </div>
-                    <Link to="" className="hover:no-underline ">
-                        {" "}
-                        <div className="flex flex-col justify-center items-center">
-                            <img
-                                src="/my__coupon.png"
-                                alt="logo"
-                                className="w-[45px]"
-                            />
-                            <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                                MyCoupon
-                            </p>
-                        </div>
-                    </Link>
-                    <div className="flex flex-col justify-center items-center -ml-[11px] mr-[7px]">
-                        <img
-                            src="/my__shopping.png"
-                            alt="logo"
-                            className="w-[45px]"
-                        />
-                        <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
-                            MyShopping
-                        </p>
-                    </div>
-                </div>
+                {/* ================ */}
+
                 <div className="flex items-center justify-center w-full mt-6 ">
                     <Swiper
                         slidesPerView={1}
