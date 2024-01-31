@@ -221,21 +221,21 @@ const HeroSection = () => {
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[165px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[175px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[175px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <div className="h-[30px] "></div>
