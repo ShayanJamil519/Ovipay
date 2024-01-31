@@ -52,7 +52,7 @@ const HeroSection = () => {
                         >
                             {" "}
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
-                                <img src="/charge.png" alt="logo" />
+                                <img src="/charge.svg" alt="logo" />
                                 <p className="text-[10px] font-bold text-[#525252]">
                                     충 전
                                 </p>
@@ -65,7 +65,7 @@ const HeroSection = () => {
                             {" "}
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
                                 <img
-                                    src="/solar_cash-out-bold.png"
+                                    src="/solar_cash-out-bold.svg"
                                     alt="logo"
                                 />
                                 <p className="text-[10px] font-bold text-[#525252]">
@@ -78,7 +78,7 @@ const HeroSection = () => {
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
-                                <img src="/p__logo.png" alt="logo" />
+                                <img src="/p__logo.svg" alt="logo" />
                                 <p className="text-[10px] font-bold text-[#525252]">
                                     포인트 선물
                                 </p>
@@ -88,7 +88,7 @@ const HeroSection = () => {
 
                     <div className="flex items-center justify-between w-full  mt-2 text-black/75">
                         <div className="flex items-center ">
-                            <img src="/ovipay__logo__small.png" alt="logo" />
+                            <img src="/ovipay__logo__small.svg" alt="logo" />
                             <p className="font-medium text-[14px]">OviPay</p>
                         </div>
                         <h5 className="text-[25px] text-[#292929] font-bold">
