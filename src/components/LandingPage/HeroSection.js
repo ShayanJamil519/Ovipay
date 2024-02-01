@@ -53,7 +53,7 @@ const HeroSection = () => {
                             {" "}
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
                                 <img src="/charge.svg" alt="logo" />
-                                <p className="text-[10px] font-bold text-[#525252]">
+                                <p className="text-[11px] font-bold text-[#525252]">
                                     충 전
                                 </p>
                             </div>
@@ -68,7 +68,7 @@ const HeroSection = () => {
                                     src="/solar_cash-out-bold.svg"
                                     alt="logo"
                                 />
-                                <p className="text-[10px] font-bold text-[#525252]">
+                                <p className="text-[11px] font-bold text-[#525252]">
                                     출 금
                                 </p>
                             </div>
@@ -79,7 +79,7 @@ const HeroSection = () => {
                         >
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
                                 <img src="/p__logo.svg" alt="logo" />
-                                <p className="text-[10px] font-bold text-[#525252]">
+                                <p className="text-[11px] font-bold text-[#525252]">
                                     포인트 선물
                                 </p>
                             </div>
