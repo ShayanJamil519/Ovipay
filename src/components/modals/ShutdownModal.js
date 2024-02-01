@@ -13,7 +13,7 @@ import logo from "../../assets/img/Group 950.png";
 
 const ShutdownModal = ({ toggle, isOpen }) => {
     return (
-        <div className="w-full  flex items-center justify-center fixed top-0 left-0 right-0 h-screen z-50 bg-black bg-opacity-40 ">
+        <div className="w-full  flex items-center justify-center fixed top-0 left-0 right-0 h-screen z-50 bg-black bg-opacity-60 ">
             <div className=" w-[90%] sm:w-fit rounded-[8px] sm:rounded-lg bg-[#fff] ">
                 <ModalHeader className="pt-4 pb-1 w-fit mx-auto border-0">
                     <img

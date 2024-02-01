@@ -53,14 +53,14 @@ export default function Header() {
 
                         <div className="flex items-center gap-x-2">
                             <span className="rounded-full p-[9px] bg-[#f1f1f1] cursor-pointer">
-                                <img src="/notification-bing.png" alt="logo" />
+                                <img src="/notification-bing.svg" alt="logo" />
                             </span>
 
                             <span
                                 onClick={handleMenu}
                                 className="rounded-full p-[7px] bg-[#f1f1f1] cursor-pointer"
                             >
-                                <img src="/mi_menu.png" alt="logo" />
+                                <img src="/mi_menu.svg" alt="logo" />
                             </span>
                         </div>
                     </div>
