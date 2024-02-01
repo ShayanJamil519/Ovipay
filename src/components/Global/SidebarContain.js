@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/img/sidebar_logo.png";
+import logo from "../../assets/img/sidebar_logo.svg";
 import { AiOutlineShop } from "react-icons/ai";
 import { GoHome } from "react-icons/go";
 import { HiGiftTop } from "react-icons/hi2";

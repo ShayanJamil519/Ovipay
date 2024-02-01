@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { GoBell } from "react-icons/go";
-import logo from '../../assets/img/sidebar_logo.png'
+import logo from '../../assets/img/sidebar_logo.svg'
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import SidebarContain from "../../components/Global/SidebarContain";
 

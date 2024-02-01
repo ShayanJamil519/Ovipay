@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import img1 from "../../assets/img/hero_swiper_image1.png";
-import img2 from "../../assets/img/sidebar_logo.png";
+import img2 from "../../assets/img/sidebar_logo.svg";
 
 import { GiRotaryPhone } from "react-icons/gi";
 import { FaGift } from "react-icons/fa";
@@ -29,8 +29,8 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const HeroSection = () => {
     return (
         <>
-            <div className="flex flex-col  items-center justify-center w-full px-3 pt-2 text-black rounded-t-3xl ">
-                <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-3 pt-4 px-6">
+            <div className="flex flex-col  items-center justify-center w-full px-3 pt-1 text-black rounded-t-3xl ">
+                <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-2 pt-3 px-6">
                     <div
                         style={{
                             boxShadow:
@@ -39,7 +39,7 @@ const HeroSection = () => {
                         className="relative w-full  py-3 bg-white border rounded-lg"
                     >
                         <div className="px-4 py-2 flex justify-center items-center bg_barcode">
-                            <button className="bg-[#fed52a] shadow-sm text-[13px] py-3  px-4 font-bold rounded-[8px] ">
+                            <button className="bg-[#fed52a] shadow-sm text-[13px] py-2.5  px-4 font-bold rounded-[8px] ">
                                 바코드 보기
                             </button>
                         </div>
@@ -52,8 +52,8 @@ const HeroSection = () => {
                         >
                             {" "}
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
-                                <img src="/charge.png" alt="logo" />
-                                <p className="text-[8px] font-bold text-[#525252]">
+                                <img src="/charge.svg" alt="logo" />
+                                <p className="text-[10px] font-bold text-[#525252]">
                                     충 전
                                 </p>
                             </div>
@@ -65,10 +65,10 @@ const HeroSection = () => {
                             {" "}
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
                                 <img
-                                    src="/solar_cash-out-bold.png"
+                                    src="/solar_cash-out-bold.svg"
                                     alt="logo"
                                 />
-                                <p className="text-[8px] font-bold text-[#525252]">
+                                <p className="text-[10px] font-bold text-[#525252]">
                                     출 금
                                 </p>
                             </div>
@@ -78,8 +78,8 @@ const HeroSection = () => {
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
                             <div className="flex items-center px-2 py-[7px] bg-white rounded-[8px] gap-x-2">
-                                <img src="/p__logo.png" alt="logo" />
-                                <p className="text-[8px] font-bold text-[#525252]">
+                                <img src="/p__logo.svg" alt="logo" />
+                                <p className="text-[10px] font-bold text-[#525252]">
                                     포인트 선물
                                 </p>
                             </div>
@@ -88,8 +88,8 @@ const HeroSection = () => {
 
                     <div className="flex items-center justify-between w-full  mt-2 text-black/75">
                         <div className="flex items-center ">
-                            <img src="/ovipay__logo__small.png" alt="logo" />
-                            <p className="font-medium text-[12px]">OviPay</p>
+                            <img src="/ovipay__logo__small.svg" alt="logo" />
+                            <p className="font-medium text-[14px]">OviPay</p>
                         </div>
                         <h5 className="text-[25px] text-[#292929] font-bold">
                             100,682 원
@@ -98,7 +98,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* ========== */}
-                <div className="flex justify-between items-center  px-1 w-full mt-6 ">
+                <div className="flex justify-between items-center  px-1 w-full mt-3.5 ">
                     <div className="flex flex-col justify-center items-center gap-2">
                         <Link
                             to="/shopping-home"
@@ -118,7 +118,7 @@ const HeroSection = () => {
                         <Link to="" className="hover:no-underline ">
                             <div className="flex flex-col justify-center items-center">
                                 <img
-                                    src="/my_opivay.png"
+                                    src="/my_opivay.svg"
                                     alt="logo"
                                     className="w-[45px]"
                                 />
@@ -135,7 +135,7 @@ const HeroSection = () => {
                             className="hover:no-underline flex flex-col justify-center items-center"
                         >
                             <img
-                                src="/reservation.png"
+                                src="/reservation.svg"
                                 alt="logo"
                                 className="w-[45px]"
                             />
@@ -145,7 +145,7 @@ const HeroSection = () => {
                         </Link>
                         <div className="flex flex-col justify-center items-center">
                             <img
-                                src="/my__gift.png"
+                                src="/my__gift.svg"
                                 alt="logo"
                                 className="w-[45px]"
                             />
@@ -160,7 +160,7 @@ const HeroSection = () => {
                             {" "}
                             <div className="flex flex-col justify-center items-center">
                                 <img
-                                    src="/gift.png"
+                                    src="/gift.svg"
                                     alt="logo"
                                     className="w-[45px]"
                                 />
@@ -173,7 +173,7 @@ const HeroSection = () => {
                             {" "}
                             <div className="flex flex-col justify-center items-center">
                                 <img
-                                    src="/my__coupon.png"
+                                    src="/my__coupon.svg"
                                     alt="logo"
                                     className="w-[45px]"
                                 />
@@ -187,7 +187,7 @@ const HeroSection = () => {
                     <div className="flex flex-col justify-center items-center gap-2 -ml-3">
                         <div className="flex flex-col justify-center items-center">
                             <img
-                                src="/store.png"
+                                src="/store.svg"
                                 alt="logo"
                                 className="w-[45px]"
                             />
@@ -197,7 +197,7 @@ const HeroSection = () => {
                         </div>
                         <div className="flex flex-col justify-center items-center ">
                             <img
-                                src="/my__shopping.png"
+                                src="/my__shopping.svg"
                                 alt="logo"
                                 className="w-[45px]"
                             />
@@ -210,7 +210,7 @@ const HeroSection = () => {
 
                 {/* ================ */}
 
-                <div className="flex items-center justify-center w-full mt-6 ">
+                <div className="flex items-center justify-center w-full mt-3 ">
                     <Swiper
                         slidesPerView={1}
                         pagination={true}
@@ -221,21 +221,21 @@ const HeroSection = () => {
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[175px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[175px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <SwiperSlide className="flex items-center justify-center">
                             <img
                                 src={img1}
                                 alt="Slide 1"
-                                className="h-[175px] w-full"
+                                className="h-[160px] w-full"
                             />
                         </SwiperSlide>
                         <div className="h-[30px] "></div>

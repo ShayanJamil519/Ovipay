@@ -51,7 +51,7 @@ input[type="range"]::-webkit-slider-thumb {
     background-image: url("../img/barcode.jpg");
     background-position: center;
     background-size: cover;
-    height: 50px;
+    height: 40px;
 }
 
 .modal {
