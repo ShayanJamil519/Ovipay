@@ -32,13 +32,13 @@ const HeroSection = () => {
             <div className="flex flex-col  items-center justify-center w-full px-3 pt-1 text-black rounded-t-3xl ">
                 <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-2 pt-3 px-6">
                     <div
-                        style={{
-                            boxShadow:
-                                "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
-                        }}
+                        // style={{
+                        //     boxShadow:
+                        //         "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
+                        // }}
                         className="relative w-full  py-3 bg-white border rounded-lg"
                     >
-                        <div className="px-4 py-2 flex justify-center items-center bg_barcode">
+                        <div className="px-4  flex justify-center items-center bg_barcode">
                             <button className="bg-[#fed52a] shadow-sm text-[13px] py-2.5  px-4 font-bold rounded-[8px] ">
                                 바코드 보기
                             </button>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { IoMenu } from "react-icons/io5";
 import { GoBell } from "react-icons/go";
-import logo from "../../assets/img/sidebar_logo.svg";
+import logo from "../../assets/img/logo.svg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import SidebarContain from "../Global/SidebarContain";
 
@@ -35,11 +35,11 @@ export default function Header() {
             <div className="fixed top-0 z-40 w-full ">
                 <nav className="w-full px-3 py-1 bg-white md:py-9 md:px-6 ">
                     <div className="container flex items-center justify-between p-0">
-                        <div className="flex items-center text-black/70 t">
-                            <Link to="/">
-                                <img src={logo} alt="logo" />
+                        <div className="flex items-center justify-start gap-2  text-black/70 t  ">
+                            <Link  to="/">
+                                <img className="w-[45px] " src={logo} alt="logo" />
                             </Link>
-                            <div className="flex flex-col items-start justify-center gap-y-1">
+                            <div className="flex flex-col items-start justify-center  gap-y-1">
                                 <h6 className="cursor-pointer font-medium text-[#575757]  text-[11px]  hover:text-[#fed52a]  ">
                                     오비페이와 행복한 하루 되세요!
                                 </h6>
