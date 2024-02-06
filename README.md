@@ -1,4 +1,1 @@
-# React Boilerplate
-
-All neccessary files setup completed and ready to start.
-**Kindly follow structure**
+Figma: https://www.figma.com/file/tkBPPOdOnkLiMreRiNl4De/%E1%84%8B%E1%85%A9%E1%84%87%E1%85%B5%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5-UI-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B3%B5%EC%9C%A0-(1)?type=design&node-id=0-1&mode=design&t=9vqEzrQng7zuiSqI-0
