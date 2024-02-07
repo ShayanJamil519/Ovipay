@@ -122,7 +122,7 @@ const Login = () => {
                             </div>
                         </FormGroup>
                         <p className="text-right my-3 md:w-[85%]">
-                            <Link to="/signup" className="font-bold">
+                            <Link to="/forgot" className="font-bold">
                                 {" "}
                                 아이디ㆍ비밀번호 찾기
                             </Link>
@@ -134,34 +134,34 @@ const Login = () => {
                         <div className="mt-12 text-center flex flex-col">
                             <Button
                                 type="submit"
-                                className="bg-[#FED52A] font-bold text-[18px] px-24 py-[12px] rounded-full hover:bg-[#f2ce3e] text-black"
+                                className="bg-[#FED52A] font-bold text-[18px] border-none px-24 py-[12px] rounded-full hover:bg-[#f2ce3e] text-black"
                             >
                                 로그인
                             </Button>
 
-                            <Button
+                            {/* <Button
                                 type="submit"
                                 className="bg-[#FED52A] font-bold text-[18px] px-14 mt-3 py-[12px] rounded-full hover:bg-[#f2ce3e] text-black "
                             >
                                 PIN 번호 로그인
-                            </Button>
+                            </Button> */}
                         </div>
                     </Form>
 
-                    <div className="flex justify-center items-center md:w-[75%] mx-auto">
+                    <div className="flex justify-center items-center md:w-[75%] mx-auto my-2">
                         <span className="w-[50%]  border"></span>
                         <p className="text-center my-3 md:w-[5%] mx-2"> or </p>
                         <span className="w-[50%]  border"></span>
                     </div>
 
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 px-3">
                         {/* Google Button for sign in */}
-                        <div className="text-center ">
+                        <div className="text-center w-full">
                             <Button
                                 onClick={() => {
                                     dispatch(signInWithGoogle());
                                 }}
-                                className=" font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[22px] py-[12px] rounded-full"
+                                className="w-full font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[22px] py-[12px] rounded-full"
                             >
                                 <IoLogoGoogle
                                     size={20}
@@ -172,12 +172,12 @@ const Login = () => {
                         </div>
 
                         {/* Button for sign in with KakaoTalk */}
-                        <div className="text-center ">
+                        <div className="text-center w-full">
                             <Button
                                 // onClick={() => {
                                 //     dispatch(signInWithGoogle());
                                 // }}
-                                className=" font-bold text-[18px] bg-[#FEE800]  hover:text-black text-black px-[22px] py-[12px] rounded-full"
+                                className="w-full font-bold border-none text-[18px] bg-[#FEE800]  hover:text-black text-black px-[22px] py-[12px] rounded-full"
                             >
                                 {/* <IoLogoGoogle
                                 size={20}

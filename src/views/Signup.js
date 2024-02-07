@@ -265,7 +265,7 @@ const Signup = () => {
                             />
                         </FormGroup>
 
-                        <FormGroup className="md:w-[75%] mx-auto">
+                        {/* <FormGroup className="md:w-[75%] mx-auto">
                             <Label
                                 for="username"
                                 className="font-extrabold text-[18px]"
@@ -294,7 +294,7 @@ const Signup = () => {
                                     )}
                                 </span>
                             </div>
-                        </FormGroup>
+                        </FormGroup> */}
 
                         {/* Four Buttons */}
 
@@ -360,10 +360,10 @@ const Signup = () => {
                         </div>
 
                         {/* Sign up button */}
-                        <div className="mt-12 text-center">
+                        <div className="mt-12 text-center w-full">
                             <Button
                                 type="submit"
-                                className="bg-[#FED52A] font-bold text-[18px] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
+                                className="w-full bg-[#FED52A] font-bold text-[18px] border-none text-[#373535] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
                             >
                                 회원가입
                             </Button>
@@ -378,12 +378,12 @@ const Signup = () => {
                     </div>
 
                     {/* Google Button  for sign up*/}
-                    <div className="flex flex-col gap-5">
-                        <div className="text-center ">
+                    <div className="flex flex-col gap-5 px-3">
+                        <div className="text-center w-full">
                             <Button
                                 onClick={() => dispatch(signInWithGoogle())}
                                 type="submit"
-                                className=" font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[18px] py-[10px] rounded-full"
+                                className="w-full font-bold text-[18px] hover:bg-gray-200 hover:text-black text-black px-[18px] py-[10px] rounded-full"
                             >
                                 <IoLogoGoogle
                                     size={20}
@@ -394,12 +394,12 @@ const Signup = () => {
                         </div>
 
                         {/* Button for sign in with KakaoTalk */}
-                        <div className="text-center ">
+                        <div className="text-center w-full">
                             <Button
                                 // onClick={() => {
                                 //     dispatch(signInWithGoogle());
                                 // }}
-                                className=" font-bold text-[18px] bg-[#FEE800]  hover:text-black text-black px-[22px] py-[12px] rounded-full"
+                                className="w-full font-bold text-[18px] bg-[#FEE800] border-none hover:text-black text-black px-[22px] py-[12px] rounded-full"
                             >
                                 {/* <IoLogoGoogle
                                 size={20}

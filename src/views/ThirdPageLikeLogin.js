@@ -4,6 +4,7 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { IoLogoGoogle } from 'react-icons/io';
 import { RiKakaoTalkFill } from 'react-icons/ri';
 import logo from '../assets/img/authentication-logo.png';
+import talk from "../assets/img/talk.svg";
 import { useDispatch } from 'react-redux';
 import { login } from '../store/actions/authAction';
 
@@ -83,7 +84,7 @@ const ThirdPageLikeLogin = () => {
               </div>
             </FormGroup>
             <p className='text-right my-3 md:w-[75%]'>
-              <a href="#" className='font-bold'> 아이디ㆍ비밀번호 찾기</a>
+              <a href="/forgot" className='font-bold'> 아이디ㆍ비밀번호 찾기</a>
             </p>
 
 
@@ -91,10 +92,10 @@ const ThirdPageLikeLogin = () => {
             {error && <Alert color='danger'>{error}</Alert>}
 
             {/* Sign in button */}
-            <div className='mt-12 text-center'>
+            <div className='w-full mt-12 text-center'>
               <Button
                 type='submit'
-                className='bg-[#FED52A] text-black  hover:bg-[#f2ce3e] font-bold text-[18px] px-24 py-[12px] rounded-full'>
+                className='w-full bg-[#FED52A] text-black border-none hover:bg-[#f2ce3e] font-bold text-[18px] px-24 py-[12px] rounded-full'>
                 로그인
               </Button>
             </div>
@@ -115,11 +116,28 @@ const ThirdPageLikeLogin = () => {
 
 
           {/* Google Button  for sign up*/}
-          <div className='text-center '>
+          <div className='text-center w-full px-3'>
             <Button
               type='submit'
-              className=' font-bold text-[18px] hover:text-black text-black px-[18px] py-[10px] rounded-full'>
+              className='w-full font-bold text-[18px] hover:text-black text-black px-[18px] py-[10px] rounded-full'>
               <IoLogoGoogle size={20} className='inline mx-2 mb-2' />구글 계정으로 로그인
+            </Button>
+          </div>
+
+          {/* Button for sign in with KakaoTalk */}
+          <div className="text-center w-full px-3 mt-4">
+            <Button
+              // onClick={() => {
+              //     dispatch(signInWithGoogle());
+              // }}
+              className="w-full font-bold border-none text-[18px] bg-[#FEE800]  hover:text-black text-black px-[22px] py-[12px] rounded-full"
+            >
+              {/* <IoLogoGoogle
+              size={20}
+              className="inline mx-2 mb-2"
+              /> */}
+              <img src={talk} className="inline mx-2 mb-2" />
+              카카오톡으로 로그인
             </Button>
           </div>
 

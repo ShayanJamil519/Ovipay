@@ -21,6 +21,10 @@ import GiftSearchProduct from "../Pages/Gift/SearchProduct";
 import ListingPage from "../Pages/ListingPage/Home";
 import ListingProductDetails from "../Pages/ListingPage/ListingProductDetails";
 import Reviews from "../Pages/ListingPage/Reviews";
+import ForgotPassword from "../views/ForgotPassword";
+import FindUser from "../views/FindUser";
+import NewPassword from "../views/NewPassword";
+import CodeVerifier from "../views/CodeVerifier";
 
 let routes = [
     {
@@ -36,6 +40,26 @@ let routes = [
     {
         path: "/saved-login",
         component: ThirdPageLikeLogin,
+        layout: "auth",
+    },
+    {
+        path: "/forgot",
+        component: ForgotPassword,
+        layout: "auth",
+    },
+    {
+        path: "/forgot/find",
+        component: FindUser,
+        layout: "auth",
+    },
+    {
+        path: "/forgot/newpassword",
+        component: NewPassword,
+        layout: "auth",
+    },
+    {
+        path: "/verify",
+        component: CodeVerifier,
         layout: "auth",
     },
     {
