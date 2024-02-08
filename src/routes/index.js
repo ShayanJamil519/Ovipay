@@ -25,6 +25,11 @@ import ForgotPassword from "../views/ForgotPassword";
 import FindUser from "../views/FindUser";
 import NewPassword from "../views/NewPassword";
 import CodeVerifier from "../views/CodeVerifier";
+import AccountTransfer from "../Pages/Charge/AccountTransfer";
+import AccountTransferTwo from "../Pages/Charge/AccountTransferTwo";
+import AccountTransferThree from "../Pages/Charge/AccountTransferThree";
+import TransferConfirmation from "../Pages/Charge/TransferConfirmation";
+import AccountTransferFour from "../Pages/Charge/AccountTransferFour";
 
 let routes = [
     {
@@ -75,6 +80,31 @@ let routes = [
     {
         path: "/charge/bar-input",
         component: BarPage,
+        layout: "main",
+    },
+    {
+        path: "/charge/account-transfer",
+        component: AccountTransfer,
+        layout: "main",
+    },
+    {
+        path: "/charge/account-transfer-two",
+        component: AccountTransferTwo,
+        layout: "main",
+    },
+    {
+        path: "/charge/account-transfer-three",
+        component: AccountTransferThree,
+        layout: "main",
+    },
+    {
+        path: "/charge/confirmation",
+        component: TransferConfirmation,
+        layout: "main",
+    },
+    {
+        path: "/charge/account-transfer-four",
+        component: AccountTransferFour,
         layout: "main",
     },
     {

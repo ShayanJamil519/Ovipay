@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import img from '../assets/img/authentication-logo.png';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
-const Popup = ({togglePopup}) => {
+const Popup = () => {
   const [isOpen, setIsOpen] = useState(true);
   const popupRef = useRef();
 
