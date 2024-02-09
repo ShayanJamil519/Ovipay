@@ -12,6 +12,7 @@ function App() {
                 <BrowserRouter>
                     <Switch>
                         {routes.map((route) => {
+                            // eslint-disable-next-line default-case
                             switch (route.layout) {
                                 case "main":
                                     return (

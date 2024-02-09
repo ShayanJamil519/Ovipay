@@ -30,6 +30,9 @@ import AccountTransferTwo from "../Pages/Charge/AccountTransferTwo";
 import AccountTransferThree from "../Pages/Charge/AccountTransferThree";
 import TransferConfirmation from "../Pages/Charge/TransferConfirmation";
 import AccountTransferFour from "../Pages/Charge/AccountTransferFour";
+import SettingsPage from "../Pages/Settings/Home";
+import EasyPasswordReset from "../Pages/Settings/EasyPasswordReset";
+import ChangePassword from "../Pages/Settings/ChangePassword";
 
 let routes = [
     {
@@ -191,6 +194,21 @@ let routes = [
     {
         path: "/listing/reviews",
         component: Reviews,
+        layout: "main",
+    },
+    {
+        path: "/settings",
+        component: SettingsPage,
+        layout: "main",
+    },
+    {
+        path: "/settings/reset-password",
+        component: EasyPasswordReset,
+        layout: "main",
+    },
+    {
+        path: "/settings/change-password",
+        component: ChangePassword,
         layout: "main",
     },
 ];

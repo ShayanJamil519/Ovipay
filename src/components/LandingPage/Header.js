@@ -36,8 +36,12 @@ export default function Header() {
                 <nav className="w-full px-3 py-1 bg-white md:py-9 md:px-6 ">
                     <div className="container flex items-center justify-between p-0">
                         <div className="flex items-center justify-start gap-2  text-black/70 t  ">
-                            <Link  to="/">
-                                <img className="w-[45px] " src={logo} alt="logo" />
+                            <Link to="/">
+                                <img
+                                    className="w-[45px] "
+                                    src={logo}
+                                    alt="logo"
+                                />
                             </Link>
                             <div className="flex flex-col items-start justify-center  gap-y-1">
                                 <h6 className="cursor-pointer font-medium text-[#575757]  text-[11px]  hover:text-[#fed52a]  ">
@@ -52,9 +56,12 @@ export default function Header() {
                         {/* menu icon */}
 
                         <div className="flex items-center gap-x-2">
-                            <span className="rounded-full p-[9px] bg-[#f1f1f1] cursor-pointer">
+                            <Link
+                                to="/settings"
+                                className="rounded-full p-[9px] bg-[#f1f1f1] cursor-pointer"
+                            >
                                 <img src="/notification-bing.svg" alt="logo" />
-                            </span>
+                            </Link>
 
                             <span
                                 onClick={handleMenu}
