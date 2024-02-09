@@ -5,6 +5,7 @@ import Header from "./Header";
 import { CiSearch } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const cards = [
@@ -34,6 +35,32 @@ const Home = () => {
         },
     ];
 
+    // Array of different filters
+    const filters = [
+        { name: '생일', value: '' },
+        { name: '부모님 선물', value: '' },
+        { name: '부담없는 선물', value: '' },
+        { name: '먹거리', value: '' },
+        { name: '명품 선물', value: '' },
+        { name: '키즈', value: '' },
+        { name: '감성 선물', value: '' },
+        { name: '상품권', value: '' },
+        { name: '집들이', value: '' },
+        { name: '교환권', value: '' },
+        { name: '설 선물', value: '' },
+        { name: '내 주변위치', value: '' },
+    ];
+
+    const handleSelectCategory = (category) => {
+        setSelectedCategory(category);
+    };
+
+    const products = [
+        { id: 1, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
+        { id: 2, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
+        { id: 3, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
+    ];
+
     return (
         <>
             <Header />
@@ -47,6 +74,7 @@ const Home = () => {
                         곳을 터치하여 주소를 설정하세요!
                     </button>
                 </Link>
+                
                 {/* Search bar for items */}
                 <FormGroup className="flex items-center justify-center w-full">
                     <CiSearch
@@ -63,63 +91,63 @@ const Home = () => {
 
                 {/* Filters */}
                 <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-4 gap-y-5">
-                    {/* home appliance */}
-                    <h6
-                        onClick={() => setSelectedCategory("Appliances")}
+                    {filters.map((filter, index) => (
+                        <h6
+                        key={index}
+                        onClick={() => {
+                            setSelectedCategory(filter.name);
+                            handleSelectCategory(filter.name);
+                        }}
                         className={`${
-                            selectedCategory === "Appliances"
-                                ? "bg-[#FED52A]"
-                                : "bg-white"
-                        } cursor-pointer text-sm min-w-[110px] text-center py-2 rounded-xl  shadow-md`}
-                    >
-                        치킨
-                    </h6>
-                    {/* Gifts */}
-                    <h6
-                        onClick={() => setSelectedCategory("Gift")}
-                        className={`${
-                            selectedCategory === "Gift"
-                                ? "bg-[#FED52A]"
-                                : "bg-white"
-                        } cursor-pointer min-w-[110px] text-sm text-center py-2 rounded-xl  shadow-md`}
-                    >
-                        부모님 선물
-                    </h6>
-                    {/* Furniture */}
-                    <h6
-                        onClick={() => setSelectedCategory("Furniture")}
-                        className={`${
-                            selectedCategory === "Furniture"
-                                ? "bg-[#FED52A]"
-                                : "bg-white"
-                        } cursor-pointer min-w-[110px] text-sm text-center py-2 rounded-xl  shadow-md`}
-                    >
-                        내 위치 주변
-                    </h6>
+                            selectedCategory === filter.name
+                            ? 'bg-[#FED52A]'
+                            : 'bg-white'
+                        } cursor-pointer min-w-[110px] text-sm text-center py-2 rounded-xl shadow-md`}
+                        >
+                        {filter.name}
+                        </h6>
+                    ))}
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-full px-3 mt-4 gap-y-12">
+                <div className="overflow-x-auto max-w-full max-h-[300px]">
+                    <div className="flex space-x-4 p-4">
+                        {products.map((product) => (
+                        <div key={product.id} className="relative flex-shrink-0 w-36">
+                            <img src={product.image} alt={product.title} className="w-full h-36 object-cover rounded-lg" />
+                            <div className="absolute top-2 left-2 bg-[#FED52A] text-white px-2 rounded-[5px]">
+                                <span className="text-[14px] font-[900]">{product.id}</span>
+                            </div>
+                            <div className="absolute top-2 right-2">
+                                <img src="/heart.svg" alt="Heart" className="w-6 h-6" />
+                            </div>
+                            <div className="p-2">
+                                <p className="text-[14px] font-semibold mb-1"><span className="text-[#F6C700] mr-2">{product.discount}</span>{product.price}</p>
+                                <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.title}</p>
+                                <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.description}</p>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center justify-center w-full px-3 mt-4 gap-y-6">
                     <h6 className="w-full text-xl font-semibold">
                         금주의 인기 GIFT
                     </h6>
 
-                    <div className="flex flex-wrap items-center justify-around gap-y-4 gap-x-2">
-                        {cards.map((item) => (
+                    <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                        {cards.map((item, index) => (
                             <div
-                                key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] w-[200px]
-                ${item.id % 2 === 0 ? " mt-0" : "mt-16"}`}
+                            key={item.id}
+                            className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] ${item.id % 2 === 0 ? " mt-0" : "mt-12"}`}
                             >
-                                <h1 className="text-lg font-bold text-white">
-                                    기프티콘 테스트
-                                </h1>
-                                <p className="text-gray-100 ">치킨</p>
-                                <h1 className="text-lg font-semibold text-white ">
-                                    50,000원
-                                </h1>
+                            <h1 className="text-lg font-bold text-white">기프티콘 테스트</h1>
+                            <p className="text-gray-100">치킨</p>
+                            <h1 className="text-lg font-semibold text-white">50,000원</h1>
                             </div>
                         ))}
                     </div>
+                    
                 </div>
             </div>
             <Footer address={"home"} />

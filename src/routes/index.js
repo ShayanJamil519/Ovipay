@@ -33,6 +33,7 @@ import AccountTransferFour from "../Pages/Charge/AccountTransferFour";
 import SettingsPage from "../Pages/Settings/Home";
 import EasyPasswordReset from "../Pages/Settings/EasyPasswordReset";
 import ChangePassword from "../Pages/Settings/ChangePassword";
+import ProductDetail from "../Pages/Gift/ProductDetail";
 
 let routes = [
     {
@@ -159,27 +160,32 @@ let routes = [
     {
         path: "/gift-home",
         component: GiftPage,
-        layout: "main",
+        layout: "auth",
     },
     {
         path: "/gift/favourite",
         component: GiftFavourite,
-        layout: "main",
+        layout: "auth",
     },
     {
         path: "/gift/mycart",
         component: GiftCart,
-        layout: "main",
+        layout: "auth",
     },
     {
         path: "/gift/delivery-details",
         component: GiftShipping,
-        layout: "main",
+        layout: "auth",
     },
     {
         path: "/gift/search-product",
         component: GiftSearchProduct,
         layout: "main",
+    },
+    {
+        path: "/gift/product-detail",
+        component: ProductDetail,
+        layout: "auth",
     },
     {
         path: "/listing-page",

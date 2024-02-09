@@ -4,6 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 const Footer = ({address}) => {
   return (
   <>

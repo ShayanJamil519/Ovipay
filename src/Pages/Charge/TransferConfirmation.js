@@ -30,7 +30,7 @@ const TransferConfirmation = () => {
                         </div>
                     </div>
                     <button
-                        className="w-full bg-[#373535] text-white py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px] w-full"
+                        className="w-full bg-[#373535] text-white py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
                     >
                         돌아가기
                     </button>
