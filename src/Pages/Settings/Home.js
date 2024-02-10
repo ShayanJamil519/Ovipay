@@ -139,7 +139,7 @@ const Home = () => {
                 </Link>
                 {/* 2 Div */}
                 <Link
-                    to="/settings/change-password"
+                    to="/settings/change-password/step-1"
                     className="flex justify-between border-b-[1px] border-[#E2E2E2] py-4 items-center"
                 >
                     <div className="flex justify-start items-center gap-2">
@@ -151,7 +151,10 @@ const Home = () => {
                     <img src="/go__settings.svg" alt="logo" />
                 </Link>
                 {/* 3 Div */}
-                <div className="flex justify-between border-b-[1px] border-[#E2E2E2] py-4 items-center">
+                <Link
+                    to="/settings/change-personal-information"
+                    className="flex justify-between border-b-[1px] border-[#E2E2E2] py-4 items-center"
+                >
                     <div className="flex justify-start items-center gap-2">
                         <img src="/profile__settings.svg" alt="logo" />
                         <p className="text-[14px] font-medium text-[#4F4F4F]">
@@ -159,9 +162,12 @@ const Home = () => {
                         </p>
                     </div>
                     <img src="/go__settings.svg" alt="logo" />
-                </div>
+                </Link>
                 {/* 4 Div */}
-                <div className="flex justify-between border-b-[1px] border-[#E2E2E2] py-4 items-center">
+                <Link
+                    to="/settings/payment-method-management"
+                    className="flex justify-between border-b-[1px] border-[#E2E2E2] py-4 items-center"
+                >
                     <div className="flex justify-start items-center gap-2">
                         <img src="/management__settings.svg" alt="logo" />
                         <p className="text-[14px] font-medium text-[#4F4F4F]">
@@ -169,7 +175,7 @@ const Home = () => {
                         </p>
                     </div>
                     <img src="/go__settings.svg" alt="logo" />
-                </div>
+                </Link>
             </div>
         </>
     );

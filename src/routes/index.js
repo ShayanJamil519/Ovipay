@@ -32,8 +32,11 @@ import TransferConfirmation from "../Pages/Charge/TransferConfirmation";
 import AccountTransferFour from "../Pages/Charge/AccountTransferFour";
 import SettingsPage from "../Pages/Settings/Home";
 import EasyPasswordReset from "../Pages/Settings/EasyPasswordReset";
-import ChangePassword from "../Pages/Settings/ChangePassword";
+import ChangePasswordStep1 from "../Pages/Settings/ChangePasswordStep1";
+import ChangePasswordStep2 from "../Pages/Settings/ChangePasswordStep2";
 import ProductDetail from "../Pages/Gift/ProductDetail";
+import ChangePersonalInformation from "../Pages/Settings/ChangePersonalInformation";
+import PaymentMethodManagement from "../Pages/Settings/PaymentMethodManagement";
 import LocationSettings from "../Pages/Gift/LocationSettings";
 import GiftProductDetails from "../Pages/Gift/GiftProductDetails";
 import GiftDetails from "../Pages/Gift/GiftDetails";
@@ -249,8 +252,23 @@ let routes = [
         layout: "main",
     },
     {
-        path: "/settings/change-password",
-        component: ChangePassword,
+        path: "/settings/change-password/step-1",
+        component: ChangePasswordStep1,
+        layout: "main",
+    },
+    {
+        path: "/settings/change-password/step-2",
+        component: ChangePasswordStep2,
+        layout: "main",
+    },
+    {
+        path: "/settings/change-personal-information",
+        component: ChangePersonalInformation,
+        layout: "main",
+    },
+    {
+        path: "/settings/payment-method-management",
+        component: PaymentMethodManagement,
         layout: "main",
     },
 ];

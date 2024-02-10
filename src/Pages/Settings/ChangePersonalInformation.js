@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import { FiEye, FiEyeOff } from "react-icons/fi";
 
-const ChangePassword = () => {
+const ChangePersonalInformation = () => {
     return (
         <>
-            <Header title="비밀번호 변경" showHamburger={false} />
+            <Header title="개인정보 변경" showHamburger={false} />
             {/* Form */}
             <form className="pt-8 min-h-[80vh] relative  flex flex-col gap-6  w-[90%] mx-auto">
                 {/* 1 Div */}
@@ -71,7 +70,7 @@ const ChangePassword = () => {
                         type="submit"
                         className="w-full bg-[#FED52A] font-semibold text-[18px] border-none text-[#272727] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
                     >
-                        로그인
+                        저 장
                     </button>
                 </div>
             </form>
@@ -79,4 +78,4 @@ const ChangePassword = () => {
     );
 };
 
-export default ChangePassword;
+export default ChangePersonalInformation;
