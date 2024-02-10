@@ -45,6 +45,12 @@ export default function Shipping() {
         </button>
       </div>
 
+      <div className="flex gap-2 text-[11px] font-[400]">
+        <span>현재 설정된 필터:</span>
+        <span className="text-[#208AC5]">전체  / 1주일 / 전체</span>
+      </div>
+      
+
       {/* This div is for card */}
       <div className='flex flex-col items-center justify-center mt-5'>
         <h1 className='font-bold text-[20px] px-2 w-full'>GIFT 주문내역 </h1>

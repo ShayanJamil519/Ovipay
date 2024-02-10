@@ -122,30 +122,6 @@ const Favourite = () => {
                     </div>
                 </div>
 
-                
-                {/* <div className="flex flex-col items-center justify-center w-full gap-y-12">
-                    <h6 className="w-full px-3 text-xl font-semibold">
-                        최근 본 GIFT
-                    </h6>
-                    <div className="flex flex-wrap items-center justify-around gap-y-4 gap-x-2">
-                        {cards.map((item) => (
-                            <div
-                                key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] w-[200px]
-                ${item.id % 2 === 0 ? " mt-0" : "mt-16"}`}
-                            >
-                                <h1 className="text-lg font-bold text-white">
-                                    기프티콘 테스트
-                                </h1>
-                                <p className="text-gray-100 ">치킨</p>
-                                <h1 className="text-lg font-semibold text-white ">
-                                    50,000원
-                                </h1>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
-
                 <div className="flex flex-col items-center justify-center w-full px-3 gap-y-6">
                     <h6 className="w-full text-xl font-semibold">
                         금주의 인기 GIFT

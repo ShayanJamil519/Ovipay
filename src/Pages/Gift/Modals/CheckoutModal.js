@@ -1,25 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
-const CouponModal = ({isOpen, handleClosePopup}) => {
-  // const [isOpen, setIsOpen] = useState(true);
+const CheckoutModal = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const [selectedOption, setSelectedOption] = useState(null);
   const popupRef = useRef();
 
-  // const handleClosePopup = (e) => {
-  //   if (popupRef.current && !popupRef.current.contains(e.target)) {
-  //     setIsOpen(false);
-  //   }
-  // };
+  const handleClosePopup = (e) => {
+    if (popupRef.current && !popupRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
 
   return (
     <div className={`${isOpen ? 'fixed' : 'hidden'} bottom-0 left-0 right-0 bg-black bg-opacity-50 z-50 h-full`} onClick={handleClosePopup}>
       <div
         ref={popupRef}
-        className={`fixed overflow-y-scroll bottom-0 left-0 right-0 bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-3xl border-2 ${
+        className={`fixed bottom-0 left-0 right-0 overflow-y-scroll bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-3xl border-2 ${
           isOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
-        style={{ maxHeight: '75vh' }}
+        style={{ maxHeight: '85vh' }}
       >
-        <div className='flex flex-col mb-8'>
+        <div className='flex flex-col'>
             <div className='flex items-center justify-center flex-col mt-16'>
                 <img src="/barcode.svg" alt="" style={{height: '10%'}} />
                 <img src="/dish.png" alt="" style={{height: '20vh'}} />
@@ -28,7 +33,7 @@ const CouponModal = ({isOpen, handleClosePopup}) => {
             </div>
             <div></div>
 
-            <div className="w-[90%] mx-3 mt-16">
+            <div className="w-[90%] mx-3 mt-16 mb-8">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>
                     <div className='flex justify-between w-full items-start'>
                         <p>저장날짜</p>
@@ -56,4 +61,4 @@ const CouponModal = ({isOpen, handleClosePopup}) => {
   );
 };
 
-export default CouponModal;
+export default CheckoutModal;

@@ -34,6 +34,12 @@ import SettingsPage from "../Pages/Settings/Home";
 import EasyPasswordReset from "../Pages/Settings/EasyPasswordReset";
 import ChangePassword from "../Pages/Settings/ChangePassword";
 import ProductDetail from "../Pages/Gift/ProductDetail";
+import LocationSettings from "../Pages/Gift/LocationSettings";
+import GiftProductDetails from "../Pages/Gift/GiftProductDetails";
+import GiftDetails from "../Pages/Gift/GiftDetails";
+import SendGift from "../Pages/Gift/SendGift";
+import MethodOne from "../Pages/Gift/MethodOne";
+import MethodTwo from "../Pages/Gift/MethodTwo";
 
 let routes = [
     {
@@ -160,22 +166,32 @@ let routes = [
     {
         path: "/gift-home",
         component: GiftPage,
-        layout: "auth",
+        layout: "main",
+    },
+    {
+        path: "/gift/gift-product-details",
+        component: GiftProductDetails,
+        layout: "main",
+    },
+    {
+        path: "/gift/location",
+        component: LocationSettings,
+        layout: "main",
     },
     {
         path: "/gift/favourite",
         component: GiftFavourite,
-        layout: "auth",
+        layout: "main",
     },
     {
         path: "/gift/mycart",
         component: GiftCart,
-        layout: "auth",
+        layout: "main",
     },
     {
         path: "/gift/delivery-details",
         component: GiftShipping,
-        layout: "auth",
+        layout: "main",
     },
     {
         path: "/gift/search-product",
@@ -185,7 +201,27 @@ let routes = [
     {
         path: "/gift/product-detail",
         component: ProductDetail,
-        layout: "auth",
+        layout: "main",
+    },
+    {
+        path: "/gift/details",
+        component: GiftDetails,
+        layout: "main",
+    },
+    {
+        path: "/gift/send",
+        component: SendGift,
+        layout: "main",
+    },
+    {
+        path: "/gift/method-one",
+        component: MethodOne,
+        layout: "main",
+    },
+    {
+        path: "/gift/method-two",
+        component: MethodTwo,
+        layout: "main",
     },
     {
         path: "/listing-page",

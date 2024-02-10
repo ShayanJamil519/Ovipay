@@ -15,7 +15,7 @@ import {  Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { IoIosStar } from 'react-icons/io';
 
-const ProductDetails = () => {
+const GiftProductDetails = () => {
   return (
     <>
     <Header/>
@@ -77,4 +77,4 @@ const ProductDetails = () => {
   )
 }
 
-export default ProductDetails
+export default GiftProductDetails
