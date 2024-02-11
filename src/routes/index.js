@@ -43,6 +43,9 @@ import GiftDetails from "../Pages/Gift/GiftDetails";
 import SendGift from "../Pages/Gift/SendGift";
 import MethodOne from "../Pages/Gift/MethodOne";
 import MethodTwo from "../Pages/Gift/MethodTwo";
+import MyOvipayPage from "../Pages/MyOvipay/Home";
+import OvipayWithdrawal from "../Pages/MyOvipay/OvipayWithdrawal";
+import GiftPoints from "../Pages/MyOvipay/GiftPoints";
 
 let routes = [
     {
@@ -269,6 +272,21 @@ let routes = [
     {
         path: "/settings/payment-method-management",
         component: PaymentMethodManagement,
+        layout: "main",
+    },
+    {
+        path: "/my-ovipay",
+        component: MyOvipayPage,
+        layout: "main",
+    },
+    {
+        path: "/my-ovipay/withdrawal",
+        component: OvipayWithdrawal,
+        layout: "main",
+    },
+    {
+        path: "/my-ovipay/gift-points",
+        component: GiftPoints,
         layout: "main",
     },
 ];

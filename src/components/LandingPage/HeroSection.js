@@ -115,7 +115,7 @@ const HeroSection = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link to="" className="hover:no-underline ">
+                        <Link to="/my-ovipay" className="hover:no-underline ">
                             <div className="flex flex-col justify-center items-center">
                                 <img
                                     src="/my_opivay.svg"
