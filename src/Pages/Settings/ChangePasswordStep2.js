@@ -77,7 +77,7 @@ const ChangePasswordStep2 = () => {
                 <div className="absolute bottom-2 text-center w-full">
                     <button
                         type="submit"
-                        className="w-full bg-[#FED52A] font-semibold text-[18px] border-none text-[#272727] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
+                        className="w-full bg-[#FED52A] font-semibold text-[17px] border-none text-[#272727] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
                     >
                         완 료
                     </button>

@@ -55,7 +55,7 @@ export default function Header({ title, showHamburger }) {
                         <IoMenu
                             onClick={handleMenu}
                             size={35}
-                            className={`rounded-full p-1 bg-[#f6f6f6] ${
+                            className={`rounded-full p-1  ${
                                 showHamburger ? "" : "invisible"
                             } cursor-pointer text-black/75`}
                         />

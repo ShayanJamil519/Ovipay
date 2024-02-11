@@ -74,7 +74,7 @@ const ChangePasswordStep1 = () => {
                             history.push("/settings/change-password/step-2")
                         }
                         type="submit"
-                        className="w-full bg-[#FED52A] font-semibold text-[18px] border-none text-[#272727] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
+                        className="w-full bg-[#FED52A] font-semibold text-[17px] border-none text-[#272727] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
                     >
                         로그인
                     </button>

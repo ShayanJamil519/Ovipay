@@ -60,7 +60,7 @@ export default function Header() {
                                 to="/settings"
                                 className="rounded-full p-[9px] bg-[#f1f1f1] cursor-pointer"
                             >
-                                <img src="/notification-bing.svg" alt="logo" />
+                                <img src="/settings__icon.svg" alt="logo" />
                             </Link>
 
                             <span
