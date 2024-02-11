@@ -79,7 +79,6 @@ const LocationSettings = () => {
             ))}
         </div> */}
 
-        <BankModal />
     </div>
   )
 }

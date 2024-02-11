@@ -14,29 +14,29 @@ const SendGift = () => {
 
             {/* This div is for below the card 3 buttons */}
             <div className=''>
-                    <h2 className='font-bold text-[20px] py-3'>결제 방법</h2>
+                <h2 className='font-bold text-[20px] py-3'>결제 방법</h2>
 
-                    {/* This div is for three buttons */}
-                    <div className='flex gap-x-3'>
-                        {/* First Button */}
-                        <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                            <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
-                        </button>
+                {/* This div is for three buttons */}
+                <div className='flex gap-x-3'>
+                    {/* First Button */}
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
+                        <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
+                    </button>
 
-                        {/* Second Button */}
-                        <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                            <span className='h-[15px] w-[30px] bg-[#DDDDDD] text-[#DDDDDD] pr-4 rounded-full'></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
-                        </button>
+                    {/* Second Button */}
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
+                        <span className='h-[15px] w-[30px] bg-[#DDDDDD] text-[#DDDDDD] pr-4 rounded-full'></span>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
+                    </button>
 
-                        {/* Third Button */}
-                        <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                            <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
-                        </button>
+                    {/* Third Button */}
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
+                        <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
+                    </button>
 
-                    </div>
+                </div>
             </div>
 
             <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
@@ -121,8 +121,24 @@ const SendGift = () => {
                 </div>
             </div>
 
-        </div>
-            
+            {/* Add Card */}
+            <div className="w-full">
+                <h1 className="font-[600] my-4">간편 결제</h1>
+                <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]">
+                    <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
+                    <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
+                </div>
+            </div>
+
+            {/* Dropdown */}
+            <div className="w-full">
+                <h1 className="font-[600] mt-4 mb-3">일반 결제</h1>
+                <select className='w-full border p-2 rounded-[10px] text-[#A19B91]'>
+                    <option>은행 선택</option>
+                </select>
+            </div>
+
+            </div>
             {/* Payment Info */}
             <div className="p-4">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2 pt-3'>

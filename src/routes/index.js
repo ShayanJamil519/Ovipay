@@ -203,7 +203,7 @@ let routes = [
     },
     {
         path: "/gift/product-detail",
-        component: ProductDetail,
+        component: GiftProductDetails,
         layout: "main",
     },
     {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 
-const SortModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+const SortModal = ({isOpen, setIsOpen}) => {
+  
   const popupRef = useRef();
 
   const [selectedOption, setSelectedOption] = useState('');
