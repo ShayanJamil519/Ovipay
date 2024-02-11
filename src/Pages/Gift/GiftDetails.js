@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import Footer from './Footer';
 
-const isTrue = false;
 
 const GiftDetails = () => {
   return (
@@ -137,6 +137,8 @@ const GiftDetails = () => {
 
             </div>
         </div>
+
+        <Footer address={'account'} />
     </>
   )
 }

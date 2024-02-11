@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import product from "../../assets/img/product-item.png";
-import { IoIosStar } from "react-icons/io";
-import { FaRegSquare } from "react-icons/fa6";
-import { FaRegSquareCheck } from "react-icons/fa6";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,10 +9,12 @@ import "swiper/css/mousewheel";
 
 // import required modules
 import RecommendedProducts from "../../components/Global/RecommendedProducts";
+import SortModal from "./Modals/SortModal";
 
 
 const Favourite = () => {
-    const [isTrue, setIsTrue] = useState(false);
+    
+    const [isOpen, setIsOpen] = useState(false);
 
     const firstProducts = [
         { id: 1, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
@@ -25,6 +23,51 @@ const Favourite = () => {
         { id: 1, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
         { id: 2, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
         { id: 3, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
+    ];
+
+    const products = [
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
+        {
+            id: 2,
+            category: "Bathroom",
+            name: "테스트 상품",
+            price: "49,000원",
+            image: "/recommended__product__1.png",
+        },
     ];
 
     return (
@@ -46,7 +89,7 @@ const Favourite = () => {
 
                 {/* More Modal */}
                 <div className="flex items-start justify-start w-full mt-2">
-                    <div className="flex justify-start gap-2 border px-3 py-2 rounded-[50px]">
+                    <div className="flex justify-start gap-2 border px-3 py-2 rounded-[50px]" onClick={()=> setIsOpen(true)}>
                         <p className="text-[#828282] text-[10px]">담은순</p>
                         <img src="/arrow_down.svg" alt="" />
                     </div>
@@ -75,47 +118,50 @@ const Favourite = () => {
                 {/* Price and Button */}
                 <div className="w-full">
                     <div className="flex gap-6 my-4">
-                        <div className="flex flex-col items-start justify-start py-2">
+                        <div className="flex flex-col items-start justify-start">
                             <h1 className="text-[14px] text-[#989898]">1개 선택</h1>
                             <p className="text-[18px] font-[900] text-[#464441]">총 149,000원</p>
                         </div>
-                        <div className="flex items-center justify-center w-[60%] bg-[#FED52A] py-1 rounded-[50px]">
+                        <div className="flex items-center justify-center w-[60%] bg-[#FED52A] rounded-[50px]">
                             <button className="text-[12px] font-[700]">장바구니</button>
                         </div>
                     </div>
                 </div>
 
-                <RecommendedProducts />
-                {/* <div className="flex-col items-center justify-center w-full px-1 mt-6 ">
-                    <h6 className="w-full font-semibold">최근 본 상품</h6>
-                    <Swiper
-                        slidesPerView={1}
-                        pagination={true}
-                        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                        className="flex items-center justify-center w-full mb-[60px] py-5"
-                    >
-                        {products.map((item) => (
-                            <SwiperSlide className="flex flex-col items-center justify-center">
-                                <div className="flex flex-col items-center justify-center p-5 shadow-md">
-                                    <div className="w-full mb-2">
-                                        <h1 className="text-2xl font-bold text-black">
-                                            {item.name}
-                                        </h1>
-                                        <p className="text-[#FED52A] font-semibold text-xl">
-                                            {item.price}원
-                                        </p>
-                                    </div>
-                                    <img
-                                        src={item.image}
-                                        className="h-[200px] w-[300px]"
-                                        alt="Slide 1"
-                                    />
+                {/* Recommended Products */}
+                <div className="px-3 my-6 w-full">
+                    <h1 className=" mb-2 text-[16px] font-medium text-[#464441]">
+                        오비의 추천상품
+                    </h1>
+                    <div className="flex w-full overflow-x-auto justify-start items-center gap-3">
+                        {products.map((item, index) => (
+                            <div
+                                key={index}
+                                style={{
+                                    flex: "0 0 70%", // 80% width for each product
+                                    marginRight: "0.7rem", // Adjust as needed for the gap
+                                    boxShadow: "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
+                                }}
+                                className="flex flex-col  items-center rounded-[12px] justify-center px-3 pt-4 pb-3"
+                            >
+                                <div className="w-full mb-2">
+                                    <p className="text-[#8D8D8D] text-[12px] font-[400]">매장명</p>
+                                    <p className="text-[#464441] font-[400] text-[15px]">안심한우 1++등급 ‘투뿔 스페셜...</p>
+                                    <h1 className="text-[#464441] font-[900] text-[20px] mt-2">149,000원<span className="text-[#F6C700] ml-2 font-[700]">15%</span></h1>
                                 </div>
-                            </SwiperSlide>
+                                <img
+                                    src={item.image}
+                                    className="h-[180px] w-full object-cover rounded-[10px]"
+                                    alt="Product"
+                                />
+                            </div>
                         ))}
-                    </Swiper>
-                </div> */}
+                    </div>
+                </div>
             </div>
+
+            {isOpen && <SortModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+            
             <Footer address="favourite" />
         </>
     );

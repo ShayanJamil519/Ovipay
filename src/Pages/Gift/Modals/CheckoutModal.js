@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 
-const CheckoutModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
-  const [selectedOption, setSelectedOption] = useState(null);
+const CheckoutModal = ({isOpen, setIsOpen}) => {
+  
   const popupRef = useRef();
 
   const handleClosePopup = (e) => {
@@ -11,9 +10,6 @@ const CheckoutModal = () => {
     }
   };
 
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
-  };
 
   return (
     <div className={`${isOpen ? 'fixed' : 'hidden'} bottom-0 left-0 right-0 bg-black bg-opacity-50 z-50 h-full`} onClick={handleClosePopup}>

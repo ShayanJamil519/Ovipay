@@ -5,8 +5,6 @@ import { FormGroup, Input } from 'reactstrap'
 import { CiSearch } from 'react-icons/ci'
 import { IoOptionsOutline } from "react-icons/io5";
 import product from '../../assets/img/product-item.png'
-import ConfirmationModal from '../../components/modals/ConfirmationModal'
-import FilterModal from '../../components/modals/FilterModal'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 const ShippingDetails = () => {
