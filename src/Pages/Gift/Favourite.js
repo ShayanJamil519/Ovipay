@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import product from "../../assets/img/card image gift.png";
-import { IoIosStar } from "react-icons/io";
 import { FaRegSquare } from "react-icons/fa6";
 import { FaRegSquareCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Favourite = () => {
     const [isTrue, setIsTrue] = useState(false);
@@ -113,10 +113,14 @@ const Favourite = () => {
 
                         <div className="w-full flex gap-5 my-4">
                             <div className="flex items-center justify-center w-1/2 bg-[#373535] py-2 rounded-[50px] text-white">
-                                <button className="">선물하기</button>
+                                <Link to="/gift/send">
+                                    <button className="">선물하기</button>
+                                </Link>
                             </div>
                             <div className="flex items-center justify-center w-1/2 bg-[#FED52A] py-2 rounded-[50px]">
-                                <button>결제하기</button>
+                                <Link to="/gift/method-one">
+                                    <button>결제하기</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

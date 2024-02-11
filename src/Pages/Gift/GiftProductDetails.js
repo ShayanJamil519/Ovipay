@@ -17,14 +17,7 @@ import { IoIosStar } from 'react-icons/io';
 
 const ProductDetails = () => {
 
-  const [isOpen, setIsOpen] = useState(true);
-  const popupRef = useRef();
-
-  const handleClosePopup = (e) => {
-    if (popupRef.current && !popupRef.current.contains(e.target)) {
-      setIsOpen(false);
-    }
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -87,7 +80,7 @@ const ProductDetails = () => {
       </div>
 
       {/* Modal */}
-      <CouponModal handleClosePopup={togglePopup} isOpen={isOpen} />
+      {isOpen && <CouponModal isOpen={isOpen} setIsOpen={setIsOpen} />}
       
       <Footer address='home'/>
     </>

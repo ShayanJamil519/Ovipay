@@ -10,7 +10,7 @@ const SortModal = ({isOpen, setIsOpen}) => {
     setSelectedOption(item)
   }
 
-  const options = ['선택안함', 'NH 농협', '카카오뱅크', 'KB국민', '신한', '토스뱅크', '우리', 'IBK기업', '하나', '새마을']
+  const options = ['담은순', '인기순', '최신순', '저가순'];
 
   const handleClosePopup = (e) => {
     if (popupRef.current && !popupRef.current.contains(e.target)) {
@@ -32,7 +32,7 @@ const SortModal = ({isOpen, setIsOpen}) => {
                 <h1 className='mb-4 text-[#0F1121] text-[19px] font-[700]'>정렬</h1>
                 {
                     options.map((item, index)=> (
-                        <div key={index} className='flex justify-between h-6' onClick={()=> handleSelection(item)}>
+                        <div key={index} className='flex justify-between h-6 mb-3' onClick={()=> handleSelection(item)}>
                             <p className={`text-[17px] ${selectedOption === item ? 'text-[#FED52A]' : 'text-[#B9B9B9]'} font-[400]`}>{item}</p>
                             {selectedOption === item && <img src="/tick.svg" alt="" className="ml-auto pl-auto" />}
                         </div>
@@ -44,7 +44,7 @@ const SortModal = ({isOpen, setIsOpen}) => {
                 <button
                     className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[17px]"
                 >
-                    선 택
+                    닫 기
                 </button>
             </div>
 

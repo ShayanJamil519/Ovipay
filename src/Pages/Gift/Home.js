@@ -6,9 +6,12 @@ import { CiSearch } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
+import LocationModal from './Modals/LocationModal'
+
 const Home = () => {
         
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [isOpen, setIsOpen] = useState(false);
     const cards = [
         {
             id: 0,
@@ -66,15 +69,14 @@ const Home = () => {
         <>
             <Header />
             <div className="flex flex-col items-center w-full py-4">
-                <Link
-                    to="/gift/search-product"
+                <div
                     className="flex items-center justify-center w-full hover:no-underline"
                 >
-                    <button className="w-[95%] flex items-center text-center font-bold text-sm rounded-xl text-black py-2.5 px-3 shadow-md mb-3 bg-[#FED52A] gap-x-1">
+                    <button className="w-[95%] flex items-center text-center font-bold text-sm rounded-xl text-black py-2.5 px-3 shadow-md mb-3 bg-[#FED52A] gap-x-1" onClick={()=> setIsOpen(true)}>
                         <FaLocationDot size={18} className="text-black" /> 이
                         곳을 터치하여 주소를 설정하세요!
                     </button>
-                </Link>
+                </div>
                 
                 {/* Search bar for items */}
                 <FormGroup className="flex items-center justify-center w-full">
@@ -91,7 +93,7 @@ const Home = () => {
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-4 gap-y-5">
+                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-3 gap-y-5">
                     {filters.map((filter, index) => (
                         <h6
                         key={index}
@@ -103,7 +105,7 @@ const Home = () => {
                             selectedCategory === filter.name
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer min-w-[110px] text-sm text-center py-2 rounded-xl shadow-md`}
+                        } cursor-pointer min-w-[100px] text-[10px] font-[700] text-center py-2 rounded-xl shadow-md`}
                         >
                         {filter.name}
                         </h6>
@@ -151,6 +153,8 @@ const Home = () => {
                     
                 </div>
             </div>
+
+            {isOpen && <LocationModal isOpen={isOpen} setIsOpen={setIsOpen} />}
             <Footer address={"home"} />
         </>
     );

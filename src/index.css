@@ -11,3 +11,8 @@ body {
 .h-custom {
     height: calc(100vh - 50px);
 }
+
+.checkbox:checked {
+    background-color: #FED52A;
+    border-color: #FED52A;
+}

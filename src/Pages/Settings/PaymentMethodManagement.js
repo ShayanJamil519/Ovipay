@@ -55,7 +55,7 @@ const PaymentMethodManagement = () => {
                         <SwiperSlide className="">
                             <div className="h-[200px] border-[1px] border-[#DDDDDD] rounded-[20px] flex flex-col justify-center items-center py-3 w-full bg-[#ffffff]">
                                 <div className="p-1 rounded-full border-[1px] border-[#A0A0A0]">
-                                    <img src="/settings__add.svg" />
+                                    <img src="/settings__add.svg" alt="" />
                                 </div>
 
                                 <p className="text-[#A0A0A0] text-[14px] font-medium mt-3 ">

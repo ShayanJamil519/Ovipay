@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 
-const BankModal = () => {
+const BankModal = ({isOpen, setIsOpen}) => {
 
-  const [isOpen, setIsOpen] = useState(true);
   const popupRef = useRef();
 
   const handleClosePopup = (e) => {
