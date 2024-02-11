@@ -11,6 +11,7 @@ import logo from "../../assets/img/logo.svg";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import CardModal from "./CardModal";
+import MenuToggle from "../../components/MenuToggle";
 
 const PaymentMethodManagement = () => {
     const [isOpen, setIsOpen] = useState(false);
