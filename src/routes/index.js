@@ -41,15 +41,13 @@ import LocationSettings from "../Pages/Gift/LocationSettings";
 import GiftProductDetails from "../Pages/Gift/GiftProductDetails";
 import GiftDetails from "../Pages/Gift/GiftDetails";
 import SendGift from "../Pages/Gift/SendGift";
-import MethodOne from "../Pages/Gift/MethodOne";
-import MethodTwo from "../Pages/Gift/MethodTwo";
+import Payment from "../Pages/Gift/Payment";
 import MyOvipayPage from "../Pages/MyOvipay/Home";
 import OvipayWithdrawal from "../Pages/MyOvipay/OvipayWithdrawal";
 import GiftPoints from "../Pages/MyOvipay/GiftPoints";
 import ReservationPage from "../Pages/Reservation/Home";
 import MyCouponPage from "../Pages/MyCoupon/Home";
 import OrderDetails from "../Pages/ShoppingPage/OrderDetails";
-import MethodThree from "../Pages/Gift/MethodThree";
 import CompletePayment from "../Pages/ShoppingPage/CompletePayment";
 import AffiliatedStores from "../Pages/Affiliated/AffiliatedStore";
 import StoreDetails from "../Pages/Affiliated/StoreDetails";
@@ -237,18 +235,8 @@ let routes = [
         layout: "main",
     },
     {
-        path: "/gift/method-one",
-        component: MethodOne,
-        layout: "main",
-    },
-    {
-        path: "/gift/method-two",
-        component: MethodTwo,
-        layout: "main",
-    },
-    {
-        path: "/gift/method-three",
-        component: MethodThree,
+        path: "/gift/payment",
+        component: Payment,
         layout: "main",
     },
     {

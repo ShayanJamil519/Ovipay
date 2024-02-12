@@ -118,7 +118,7 @@ const Favourite = () => {
                                 </Link>
                             </div>
                             <div className="flex items-center justify-center w-1/2 bg-[#FED52A] py-2 rounded-[50px]">
-                                <Link to="/gift/method-one">
+                                <Link to="/gift/payment">
                                     <button>결제하기</button>
                                 </Link>
                             </div>
@@ -136,7 +136,7 @@ const Favourite = () => {
                             <div
                                 key={item.id}
                                 className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] ${
-                                    item.id % 2 === 0 ? " mt-0" : "mt-12"
+                                    item.id % 2 === 0 ? " mt-0" : "mt-8"
                                 }`}
                             >
                                 <h1 className="text-lg font-bold text-white">

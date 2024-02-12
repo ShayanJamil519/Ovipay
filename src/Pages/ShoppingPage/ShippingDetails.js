@@ -112,7 +112,7 @@ export default function Shipping() {
                                 <p className='text-sm text-[#8D8D8D]'>{card.category}</p>
                                 <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
                                 <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
-                                <Link to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
+                                <Link to="/shopping/order-details" className='flex flex-col items-end justify-center w-full mt-3'>
                                     <button className='bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
                                 </Link>
                             </div>

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import CouponPopup from './Popups/CouponPopup';
-import CheckoutPopup from './Popups/CheckoutPopup';
 
 const CouponModal = ({isOpen, setIsOpen}) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -56,7 +55,7 @@ const CouponModal = ({isOpen, setIsOpen}) => {
         </div>
       </div>
 
-      {isPopupOpen && <CheckoutPopup isOpen={isPopupOpen} toggle={setIsPopupOpen}/>}
+      {isPopupOpen && <CouponPopup isOpen={isPopupOpen} toggle={setIsPopupOpen}/>}
     </div>
   );
 };

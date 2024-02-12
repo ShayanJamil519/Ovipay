@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import CheckoutPopup from './Popups/CheckoutPopup';
 
 const CheckoutModal = ({isOpen, setIsOpen}) => {
   
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const popupRef = useRef();
 
   const handleClosePopup = (e) => {
@@ -120,6 +122,7 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
                 </div>
                 <button
                     className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
+                    onClick={()=> setIsPopupOpen(true)}
                 >
                     저 장
                 </button>
@@ -127,6 +130,8 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
 
         </div>
       </div>
+
+      {isPopupOpen && <CheckoutPopup isOpen={isPopupOpen} toggle={setIsPopupOpen}/>}
     </div>
   );
 };
