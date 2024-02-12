@@ -46,6 +46,8 @@ import MethodTwo from "../Pages/Gift/MethodTwo";
 import MyOvipayPage from "../Pages/MyOvipay/Home";
 import OvipayWithdrawal from "../Pages/MyOvipay/OvipayWithdrawal";
 import GiftPoints from "../Pages/MyOvipay/GiftPoints";
+import ReservationPage from "../Pages/Reservation/Home";
+import MyCouponPage from "../Pages/MyCoupon/Home";
 
 let routes = [
     {
@@ -138,11 +140,11 @@ let routes = [
         component: Authentications,
         layout: "auth",
     },
-    {
-        path: "/my-coupon",
-        component: CouponsHome,
-        layout: "main",
-    },
+    // {
+    //     path: "/my-coupon",
+    //     component: CouponsHome,
+    //     layout: "main",
+    // },
     {
         path: "/shopping-home",
         component: shoppingPage,
@@ -287,6 +289,16 @@ let routes = [
     {
         path: "/my-ovipay/gift-points",
         component: GiftPoints,
+        layout: "main",
+    },
+    {
+        path: "/reservation",
+        component: ReservationPage,
+        layout: "main",
+    },
+    {
+        path: "/my-coupon",
+        component: MyCouponPage,
         layout: "main",
     },
 ];

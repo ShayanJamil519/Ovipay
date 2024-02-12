@@ -131,7 +131,7 @@ const HeroSection = () => {
 
                     <div className="flex flex-col justify-center items-center gap-2">
                         <Link
-                            to="/listing-page"
+                            to="/reservation"
                             className="hover:no-underline flex flex-col justify-center items-center"
                         >
                             <img
@@ -169,7 +169,7 @@ const HeroSection = () => {
                                 </p>
                             </div>
                         </Link>
-                        <Link to="" className="hover:no-underline ">
+                        <Link to="/my-coupon" className="hover:no-underline ">
                             {" "}
                             <div className="flex flex-col justify-center items-center">
                                 <img

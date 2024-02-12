@@ -4,7 +4,7 @@ import Header from "./Header";
 import product from "../../assets/img/card image gift.png";
 import { FaRegSquare } from "react-icons/fa6";
 import { FaRegSquareCheck } from "react-icons/fa6";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const Favourite = () => {
     const [isTrue, setIsTrue] = useState(false);
@@ -46,7 +46,7 @@ const Favourite = () => {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="flex flex-col items-center justify-center w-full gap-y-1">
                     <div
                         onClick={handleTrue}
@@ -135,15 +135,20 @@ const Favourite = () => {
                         {cards.map((item, index) => (
                             <div
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] ${item.id % 2 === 0 ? " mt-0" : "mt-12"}`}
+                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] ${
+                                    item.id % 2 === 0 ? " mt-0" : "mt-12"
+                                }`}
                             >
-                            <h1 className="text-lg font-bold text-white">기프티콘 테스트</h1>
-                            <p className="text-gray-100">치킨</p>
-                            <h1 className="text-lg font-semibold text-white">50,000원</h1>
+                                <h1 className="text-lg font-bold text-white">
+                                    기프티콘 테스트
+                                </h1>
+                                <p className="text-gray-100">치킨</p>
+                                <h1 className="text-lg font-semibold text-white">
+                                    50,000원
+                                </h1>
                             </div>
                         ))}
                     </div>
-                    
                 </div>
             </div>
             <Footer address={"favourite"} />
