@@ -2,6 +2,7 @@ import React from 'react'
 import { FormGroup, Input } from "reactstrap";
 import BankModal from './Modals/BankModal';
 import SortModal from './Modals/SortModal';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 const LocationSettings = () => {
     
@@ -20,10 +21,16 @@ const LocationSettings = () => {
         { heading: "강서구 강서로", subtitle: "서울 강서구 강서로" },
     ];
 
+    const history = useHistory();
+
+    const handleBackClick = () => {
+        history.goBack();
+    };
+
   return (
     <div className="py-4">
         <div className="flex items-center justify-center mb-6 relative mx-4">
-            <img src="/back.svg" alt="" className="absolute left-0 top-1" />
+            <img src="/back.svg" alt="" className="absolute left-0 top-1" onClick={handleBackClick} />
             <p className="text-[17px] font-[700] text-black">위치 설정</p>
         </div>
 

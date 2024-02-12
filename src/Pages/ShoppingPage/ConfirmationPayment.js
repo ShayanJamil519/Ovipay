@@ -31,22 +31,22 @@ export default function ConfirmationPayment() {
                 {/* First Card */}
                 <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl'>
                     <div>
-                    <p className='text-lg font-bold'>Home</p>
-                    <p>서울특별시 홍길동로 삼겹살</p>
+                        <p className='text-lg font-bold'>Home</p>
+                        <p>서울특별시 홍길동로 삼겹살</p>
                     </div>
-        <input
-          type="radio"
-          id="homeRadio"
-          name="location"
-          value="home"
-          className='p-1 sr-only' 
-          />
-        <label
-          id="homeLabel"
-          htmlFor="homeRadio"
-          className='p-1 radio-label' 
-        ></label>
-      </div>
+                <input
+                    type="radio"
+                    id="homeRadio"
+                    name="location"
+                    value="home"
+                    className='p-1 sr-only' 
+                />
+                <label
+                    id="homeLabel"
+                    htmlFor="homeRadio"
+                    className='p-1 radio-label' 
+                ></label>
+            </div>
 
       {/* Second Card */}
       <div className='flex items-center justify-between px-4 py-3 mt-3 shadow-md rounded-xl'>

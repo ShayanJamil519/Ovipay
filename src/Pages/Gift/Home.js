@@ -7,6 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import LocationModal from './Modals/LocationModal'
+import CheckoutModal from "./Modals/CheckoutModal";
 
 const Home = () => {
         
@@ -105,7 +106,7 @@ const Home = () => {
                             selectedCategory === filter.name
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer min-w-[100px] text-[10px] font-[700] text-center py-2 rounded-xl shadow-md`}
+                        } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[12px] shadow-md`}
                         >
                         {filter.name}
                         </h6>
@@ -143,7 +144,7 @@ const Home = () => {
                             <Link
                                 to="/gift/gift-product-details"
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-[#C4C4C4] rounded-3xl h-[250px] ${item.id % 2 === 0 ? " mt-0" : "mt-12"}`}
+                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-[#C4C4C4] rounded-3xl h-[250px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
                             >
                                 <h1 className="text-[14px] font-[600] text-white">기프티콘 테스트</h1>
                                 <p className="text-gray-100">치킨</p>

@@ -1,9 +1,6 @@
-import React, { useRef, useState } from 'react';
-import CouponPopup from './Popups/CouponPopup';
-import CheckoutPopup from './Popups/CheckoutPopup';
+import React, { useRef } from 'react';
 
 const CouponModal = ({isOpen, setIsOpen}) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const popupRef = useRef();
 
   const handleClosePopup = (e) => {
@@ -25,8 +22,8 @@ const CouponModal = ({isOpen, setIsOpen}) => {
             <div className='flex items-center justify-center flex-col mt-12'>
                 <img src="/barcode.svg" alt="" style={{height: '10%'}} />
                 <img src="/dish.png" alt="" style={{height: '20vh'}} />
-                <p className='text-[17px] text-center my-2'>온가족이 즐기는 <br /> 따뜻하고 오붓한 set!</p>
-                <h1 className='text-[35px] font-[700] text-center'>38,000원</h1>
+                <p className='text-[17px] text-center my-2'>허니콤보세트</p>
+                <h1 className='text-[25px] font-[700] text-center'> <span className='text-[50px]'>5%</span><br />할인쿠폰</h1>
             </div>
             <div></div>
 
@@ -40,23 +37,16 @@ const CouponModal = ({isOpen, setIsOpen}) => {
                         <p>만료기한</p>
                         <p>2024. 01. 02 까지</p>
                     </div>
-                    <div className='flex justify-between w-full items-end text-[#406FC9]'>
-                        <p>거래 후 잔액</p>
-                        <p>200,683원</p>
-                    </div>
                 </div>
                 <button
-                    className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
-                    onClick={()=> setIsPopupOpen(true)}
+                    className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-[700] text-[17px]"
                 >
-                    저 장
+                    닫 기
                 </button>
             </div>
 
         </div>
       </div>
-
-      {isPopupOpen && <CheckoutPopup isOpen={isPopupOpen} toggle={setIsPopupOpen}/>}
     </div>
   );
 };

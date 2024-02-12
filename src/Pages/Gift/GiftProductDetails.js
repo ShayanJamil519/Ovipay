@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Header from './Header'
 import Footer from './Footer'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -55,15 +55,15 @@ const ProductDetails = () => {
               <p className='text-sm text-gray-400'>가전제품</p>    
           </div>
           <div className='flex items-center gap-x-1'>
-          <IoIosStar size={17} className='text-[#FED52A]'/>
-          <IoIosStar size={17} className='text-[#FED52A]'/>
-          <IoIosStar size={17} className='text-[#FED52A]'/>
-          <IoIosStar size={17} className='text-[#FED52A]'/>
-          <IoIosStar size={17} className='text-[#FED52A]'/>
+            <IoIosStar size={17} className='text-[#FED52A]'/>
+            <IoIosStar size={17} className='text-[#FED52A]'/>
+            <IoIosStar size={17} className='text-[#FED52A]'/>
+            <IoIosStar size={17} className='text-[#FED52A]'/>
+            <IoIosStar size={17} className='text-[#FED52A]'/>
           </div>
         </div>
 
-        <div className='flex items-center justify-center w-full mt-12 overflow-scroll gap-x-4'>
+        <div className='flex items-center justify-center mt-12 overflow-scroll gap-4'>
           <img src={product} alt="" />
           <img src={product} alt="" />
           <img src={product} alt="" />

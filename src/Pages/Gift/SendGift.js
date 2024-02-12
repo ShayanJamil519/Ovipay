@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap'
 
 const SendGift = () => {
+
+    const [currentOption, setCurrentOption] = useState(0)
   return (
     <>
         <Header />
@@ -19,33 +21,39 @@ const SendGift = () => {
                 {/* This div is for three buttons */}
                 <div className='flex gap-x-3'>
                     {/* First Button */}
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                        <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl' onClick={()=> setCurrentOption(0)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
                     </button>
 
                     {/* Second Button */}
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                        <span className='h-[15px] w-[30px] bg-[#DDDDDD] text-[#DDDDDD] pr-4 rounded-full'></span>
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl' onClick={()=> setCurrentOption(1)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} text-[#DDDDDD] pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                     </button>
 
                     {/* Third Button */}
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                        <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl' onClick={()=> setCurrentOption(2)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>계좌이체</p>
                     </button>
 
                 </div>
             </div>
 
-            <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
-                <p className='flex text-[12px] text-[#171717]'> <img src="/logo.svg" alt="" /> OviPay</p>
-                <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
-            </div>
+
+            {
+                currentOption === 0 &&
+                <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
+                    <p className='flex text-[12px] text-[#171717]'> <img src="/logo.svg" alt="" /> OviPay</p>
+                    <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
+                </div>
+            }
+
+
             
             {/* Form start from here */}
-            <Form className="py-1 w-full">
+            <Form className="py-1 w-full mt-4">
                         {/* Input fields one by one */}
 
                         <FormGroup className="md:w-[75%] mx-auto">
@@ -121,35 +129,51 @@ const SendGift = () => {
                 </div>
             </div>
 
-            {/* Add Card */}
-            <div className="w-full">
-                <h1 className="font-[600] my-4">간편 결제</h1>
-                <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]">
-                    <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
-                    <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
-                </div>
-            </div>
-
-            {/* Sort Modal Opens From here */}
-            <div className="mt-4">
-                <h1 className="mb-3 font-[600]">일반 결제</h1>
-                <div className="flex justify-between border rounded-xl px-4 py-2">
-                    <p className="text-[#A19B91]">은행 선택</p>
-                    <img src="/arrow_down.svg" alt="" />
-                </div>
-
-                <div className='mt-4'>
-                    <div className="flex gap-3 items-center mb-1">
-                        <input type="checkbox" className='h-4 w-4' />
-                        <p className='text-[14px] font-[700]'>ATM으로 입금</p>
+            {
+                currentOption === 1 &&
+                <>
+                    <div className="w-full">
+                        <h1 className="font-[600] my-4">간편 결제</h1>
+                        <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]">
+                            <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
+                            <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
+                        </div>
                     </div>
-                    <p className='text-[#A7A7A7]'>* ATM은 동전을 입금할 수 없습니다.</p>
-                    <div className='px-3 mt-3'>
-                        <p className='mb-1'>입금자명을 입력해주세요.</p>
-                        <input type="text" className='border w-full rounded-lg p-2' placeholder="이OO" />
+
+                    <div className="mt-4">
+                        <h1 className="mb-3 font-[600]">일반 결제</h1>
+                        <div className="flex justify-between border rounded-xl px-4 py-2">
+                            <p className="text-[#A19B91]">은행 선택</p>
+                            <img src="/arrow_down.svg" alt="" />
+                        </div>
+                    </div>
+                </>
+            }
+
+            {
+                currentOption === 2 &&
+                <div className="mt-4">
+                    <h1 className="mb-3 font-[600]">입금은행</h1>
+                    <div className="flex justify-between border rounded-xl px-4 py-2">
+                        <p className="text-[#A19B91]">은행 선택</p>
+                        <img src="/arrow_down.svg" alt="" />
+                    </div>
+
+                    <div className='mt-4'>
+                        <div className="flex gap-3 items-center mb-1">
+                            <input type="checkbox" className='h-4 w-4' />
+                            <p className='text-[14px] font-[700]'>ATM으로 입금</p>
+                        </div>
+                        <p className='text-[#A7A7A7]'>* ATM은 동전을 입금할 수 없습니다.</p>
+                        <div className='px-3 mt-3'>
+                            <p className='mb-1'>입금자명을 입력해주세요.</p>
+                            <input type="text" className='border w-full rounded-lg p-2' placeholder="이OO" />
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+
+
 
             </div>
             {/* Payment Info */}

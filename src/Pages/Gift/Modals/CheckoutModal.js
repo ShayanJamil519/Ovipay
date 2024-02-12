@@ -28,6 +28,81 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
                 <h1 className='text-[35px] font-[700] text-center'>38,000원</h1>
             </div>
 
+            {/* Radio Options */}
+            <div>
+              {/* First Radio Button */}
+              <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                  <input
+                      type="radio"
+                      id="homeRadio"
+                      name="location"
+                      value="home"
+                      className='p-1 sr-only' 
+                  />
+                  <label
+                      id="homeLabel"
+                      htmlFor="homeRadio"
+                      className='p-1 radio-label' 
+                  ></label>
+                  <p className='font-[600]'>현금영수증 발행 안함</p>
+              </div>
+
+              {/* Second Radio Button */}
+              <div>
+                <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                    <input
+                        type="radio"
+                        id="homeRadio"
+                        name="location"
+                        value="home"
+                        className='p-1 sr-only' 
+                    />
+                    <label
+                        id="homeLabel"
+                        htmlFor="homeRadio"
+                        className='p-1 radio-label' 
+                    ></label>
+                    <p className='font-[600]'>현금영수증 발행 안함</p>
+                </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+              </div>
+
+              {/* Third Radio Button */}
+              <div>
+                <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                    <input
+                        type="radio"
+                        id="homeRadio"
+                        name="email"
+                        value="home"
+                        className='p-1 sr-only' 
+                    />
+                    <label
+                        id="homeLabel"
+                        htmlFor="homeRadio"
+                        className='p-1 radio-label' 
+                    ></label>
+                    <p className='font-[600]'>사업자증빙용 / 세금계산서</p>
+                </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>사업자 상호를 기재해주세요.</p>
+                  <input type="text" placeholder="사업자 상호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="사업자등록번호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="000000@naver.com" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+              </div>
+            </div>
+
+
             <div className="w-[90%] mx-3 mt-16 mb-8">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>
                     <div className='flex justify-between w-full items-start'>

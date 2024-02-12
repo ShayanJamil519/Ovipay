@@ -51,6 +51,8 @@ import MyCouponPage from "../Pages/MyCoupon/Home";
 import OrderDetails from "../Pages/ShoppingPage/OrderDetails";
 import MethodThree from "../Pages/Gift/MethodThree";
 import CompletePayment from "../Pages/ShoppingPage/CompletePayment";
+import AffiliatedStores from "../Pages/Affiliated/AffiliatedStore";
+import StoreDetails from "../Pages/Affiliated/StoreDetails";
 
 let routes = [
     {
@@ -247,6 +249,16 @@ let routes = [
     {
         path: "/gift/method-three",
         component: MethodThree,
+        layout: "main",
+    },
+    {
+        path: "/affiliate",
+        component: AffiliatedStores,
+        layout: "main",
+    },
+    {
+        path: "/affiliate/store-details",
+        component: StoreDetails,
         layout: "main",
     },
     {
