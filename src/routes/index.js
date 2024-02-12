@@ -51,6 +51,7 @@ import OrderDetails from "../Pages/ShoppingPage/OrderDetails";
 import CompletePayment from "../Pages/ShoppingPage/CompletePayment";
 import AffiliatedStores from "../Pages/Affiliated/AffiliatedStore";
 import StoreDetails from "../Pages/Affiliated/StoreDetails";
+import DeliveryTracking from "../Pages/ShoppingPage/DeliveryTracking";
 
 let routes = [
     {
@@ -166,6 +167,11 @@ let routes = [
     {
         path: "/shopping/delivery-details",
         component: ShippingDetails,
+        layout: "main",
+    },
+    {
+        path: "/shopping/delivery-tracking",
+        component: DeliveryTracking,
         layout: "main",
     },
     {

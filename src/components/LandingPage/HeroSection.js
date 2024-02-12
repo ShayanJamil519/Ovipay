@@ -182,7 +182,10 @@ const HeroSection = () => {
                                 OVI가맹점
                             </p>
                         </div>
-                        <div className="flex flex-col justify-center items-center ">
+                        <Link
+                            to="/shopping/delivery-details"
+                            className="flex flex-col justify-center items-center "
+                        >
                             <img
                                 src="/my__shopping.svg"
                                 alt="logo"
@@ -191,7 +194,7 @@ const HeroSection = () => {
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 MyShopping
                             </p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
 
