@@ -95,12 +95,16 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                     </div>
 
                     <div className="flex flex-col  justify-center w-full   text-[#fed52a] gap-y-2 ">
-                        <div className="flex items-center px-4  py-2 gap-x-4   hover:bg-[#fed52a] cursor-pointer hover:text-white">
-                            <MdOutlinePayment size={28} className="text-[" />
+                        <Link
+                            to="/my-ovipay"
+                            onClick={handleToggle}
+                            className="flex items-center px-4  py-2 gap-x-4   hover:bg-[#fed52a] cursor-pointer hover:text-white"
+                        >
+                            <MdOutlinePayment size={28} className="" />
                             <h6 className="text-black text-[14px]">
                                 MY Ovipay
                             </h6>
-                        </div>
+                        </Link>
                         <Link
                             to="/gift-home"
                             onClick={handleToggle}

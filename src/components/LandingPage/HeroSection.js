@@ -2,19 +2,6 @@ import { React, useState } from "react";
 import img1 from "../../assets/img/hero_swiper_image1.png";
 import img2 from "../../assets/img/sidebar_logo.svg";
 
-import { GiRotaryPhone } from "react-icons/gi";
-import { FaGift } from "react-icons/fa";
-import { AiFillPlusSquare } from "react-icons/ai";
-import { FaRegEyeSlash } from "react-icons/fa6";
-import { MdShoppingBag } from "react-icons/md";
-import { BiSolidGift } from "react-icons/bi";
-import { CiWallet } from "react-icons/ci";
-import { RiShoppingBagLine } from "react-icons/ri";
-import { TbCash } from "react-icons/tb";
-import { RiCoupon3Line } from "react-icons/ri";
-
-import { AiOutlineShop } from "react-icons/ai";
-import { HiGiftTop } from "react-icons/hi2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
@@ -24,12 +11,12 @@ import "swiper/css/mousewheel";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
         <>
-            <div className="flex flex-col  items-center justify-center w-full px-3 pt-1 text-black rounded-t-3xl ">
+            <div className="flex flex-col  items-center justify-center w-full mb-4 px-3 pt-1 text-black rounded-t-3xl ">
                 <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-2 pt-3 px-6">
                     <div
                         // style={{

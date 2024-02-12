@@ -1,9 +1,9 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import PopularProducts from "./PopularProducts";
 import Header from "./Header";
 import Footer from "./Footer";
 import RecommendedProducts from "../Global/RecommendedProducts";
+import GiftLikeThis from "./GiftLikeThis";
 
 const Index = () => {
     return (
@@ -11,8 +11,10 @@ const Index = () => {
             <Header />
 
             <HeroSection />
-            <RecommendedProducts />
-            <PopularProducts />
+            <div className="bg-[#FBFBFB]">
+                <RecommendedProducts />
+                <GiftLikeThis />
+            </div>
 
             <div className="mb-[140px]"></div>
 
