@@ -48,6 +48,9 @@ import OvipayWithdrawal from "../Pages/MyOvipay/OvipayWithdrawal";
 import GiftPoints from "../Pages/MyOvipay/GiftPoints";
 import ReservationPage from "../Pages/Reservation/Home";
 import MyCouponPage from "../Pages/MyCoupon/Home";
+import OrderDetails from "../Pages/ShoppingPage/OrderDetails";
+import MethodThree from "../Pages/Gift/MethodThree";
+import CompletePayment from "../Pages/ShoppingPage/CompletePayment";
 
 let routes = [
     {
@@ -170,6 +173,16 @@ let routes = [
         component: ProductDetails,
         layout: "main",
     },
+    {
+        path: "/shopping/order-details",
+        component: OrderDetails,
+        layout: "main",
+    },
+    {
+        path: "/shopping/complete-payment",
+        component: CompletePayment,
+        layout: "main",
+    },
 
     {
         path: "/gift-home",
@@ -229,6 +242,11 @@ let routes = [
     {
         path: "/gift/method-two",
         component: MethodTwo,
+        layout: "main",
+    },
+    {
+        path: "/gift/method-three",
+        component: MethodThree,
         layout: "main",
     },
     {

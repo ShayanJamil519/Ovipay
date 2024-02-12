@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 
 // import required modules
-import RecommendedProducts from "../../components/Global/RecommendedProducts";
 import SortModal from "./Modals/SortModal";
 
 

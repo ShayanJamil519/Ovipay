@@ -1,68 +1,138 @@
-import React, { useState } from 'react'
-import Header from './Header'
-import Footer from './Footer'
-import { FormGroup, Input } from 'reactstrap'
-import { CiSearch } from 'react-icons/ci'
-import { IoOptionsOutline } from "react-icons/io5";
-import product from '../../assets/img/product-item.png'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import React, { useState } from 'react';
+import { PiMagnifyingGlass } from "react-icons/pi";
+import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
+import Footer from './Footer';
+import Header from './Header';
+import SaveHistory from '../../components/SaveHistory';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import FilterModal from '../Gift/Modals/FilterModal';
 
-const ShippingDetails = () => {
-    const [isOpen, setIsOpen] = useState(false)
 
- 
+export default function Shipping() {
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const [isCouponModalOpen, setIsCouponModalOpen] = useState(false);
+  const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
+  const [currentOption, setCurrentOption] = useState(0);
 
-    const toggleOpen = () =>
-    {
-        setIsOpen(!isOpen)
-    }
-      
+  const cardData = [
+    { id: 1, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000원" },
+    { id: 2, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000원" },
+  ];
+
+  const [isToggled, setIsToggled] = useState(false);
+
+  const toggleMenu = (e) => {
+    setCurrentOption(e)
+    setIsToggled(!isToggled);
+  };
+
   return (
     <>
-    <Header/>
-    <div className='flex flex-col items-center justify-center w-full px-4 '>
-     {/* Search bar for items */}
-     <FormGroup className="flex items-center justify-center w-full gap-x-2">
-         <CiSearch size={40} type='submit' className='cursor-pointer bg-[#FED52A] z-10 absolute left-[6.6%] p-2 rounded-xl text-white'/>
-         <Input
-             type="text"
-             placeholder="배송내역 검색..."
-             className="rounded-xl py-[25px] pl-14 border-[#FED52A] w-[95%] text-gray-400 bg-[#ffffff] focus:outline-none "
-         />
-         <Link to='/shopping/filter' className='hover:no-underline'><IoOptionsOutline onClick={toggleOpen} size={47} className='cursor-pointer p-2 rounded-xl text-white bg-[#FED52A]'/> </Link>
-     </FormGroup>
-
-     <h1 className='w-full text-xl font-semibold'>배송내역</h1>
-
-     <div className='flex flex-col items-center justify-center w-full gap-y-2'>
+      <Header />
+      
+      <div className='px-3'>
         
-       <div className='w-[95%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4'>
-         <img src={product} alt="" />
-         <div className='w-full mt-2'>
-             <h6 className='text-lg font-bold text-black'>테스트 상품</h6>
-             <p className='text-sm text-gray-400'>가전제품</p>
-             <div className='flex flex-col items-end justify-center w-full mt-3'>
-             <button className='bg-[#f2f2f2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
-             </div>
-         </div>    
-       </div>
-       <div className='w-[95%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4'>
-         <img src={product} alt="" />
-         <div className='w-full mt-2'>
-             <h6 className='text-lg font-bold text-black'>테스트 상품</h6>
-             <p className='text-sm text-gray-400'>가전제품</p>
-             <div className='flex flex-col items-end justify-center w-full mt-3'>
-             <button className='bg-[#f2f2f2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
-             </div>
-         </div>    
-       </div>
-        
-     </div>
-    </div>
-    <Footer address='account'/>
-    {/* <FilterModal toggle={toggleOpen} isOpen={isOpen}/> */}
+        {/* This div is for input search-bar */}
+        <div className='flex justify-between my-4 rounded-xl '>
+          <div className='rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8]'>
+            <PiMagnifyingGlass
+              size={30}
+              className='text-gray-300 text-start'
+            />
+            <input
+              placeholder='주문내역 검색'
+              className='bg-transparent text-[14px]'
+            />
+          </div>
+
+          <button onClick={()=> setIsOpen(true)}>
+            <HiOutlineAdjustmentsHorizontal
+              size={50}
+              className='bg-[#fed52a] text-white p-[5px] rounded-xl ml-3'
+            />
+          </button>
+        </div>
+
+        <div className="flex gap-2 text-[11px] font-[400]">
+          <span>현재 설정된 필터:</span>
+          <span className="text-[#208AC5]">전체  / 1주일 / 전체</span>
+        </div>
+
+        {/* Save History */}
+        {/* This div is for card */}
+        <div className='flex flex-col items-center justify-center mt-4'>
+                <h1 className='px-2 w-full text-[#464441]'>주문내역</h1>
+                <div className="mb-2 flex items-center w-full mt-3">
+                    <img src="/dot.svg" alt="" className="mr-2" />
+                    <h1 className='text-[#303030] w-full'>쇼핑</h1>
+                </div>
+
+                <div className='w-full flex items-center flex-col'>
+                    {cardData.map((card) => (
+                        <div key={card.id} className='w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4'>
+                            <img src="/card_img.png" alt="" />
+                            <div className='w-full mt-2'>
+                                <p className='flex flex-col items-end justify-center w-full text-[#DC3131] text-[12px]'>{card.expiry}</p>
+                                <p className='text-sm text-[#8D8D8D]'>{card.category}</p>
+                                <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
+                                <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
+                                <div className='flex flex-col items-end justify-center w-full mt-3'>
+                                    <button className='bg-[#FED52A] px-3 text-sm py-1 rounded-xl' onClick={()=> setIsOpen(true)}>쿠폰보기</button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+            {/* See More */}
+            <div className="w-full mt-4">
+                <div className="flex gap-2 border border-[#C8C8C8] items-center justify-center py-3 rounded-[10px]">
+                    <p className="text-[#737373] text-[14px]">더보기</p>
+                    <img src="/arrow_down.svg" alt="" />
+                </div>
+            </div>
+
+            {/* This div is for card */}
+            <div className='flex flex-col items-center justify-center mt-6'>
+                <div className="mb-2 flex items-center w-full">
+                    <img src="/dot.svg" alt="" className="mr-2" />
+                    <h1 className='w-full text-[#464441]'>배송완료내역</h1>
+                </div>
+                <h1 className='text-[#E3BB17] w-full mt-3 font-[600] text-[15px]'>2024. 01. 20</h1>
+
+                <div className='w-full flex items-center flex-col'>
+                    {cardData.map((card) => (
+                        <div key={card.id} className='w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3'>
+                            <img src="/card_img.png" alt="" />
+                            <div className='w-full mt-2'>
+                                <p className='flex flex-col items-end justify-center w-full text-[#5966D7] text-[12px]'>사용완료</p>
+                                <p className='text-sm text-[#8D8D8D]'>{card.category}</p>
+                                <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
+                                <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
+                                <Link to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
+                                    <button className='bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* See More */}
+            <div className="w-full mt-4">
+                <div className="flex gap-2 border border-[#C8C8C8] items-center justify-center py-3 rounded-[10px]">
+                    <p className="text-[#737373] text-[14px]">더보기</p>
+                    <img src="/arrow_down.svg" alt="" />
+                </div>
+            </div>
+      </div>
+
+      {isOpen && <FilterModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+            
+      <Footer address={'account'} />
     </>
-  )
+  );
 }
-
-export default ShippingDetails

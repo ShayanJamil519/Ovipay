@@ -27,7 +27,6 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
                 <p className='text-[17px] text-center my-2'>온가족이 즐기는 <br /> 따뜻하고 오붓한 set!</p>
                 <h1 className='text-[35px] font-[700] text-center'>38,000원</h1>
             </div>
-            <div></div>
 
             <div className="w-[90%] mx-3 mt-16 mb-8">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>

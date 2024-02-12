@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Header from './Header';
 import Footer from './Footer';
+import BankModal from '../Gift/Modals/BankModal';
+import FilterModal from '../Gift/Modals/FilterModal';
+import SortModal from '../Gift/Modals/SortModal';
 
 export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
+    const [isBankOpen, setIsBankOpen] = useState(false);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     const handleThirdButtonClick = () => {
         setShowInputs(!showInputs);
@@ -17,7 +22,7 @@ export default function ConfirmationPayment() {
             {/* This div is for heading and description */}
             <div className='pt-3 pl-3'>
                 <h1 className='font-bold text-[22px]'>결제하기</h1>
-                <p>배달 주소</p>
+                <p className='mt-3 font-semibold'>배달 주소</p>
             </div>
 
             {/* This div is for Cards */}
@@ -25,10 +30,10 @@ export default function ConfirmationPayment() {
             <div className='mx-3'>
                 {/* First Card */}
                 <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl'>
-        <div>
-          <p className='text-lg font-bold'>Home</p>
-          <p>서울특별시 홍길동로 삼겹살</p>
-        </div>
+                    <div>
+                    <p className='text-lg font-bold'>Home</p>
+                    <p>서울특별시 홍길동로 삼겹살</p>
+                    </div>
         <input
           type="radio"
           id="homeRadio"
@@ -90,6 +95,24 @@ export default function ConfirmationPayment() {
                         <span className='h-[15px] w-[30px] bg-[#FED52A] text-[#FED52A] pr-4 rounded-full'></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
+                </div>
+            </div>
+
+            {/* Add Card */}
+            <div className="px-3 mt-8">
+                <h1 className="font-[600] my-4">간편 결제</h1>
+                <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]" onClick={()=> setIsBankOpen(true)}>
+                    <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
+                    <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
+                </div>
+            </div>
+
+            {/* Sort Modal Opens From here */}
+            <div className="px-3 mt-6">
+                <h1 className="mb-3 font-[600]">일반 결제</h1>
+                <div className="flex justify-between border rounded-xl px-4 py-2" onClick={()=> setIsFilterOpen(true)}>
+                    <p className="text-[#A19B91]">은행 선택</p>
+                    <img src="/arrow_down.svg" alt="" />
                 </div>
             </div>
 
@@ -217,11 +240,15 @@ export default function ConfirmationPayment() {
 
             {/* Payment Button */}
             <div className='mx-3 mt-4'>
-                <button className='w-full bg-[#FED52A] py-3 font-extrabold text-[18px] rounded-xl'>결 제</button>
+                <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]'>결 제</button>
             </div>
 
 
         </div>
+
+        {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} />}
+        {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen}/>}
+        
         <Footer address={'none'}/>
      </>
     )

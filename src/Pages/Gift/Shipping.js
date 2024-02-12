@@ -17,7 +17,7 @@ export default function Shipping() {
   const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
   const [currentOption, setCurrentOption] = useState(0);
 
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
 
   const toggleMenu = (e) => {
     setCurrentOption(e)
