@@ -7,7 +7,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import LocationModal from './Modals/LocationModal'
-import CheckoutModal from "./Modals/CheckoutModal";
 
 const Home = () => {
         
@@ -68,7 +67,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Header title="GIFT" />
             <div className="flex flex-col items-center w-full py-4">
                 <div
                     className="flex items-center justify-center w-full hover:no-underline"

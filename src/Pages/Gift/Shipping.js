@@ -26,7 +26,7 @@ export default function Shipping() {
 
   return (
     <>
-      <Header />
+      <Header title="MY GIFT" />
       
       <div className='px-3'>
         

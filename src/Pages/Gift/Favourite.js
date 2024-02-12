@@ -33,7 +33,7 @@ const Favourite = () => {
     ];
     return (
         <>
-            <Header />
+            <Header title="" />
             <div className="flex flex-col items-center justify-center w-full px-3 py-3 gap-y-5">
                 <div className="flex items-center justify-between w-full">
                     <h2 className="text-lg font-semibold">GIFT 찜 리스트</h2>

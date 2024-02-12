@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const products = [
     {
@@ -21,33 +21,19 @@ const products = [
         name: "테스트 상품",
         price: "49,000원",
         image: "/recommended__product__1.png",
-    },
-    {
-        id: 2,
-        category: "Bathroom",
-        name: "테스트 상품",
-        price: "49,000원",
-        image: "/recommended__product__1.png",
-    },
-    {
-        id: 2,
-        category: "Bathroom",
-        name: "테스트 상품",
-        price: "49,000원",
-        image: "/recommended__product__1.png",
-    },
-    {
-        id: 2,
-        category: "Bathroom",
-        name: "테스트 상품",
-        price: "49,000원",
-        image: "/recommended__product__1.png",
-    },
+    }
 ];
 
 const RecommendedProducts = () => {
+
+    const [currentProductIndex, setCurrentProductIndex] = useState(0);
+
+  const handleDotClick = (index) => {
+    setCurrentProductIndex(index);
+  };
+
     return (
-        <div className="px-3 my-6 pt-10 w-full">
+        <div className="px-3 my-6 pt-10 w-full bg-[#FBFBFB]">
             <h1 className=" mb-2 text-[16px] font-medium text-[#464441]">
                 OVI의 추천상품
             </h1>
@@ -60,7 +46,7 @@ const RecommendedProducts = () => {
                             marginRight: "0.7rem", // Adjust as needed for the gap
                             // boxShadow: "2px 2px 30px 0px #0000001A",
                         }}
-                        className="flex flex-col  items-center rounded-[12px] justify-center px-3 pt-4 pb-3"
+                        className="flex flex-col bg-white shadow-md items-center rounded-[12px] justify-center px-3 pt-4 pb-3"
                     >
                         <div className="w-full mb-2">
                             <p className="text-[#8D8D8D] text-[12px] font-[400]">
@@ -82,6 +68,18 @@ const RecommendedProducts = () => {
                             alt="Product"
                         />
                     </div>
+                ))}
+            </div>
+
+            <div className="flex justify-center mt-3">
+                {products.map((_, index) => (
+                <button
+                    key={index}
+                    className={`mx-1 w-2 h-2 rounded-full ${
+                    currentProductIndex === index ? 'bg-[#FED52A]' : 'bg-[#E5E5EA]'
+                    }`}
+                    onClick={() => handleDotClick(index)}
+                />
                 ))}
             </div>
         </div>

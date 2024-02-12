@@ -6,7 +6,7 @@ import logo from '../../assets/img/sidebar_logo.svg'
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import SidebarContain from "../../components/Global/SidebarContain";
 
-export default function Header() {
+export default function Header({title}) {
     const history = useHistory();
 
     const handleBackClick = () => {
