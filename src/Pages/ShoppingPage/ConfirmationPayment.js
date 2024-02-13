@@ -4,16 +4,17 @@ import Header from './Header';
 import Footer from './Footer';
 import BankModal from '../Gift/Modals/BankModal';
 import SortModal from '../Gift/Modals/SortModal';
+import LocationModal from '../Gift/Modals/LocationModal';
+import CardPaymentPopup from './Popups/CardPaymentPopup';
 
 export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
     const [isBankOpen, setIsBankOpen] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [isLocationOpen, setIsLocationOpen] = useState(false);
+    const [isPaymentOpen, setIsPaymentOpen] = useState(false);
     const [currentOption, setCurrentOption] = useState(0);
 
-    const handleThirdButtonClick = () => {
-        setShowInputs(!showInputs);
-    };
     return (
         <>
         <Header title="쇼 핑" showHamburger={true} />
@@ -29,7 +30,7 @@ export default function ConfirmationPayment() {
 
             <div className='mx-3'>
                 {/* First Card */}
-                <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl'>
+                <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl' onClick={() =>setIsLocationOpen(true)}>
                     <div>
                         <p className='text-lg font-bold'>Home</p>
                         <p>서울특별시 홍길동로 삼겹살</p>
@@ -77,23 +78,23 @@ export default function ConfirmationPayment() {
                 {/* This div is for three buttons */}
                 <div className='flex justify-between gap-x-1'>
                     {/* First Button */}
-                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 0 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                         <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A] border-solid border-2 border-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
 
-                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 1 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                         <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
-                        <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
+                        <p className='pt-3 pb-2 text-[13px] font-semibold'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
 
-                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 2 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
                         <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
-                        <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
+                        <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                     </button>
                 </div>
             </div>
@@ -241,7 +242,7 @@ export default function ConfirmationPayment() {
 
             {/* Payment Button */}
             <div className='mx-3 mt-4'>
-                <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]'>결 제</button>
+                <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]' onClick={()=> setIsPaymentOpen(true)}>결 제</button>
             </div>
 
 
@@ -249,6 +250,8 @@ export default function ConfirmationPayment() {
 
         {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} />}
         {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen} />}
+        {isLocationOpen && <LocationModal isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
+        {isPaymentOpen && <CardPaymentPopup isOpen={isPaymentOpen} />}
         
         <Footer address={'none'}/>
      </>

@@ -11,6 +11,7 @@ import "swiper/css/mousewheel";
 // import required modules
 import Footer from "./Footer";
 import RecommendedProducts from "../../components/Global/RecommendedProducts";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const Home = () => {
     
@@ -196,7 +197,8 @@ const Home = () => {
                     </h1>
                     <div className="flex space-x-4 p-4">
                         {firstProducts.map((product) => (
-                            <div
+                            <Link
+                                to="/shopping/product-details"
                                 key={product.id}
                                 className="relative flex-shrink-0 w-36"
                             >
@@ -226,7 +228,7 @@ const Home = () => {
                                         {product.description}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -240,7 +242,8 @@ const Home = () => {
                     </h1>
                     <div className="flex flex-col space-y-4 px-4 pb-4 pt-3">
                         {firstProducts.map((product) => (
-                            <div
+                            <Link
+                                to="/shopping/product-details"
                                 key={product.id}
                                 className="flex border-b pb-3"
                             >
@@ -276,7 +279,7 @@ const Home = () => {
                                         {product.price}원
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -295,7 +298,8 @@ const Home = () => {
                     </div>
                     <div className="flex flex-wrap justify-between gap-3 p-4">
                         {secondProducts.slice(0, displayedProducts).map((product) => (
-                            <div
+                            <Link
+                                to="/shopping/product-details"
                                 key={product.id}
                                 className="relative flex-shrink-0 w-[30%] mb-4"
                             >
@@ -325,7 +329,7 @@ const Home = () => {
                                         {product.description}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -56,10 +56,7 @@ const ProductDetails = () => {
           </div>
           <div className='flex items-center gap-x-1'>
             <IoIosStar size={17} className='text-[#FED52A]'/>
-            <IoIosStar size={17} className='text-[#FED52A]'/>
-            <IoIosStar size={17} className='text-[#FED52A]'/>
-            <IoIosStar size={17} className='text-[#FED52A]'/>
-            <IoIosStar size={17} className='text-[#FED52A]'/>
+            <span>5</span>
           </div>
         </div>
 

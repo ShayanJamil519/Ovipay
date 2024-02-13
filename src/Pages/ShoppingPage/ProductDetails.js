@@ -18,7 +18,7 @@ import { IoIosStar } from 'react-icons/io';
 const GiftProductDetails = () => {
   return (
     <>
-    <Header/>
+    <Header title="쇼 핑" showHamburger={true} />
     <div className='w-full '>
         
     <div className='flex items-center justify-center w-full mt-12'>
@@ -48,10 +48,7 @@ const GiftProductDetails = () => {
     </div>
     <div className='flex items-center gap-x-1'>
     <IoIosStar size={17} className='text-[#FED52A]'/>
-    <IoIosStar size={17} className='text-[#FED52A]'/>
-    <IoIosStar size={17} className='text-[#FED52A]'/>
-    <IoIosStar size={17} className='text-[#FED52A]'/>
-    <IoIosStar size={17} className='text-[#FED52A]'/>
+    <span>5</span>
     </div>
   </div>
 

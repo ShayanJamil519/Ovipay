@@ -26,8 +26,8 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
             <div className='flex items-center justify-center flex-col mt-16'>
                 <img src="/barcode.svg" alt="" style={{height: '10%'}} />
                 <img src="/dish.png" alt="" style={{height: '20vh'}} />
-                <p className='text-[17px] text-center my-2'>온가족이 즐기는 <br /> 따뜻하고 오붓한 set!</p>
-                <h1 className='text-[35px] font-[700] text-center'>38,000원</h1>
+                <p className='text-[17px] text-center my-2 text-[#696969]'>온가족이 즐기는 <br /> 따뜻하고 오붓한 set!</p>
+                <h1 className='text-[35px] font-[700] text-center text-[#464441]'>38,000원</h1>
             </div>
 
             {/* Radio Options */}
@@ -36,14 +36,14 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
               <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
                   <input
                       type="radio"
-                      id="homeRadio"
-                      name="location"
+                      id="receiptRadio"
+                      name="receipt"
                       value="home"
                       className='p-1 sr-only' 
                   />
                   <label
                       id="homeLabel"
-                      htmlFor="homeRadio"
+                      htmlFor="receiptRadio"
                       className='p-1 radio-label' 
                   ></label>
                   <p className='font-[600]'>현금영수증 발행 안함</p>
@@ -54,14 +54,14 @@ const CheckoutModal = ({isOpen, setIsOpen}) => {
                 <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
                     <input
                         type="radio"
-                        id="homeRadio"
-                        name="location"
+                        id="businessRadio"
+                        name="business"
                         value="home"
                         className='p-1 sr-only' 
                     />
                     <label
                         id="homeLabel"
-                        htmlFor="homeRadio"
+                        htmlFor="businessRadio"
                         className='p-1 radio-label' 
                     ></label>
                     <p className='font-[600]'>현금영수증 발행 안함</p>

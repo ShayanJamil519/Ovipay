@@ -7,9 +7,9 @@ const LocationModal = ({isOpen, setIsOpen}) => {
   const popupRef = useRef();
 
     const results=[
-        { heading: "Home", subtitle: "서울특별시 홍길동로 삼겹살" },
-        { heading: "서울특별시 홍길동로 삼겹살", subtitle: "서울특별시 홍길동로 삼겹살 곱창 보쌈 201호" },
-        { heading: "서울특별시 홍길동로 삼겹살", subtitle: "서울특별시 홍길동로 삼겹살 곱창 보쌈 201호" }
+        { heading: "Home", subtitle: "서울특별시 홍길동로 삼겹살", image: '/gps_yellow.svg' },
+        { heading: "서울특별시 홍길동로 삼겹살", subtitle: "서울특별시 홍길동로 삼겹살 곱창 보쌈 201호", image: '/marker.svg' },
+        { heading: "서울특별시 홍길동로 삼겹살", subtitle: "서울특별시 홍길동로 삼겹살 곱창 보쌈 201호", image: '/marker.svg' }
     ];
 
   const handleClosePopup = (e) => {
@@ -24,10 +24,10 @@ const LocationModal = ({isOpen, setIsOpen}) => {
     <div className="fixed bottom-0 left-0 right-0 bg-black bg-opacity-50 z-50 h-full" onClick={handleClosePopup}>
       <div
         ref={popupRef}
-        className={`fixed bottom-0 left-0 right-0 bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-3xl border-2 ${
+        className={`fixed bottom-0 left-0 right-0 bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-2xl border-2 ${
           isOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
-        style={{ minHeight: '75vh' }}
+        style={{ minHeight: '85vh' }}
       >
         <div className='flex flex-col'>
             <div className="w-full my-2">
@@ -87,10 +87,10 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                     <div key={index} className="flex border-b py-3 px-3 justify-between">
                         <div>
                             <div className='flex gap-3 items-start'>
-                                <img src="/marker.svg" alt="" className='flex items-start justify-start h-4 mt-1' />
+                                <img src={result.image} alt="" className='flex items-start justify-start h-4 mt-1' />
                                 <div className="">
-                                    <p className="text-[14px]">{result.heading}</p>
-                                    <p className='text-[12px] text-[#AAAAAA]'>{result.subtitle}</p>
+                                    <p className="text-[14px] font-bold">{result.heading}</p>
+                                    <p className='text-[12px] font-[400] text-[#AAAAAA]'>{result.subtitle}</p>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,30 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                         </div>
                     </div>
                 ))}
-            </div>          
+            </div>
+            
+            <div className='bg-[#F2F3F7] h-2'></div>
+
+            <div className='px-3'>
+                    <div className="flex border-b py-3 px-3 justify-between">
+                        <div>
+                            <div className='flex gap-3 items-start'>
+                                <img src="/gps_yellow.svg" alt="" className='flex items-start justify-start h-4 mt-1' />
+                                <div className="">
+                                    <p className="text-[14px] font-bold">Office</p>
+                                    <p className='text-[12px] font-[400] text-[#AAAAAA]'>서울특별시 홍길동로 여기는 회사</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center">
+                            <input
+                                type="checkbox"
+                                id="giftCheckbox"
+                                class="border-[#FED52A] p-2 h-5 w-5 checked:bg-[#FED52A] checked:text-[#FED52A]"
+                            />
+                        </div>
+                    </div>
+            </div>
 
         </div>
       </div>

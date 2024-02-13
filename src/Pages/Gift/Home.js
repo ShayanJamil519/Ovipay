@@ -12,6 +12,8 @@ const Home = () => {
         
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
+    const [liked, setLiked] = useState();
+    
     const cards = [
         {
             id: 0,
@@ -88,12 +90,12 @@ const Home = () => {
                     <Input
                         type="text"
                         placeholder="GIFT로 마음을 나누세요...."
-                        className="rounded-xl py-[25px] pl-14 border-[#FED52A] w-[95%] text-gray-400 bg-[#ffffff] focus:outline-none "
+                        className="rounded-xl py-[25px] pl-14 w-[95%] text-gray-400 bg-[#ffffff] focus:outline-none "
                     />
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-3 gap-y-5">
+                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-2 gap-y-5">
                     {filters.map((filter, index) => (
                         <h6
                         key={index}
@@ -105,7 +107,7 @@ const Home = () => {
                             selectedCategory === filter.name
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[12px] shadow-md`}
+                        } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
                         >
                         {filter.name}
                         </h6>
@@ -117,11 +119,11 @@ const Home = () => {
                         {products.map((product) => (
                             <div key={product.id} className="relative flex-shrink-0 w-36">
                                 <img src={product.image} alt={product.title} className="w-full h-36 object-cover rounded-lg" />
-                                <div className="absolute top-2 left-2 bg-[#FED52A] text-white px-2 rounded-[5px]">
+                                <div className="absolute top-2 left-2 bg-[#FFB800] text-white px-2 rounded-[5px]">
                                     <span className="text-[14px] font-[900]">{product.id}</span>
                                 </div>
-                                <div className="absolute top-2 right-2">
-                                    <img src="/heart.svg" alt="Heart" className="w-6 h-6" />
+                                <div className="absolute top-2 right-2" onClick={() => setLiked(product.id)}>
+                                    <img src={`${liked === product.id ? '/heart_filled.svg' : '/heart.svg'}`} alt="Heart" className="w-6 h-6" />
                                 </div>
                                 <div className="p-2">
                                     <p className="text-[14px] font-semibold mb-1"><span className="text-[#F6C700] mr-2">{product.discount}</span>{product.price}</p>
@@ -143,9 +145,10 @@ const Home = () => {
                             <Link
                                 to="/gift/gift-product-details"
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-[#C4C4C4] rounded-3xl h-[250px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
+                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-[#C4C4C4] border rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
+                                style={{background: "linear-gradient(2.5deg, #000000 -47.86%, rgba(0, 0, 0, 0) 100%)"}}
                             >
-                                <h1 className="text-[14px] font-[600] text-white">기프티콘 테스트</h1>
+                                <p className="text-[14px] font-[600] text-white">기프티콘 테스트</p>
                                 <p className="text-gray-100">치킨</p>
                             </Link>
                         ))}
