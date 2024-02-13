@@ -9,13 +9,13 @@ const DeliveryTracking = () => {
             <Header title="상세내역" showHamburger={true} />
 
             <div className="w-[90%] mx-auto pt-3 ">
-                <h1 className="text-[16px] text-[#464441]">배송중인 상품</h1>
+                <h1 className="text-[16px] text-[#464441] mb-4">배송중인 상품</h1>
                 <div
                     // to="/shopping/product-details"
                     style={{
                         boxShadow: "2px 2px 5px 0px #0000001A",
                     }}
-                    className=" w-full rounded-[12px] relative flex justify-start items-center gap-x-3 p-3 bg-[#fff]"
+                    className=" w-full rounded-[12px] relative flex justify-start shadow-lg items-center gap-x-3 p-3 bg-[#fff]"
                 >
                     <img src={product} alt="logo" />
                     <div className="w-full mt-2">

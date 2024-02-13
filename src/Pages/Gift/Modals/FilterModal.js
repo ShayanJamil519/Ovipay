@@ -56,7 +56,7 @@ const filterOne = [
             <div className="my-4">
                 <h1 className="px-4 py-1 font-[600]">가격대별</h1>
                 <div className="overflow-x-auto whitespace-nowrap">
-                    <div className="flex items-center px-3 mt-2 font-bold gap-x-2 gap-y-5">
+                    <div className="flex items-center px-3 mt-2 font-bold gap-y-5">
                         {filterOne.map((filter, index) => (
                         <h6
                             key={index}
@@ -81,7 +81,7 @@ const filterOne = [
             <div className="mt-2 mb-6">
                 <h1 className="px-4 py-1 font-[600]">기간</h1>
                 <div className="overflow-x-auto whitespace-nowrap">
-                    <div className="flex items-center px-3 mt-2 font-bold gap-x-2 gap-y-5">
+                    <div className="flex items-center px-3 mt-2 font-bold gap-y-5">
                         {filters.map((filter, index) => (
                             <h6
                                 key={index}
@@ -126,6 +126,7 @@ const filterOne = [
             <div className="w-[90%] mx-3 mt-8 mb-4">
                 <button
                     className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
+                    onClick={()=>setIsOpen(false)}
                 >
                     적 용
                 </button>
