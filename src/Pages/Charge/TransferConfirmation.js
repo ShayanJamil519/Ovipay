@@ -1,13 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const TransferConfirmation = () => {
   return (
     <>
             {/* Header */}
-            <div className="flex items-center justify-center mb-6 relative mx-4 mt-4">
-                <img src="/back.svg" alt="" className="absolute left-0 top-1" />
-                <p className="text-[17px] font-[700] text-black">계좌이체</p>
-            </div>
+            <Header />
 
 
             <div className="h-custom flex items-center flex-col">
@@ -18,15 +16,15 @@ const TransferConfirmation = () => {
                     <p className='text-[#A19B91] text-[12px] text-center mt-8'>MY Ovipay에서 충전내역을 확인해 보실 수 있습니다.</p>
                 </div>
                 
-                <div className="w-[90%] mx-3 mt-16 absolute bottom-[10%]">
+                <div className="w-[90%] mx-3 mt-16 absolute bottom-[8%]">
                     <div className='flex flex-col items-center justify-center mb-10 w-full px-2 gap-4'>
                         <div className='flex justify-between w-full items-start'>
-                            <p>충전계좌</p>
-                            <p>국민000</p>
+                            <p className='text-[#676767] text-[14px]'>충전계좌</p>
+                            <p className='text-[#676767] text-[14px]'>국민000</p>
                         </div>
                         <div className='flex justify-between w-full items-end'>
-                            <p>거래 후 잔액</p>
-                            <p>200,683원</p>
+                            <p className='text-[#676767] text-[14px]'>거래 후 잔액</p>
+                            <p className='text-[#676767] text-[14px]'>200,683원</p>
                         </div>
                     </div>
                     <button

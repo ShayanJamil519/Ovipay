@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import ConfirmationDone from "../../components/modals/ConfirmationDone";
 import ConfirmationModal from "../../components/modals/ConfirmationModal";
 import Header from "./Header";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 export default function BarPage() {
     const [confirm, setConfirm] = useState(false);
+    const [currentOption, setCurrentOption] = useState(0);
     const [done, setDone] = useState(false);
     const [balance, setBalance] = useState(100682);
 
@@ -85,15 +87,15 @@ export default function BarPage() {
                     {/* This div is for three buttons */}
                     <div className='flex gap-x-3'>
                         {/* First Button */}
-                        <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                            <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                            <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>계좌이체</p>
                         </button>
 
                         {/* Second Button */}
 
-                        <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                            <span className='h-[15px] w-[30px] bg-[#DDDDDD] text-[#DDDDDD] pr-4 rounded-full'></span>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                            <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                         </button>
 
@@ -105,7 +107,7 @@ export default function BarPage() {
                     <div className="font-[600]">계좌</div>
                     <div className="flex items-center justify-between mt-2">
                         <p className="text-[#676767] text-[14px]">충전계좌</p>
-                        <div className="flex  gap-2 text-[#676767] text-[14px]">없음 <img src="/downarrow.svg" alt="" /></div>
+                        <Link to="/charge/confirmation" className="flex  gap-2 text-[#676767] text-[14px]">없음 <img src="/downarrow.svg" alt="" /></Link>
                     </div>
                 </div>
 
@@ -126,7 +128,7 @@ export default function BarPage() {
                     <div className="flex flex-col mt-2">
                         <input
                             placeholder="계좌번호 입력"
-                            className="flex-grow border border-[#ECECEA] px-2 h-[45px] rounded-xl" 
+                            className="flex-grow border-2 border-blue-300 outline-none px-2 h-[45px] rounded-xl" 
                         />
                     </div>
                 </div>
@@ -134,14 +136,14 @@ export default function BarPage() {
                 
                 {/* The last button of the page */}
 
-                <div className="mx-3 mt-16 bot">
+                <Link to="/charge/account-transfer" className="mx-3 mt-16 bot mb-12">
                     <button
                         onClick={toggleConfirm}
-                        className="bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px] w-full"
+                        className="bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px] w-[91%]"
                     >
                         충전하기
                     </button>
-                </div>
+                </Link>
             </div>
 
             <ConfirmationDone isOpen={done} toggle={toggleDone} />

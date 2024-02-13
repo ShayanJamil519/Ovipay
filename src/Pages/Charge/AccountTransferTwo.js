@@ -1,13 +1,12 @@
 import React from 'react'
+import Header from './Header'
+import { Link } from 'react-router-dom/cjs/react-router-dom'
 
 const AccountTransferTwo = () => {
   return (
     <>
             {/* Header */}
-            <div className="flex items-center justify-center mb-6 relative mx-4 mt-4">
-                <img src="/back.svg" alt="" className="absolute left-0 top-1" />
-                <p className="text-[17px] font-[700] text-black">계좌이체</p>
-            </div>
+            <Header />
 
 
             <div className="h-custom flex items-center justify-center flex-col">
@@ -22,17 +21,17 @@ const AccountTransferTwo = () => {
                 </div>
 
                 <div className='mt-24'>
-                    <p className='text-[#D61919] font-[700] text-[14px]'>이 정보가 아니예요! {'>'}</p>
+                    <p className='text-[#D61919] font-[700] text-[14px] mb-16'>이 정보가 아니예요! {'>'}</p>
                 </div>
 
                 
-                <div className="w-[90%] mx-3 mt-16 absolute bottom-[10%]">
+                <Link to="/charge/account-transfer-three" className="w-[90%] mx-3 absolute bottom-[10%]">
                     <button
-                        className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px] w-full"
+                        className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
                     >
                         인증 전화 요청
                     </button>
-                </div>
+                </Link>
             </div>
         </>
   )

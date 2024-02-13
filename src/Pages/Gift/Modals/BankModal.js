@@ -22,30 +22,30 @@ const BankModal = ({isOpen, setIsOpen}) => {
         >
 
           <div className="bg-white rounded-t-xl px-6 py-4 shadow-xl">
-            <h1 className="mb-4 font-[600]">카드 추가</h1>
+            <h1 className="mb-4 font-bold text-[16px]">카드 추가</h1>
             <div className="mb-4">
-              <label className="block text-[#444444] text-[14px] font-bold mb-1">카드번호</label>
+              <label className="block text-[#444444] text-[14px] font-[400] mb-1">카드번호</label>
               <div className="flex justify-between gap-3">
                 <input
-                  className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
+                  className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
                   id="firstName"
                   type="number"
                   placeholder="0000"
                 />
                 <input
-                  className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
+                  className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
                   id="lastName"
                   type="number"
                   placeholder="0000"
                 />
                 <input
-                  className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
+                  className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
                   id="lastName"
                   type="text"
                   placeholder="0000"
                 />
                 <input
-                  className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
+                  className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 focus:outline-none"
                   id="lastName"
                   type="text"
                   placeholder="0000"
@@ -54,18 +54,18 @@ const BankModal = ({isOpen, setIsOpen}) => {
             </div>
             <div className="flex mb-4 gap-3">
                 <div>
-                    <label className="block text-[#444444] text-[14px] font-bold mb-1">유효기간</label>
+                    <label className="block text-[#444444] text-[14px] font-[400] mb-1">유효기간</label>
                     <input
-                        className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
+                        className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
                         id="email"
                         type="email"
                         placeholder="MMYY"
                     />
                 </div>
                 <div>
-                    <label className="block text-[#444444] text-[14px] font-bold mb-1">CVC</label>
+                    <label className="block text-[#444444] text-[14px] font-[400] mb-1">CVC</label>
                     <input
-                        className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
+                        className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
                         id="email"
                         type="email"
                         placeholder="카드 뒷면 3자리 숫자"
@@ -73,16 +73,16 @@ const BankModal = ({isOpen, setIsOpen}) => {
                 </div>
             </div>
             <div className="mb-12">
-              <label className="block text-[#444444] text-[14px] font-bold mb-1">카드 비밀번호</label>
+              <label className="block text-[#444444] text-[14px] font-[400] mb-1">카드 비밀번호</label>
               <input
-                className="bg-[#F4F4F4] appearance-none border border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
+                className="bg-[#F4F4F4] appearance-none border-2 border-[#FED52A] rounded-[12px] w-full py-2 px-3 text-[#B9B9B9] focus:outline-none focus:shadow-outline"
                 id="password"
                 type="password"
                 placeholder="비밀번호 앞 2자리 숫자"
               />
             </div>
               <button
-                  className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[30px] font-bold text-[18px]"
+                  className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[30px] font-bold text-[18px]"
               >
                   카드추가
               </button>

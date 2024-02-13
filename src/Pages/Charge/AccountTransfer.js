@@ -1,16 +1,15 @@
 import React from 'react'
+import Header from './Header'
+import { Link } from 'react-router-dom/cjs/react-router-dom'
 
 const AccountTransfer = () => {
   return (
     <div className='relative h-screen'>
             {/* Header */}
-            <div className="flex items-center justify-center mb-6 relative mx-4 mt-4">
-                <img src="/back.svg" alt="" className="absolute left-0 top-1" />
-                <p className="text-[17px] font-[700] text-black">계좌이체</p>
-            </div>
+            <Header />
 
 
-            <div className="h-screen">
+            <div className="">
                 <div className="flex mx-4 flex-col mb-4 mt-12">
                     <div className="font-[600]">계좌인증</div>
                     <div className="flex flex-col mt-2">
@@ -28,13 +27,13 @@ const AccountTransfer = () => {
                 
                 {/* The last button of the page */}
 
-                <div className="w-[90%] mx-3 mt-16 absolute bottom-[10%]">
+                <Link to="/charge/account-transfer-two" className="w-[90%] mx-3 absolute bottom-[20%]">
                     <button
-                        className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px] w-full"
+                        className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
                     >
                         다음
                     </button>
-                </div>
+                </Link>
             </div>
         </div>
   )

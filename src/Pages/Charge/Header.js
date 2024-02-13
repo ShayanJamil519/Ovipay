@@ -6,7 +6,7 @@ import logo from '../../assets/img/sidebar_logo.svg'
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import SidebarContain from "../../components/Global/SidebarContain";
 
-export default function Header() {
+export default function Header({title, showHamburger}) {
   const history = useHistory();
 
   const handleBackClick = () => {
@@ -45,15 +45,21 @@ export default function Header() {
 
     <nav className='w-full px-2 py-3 bg-white md:py-9 md:px-6 '>
     <div  className="container flex items-center justify-between p-0">
-    <IoIosArrowBack onClick={handleBackClick} size={35} className='rounded-full p-1 bg-[#f6f6f6] cursor-pointer text-black/75'/>
+    <IoIosArrowBack onClick={handleBackClick} size={35} className='p-1 cursor-pointer text-black/75'/>
    
 
-    <h6 className="text-xl font-bold text-black">오비페이 충전</h6>
+    <h6 className="text-xl font-bold text-black">계좌이체</h6>
 
     
 
     {/* menu icon */}
-    <IoMenu onClick={handleMenu} size={35} className='rounded-full p-1 bg-[#f6f6f6] cursor-pointer text-black/75'/>
+    <IoMenu
+                            onClick={handleMenu}
+                            size={35}
+                            className={`rounded-full p-1  ${
+                                showHamburger ? "" : "invisible"
+                            } cursor-pointer text-black/75`}
+                        />
     </div>
 
     

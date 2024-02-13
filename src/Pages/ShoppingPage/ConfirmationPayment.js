@@ -9,6 +9,7 @@ export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
     const [isBankOpen, setIsBankOpen] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [currentOption, setCurrentOption] = useState(0);
 
     const handleThirdButtonClick = () => {
         setShowInputs(!showInputs);
@@ -76,44 +77,45 @@ export default function ConfirmationPayment() {
                 {/* This div is for three buttons */}
                 <div className='flex justify-between gap-x-1'>
                     {/* First Button */}
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                        <span className='h-[15px] w-[30px] bg-[#FED52A] pr-4 rounded-full'></span>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A] border-solid border-2 border-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
 
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl'>
-                        <span className='h-[15px] w-[30px] bg-[#FED52A] text-[#FED52A] pr-4 rounded-full'></span>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
 
                     {/* Third Button */}
 
-                    <button className='flex flex-col justify-start px-4 pt-3 border rounded-xl' onClick={handleThirdButtonClick}>
-                        <span className='h-[15px] w-[30px] bg-[#FED52A] text-[#FED52A] pr-4 rounded-full'></span>
+                    <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                        <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
                 </div>
             </div>
 
-            {/* Add Card */}
-            <div className="px-3 mt-8">
-                <h1 className="font-[600] my-4">간편 결제</h1>
-                <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]" onClick={()=> setIsBankOpen(true)}>
-                    <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
-                    <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
-                </div>
-            </div>
+            <div className='px-3'>
+                    <div className="w-full">
+                        <h1 className="font-[600] my-4">간편 결제</h1>
+                        <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]" onClick={()=> setIsBankOpen(true)}>
+                            <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
+                            <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
+                        </div>
+                    </div>
 
-            {/* Sort Modal Opens From here */}
-            <div className="px-3 mt-6">
-                <h1 className="mb-3 font-[600]">일반 결제</h1>
-                <div className="flex justify-between border rounded-xl px-4 py-2" onClick={()=> setIsFilterOpen(true)}>
-                    <p className="text-[#A19B91]">은행 선택</p>
-                    <img src="/arrow_down.svg" alt="" />
+                    <div className="mt-4">
+                        <h1 className="mb-3 font-[600]">일반 결제</h1>
+                        <div className="flex justify-between border rounded-xl px-4 py-2" onClick={()=> setIsFilterOpen(true)}>
+                            <p className="text-[#A19B91]">은행 선택</p>
+                            <img src="/arrow_down.svg" alt="" />
+                        </div>
+                    </div>
                 </div>
-            </div>
+
 
             <div>
                 {showInputs && (
@@ -231,7 +233,7 @@ export default function ConfirmationPayment() {
                     <p>3,000원</p>
                 </div>
                 {/* Third Row */}
-                <div className='flex justify-between font-semibold'>
+                <div className='flex justify-between font-semibold mt-3'>
                     <p className='font-bold'>Total</p>
                     <p className='font-bold text-[18px]'>28,000원</p>
                 </div>
@@ -246,7 +248,7 @@ export default function ConfirmationPayment() {
         </div>
 
         {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} />}
-        {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen}/>}
+        {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen} />}
         
         <Footer address={'none'}/>
      </>
