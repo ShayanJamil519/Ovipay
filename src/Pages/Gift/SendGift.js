@@ -160,7 +160,7 @@ const SendGift = () => {
                                 </SwiperSlide>
                             ))}
                             <div className="h-[40px] "></div>
-                        </Swiper>
+                    </Swiper>
 
                     <div className="mt-4">
                         <h1 className="mb-3 font-[600]">일반 결제</h1>

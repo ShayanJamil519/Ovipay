@@ -53,6 +53,7 @@ import AffiliatedStores from "../Pages/Affiliated/AffiliatedStore";
 import StoreDetails from "../Pages/Affiliated/StoreDetails";
 import DeliveryTracking from "../Pages/ShoppingPage/DeliveryTracking";
 import CompletePaymentOne from "../Pages/ShoppingPage/CompletePaymentOne";
+import OtherCategories from "../Pages/ShoppingPage/OtherCategories";
 
 let routes = [
     {
@@ -153,6 +154,11 @@ let routes = [
     {
         path: "/shopping-home",
         component: shoppingPage,
+        layout: "main",
+    },
+    {
+        path: "/shopping-other",
+        component: OtherCategories,
         layout: "main",
     },
     {

@@ -3,6 +3,13 @@ import Header from './Header'
 import { Button } from 'reactstrap'
 import BankModal from './Modals/BankModal'
 import SortModal from './Modals/SortModal'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/mousewheel";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 const Payment = () => {
 
@@ -57,17 +64,32 @@ const Payment = () => {
             {
                 currentOption === 1 &&
                 <>
-                    <div className="w-full">
-                        <h1 className="font-[600] my-4">간편 결제</h1>
-                        <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]" onClick={()=> setIsBankModalOpen(true)}>
-                            <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
-                            <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
-                        </div>
-                    </div>
+                    <h1 className="font-[600] mt-4">간편 결제</h1>
+                    <Swiper
+                    slidesPerView={1}
+                    pagination={true}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                    className=" w-full  "
+                >
+                    {[1, 2, 3].map((item, index) => (
+                        <SwiperSlide
+                            key={index}
+                            className="flex items-center justify-center "
+                        >
+                            <div className="w-full">
+                                <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]">
+                                    <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
+                                    <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
+                                </div>
+                            </div>
+                                </SwiperSlide>
+                            ))}
+                            <div className="h-[40px] "></div>
+                    </Swiper>
 
                     <div className="mt-4">
                         <h1 className="mb-3 font-[600]">일반 결제</h1>
-                        <div className="flex justify-between border rounded-xl px-4 py-2" onClick={()=> setIsSortModalOpen(true)}>
+                        <div className="flex justify-between border rounded-xl px-4 py-2">
                             <p className="text-[#A19B91]">은행 선택</p>
                             <img src="/arrow_down.svg" alt="" />
                         </div>
