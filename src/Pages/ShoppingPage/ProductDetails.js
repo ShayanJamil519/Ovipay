@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,8 +14,13 @@ import product from '../../assets/img/empty-product.png'
 import {  Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { IoIosStar } from 'react-icons/io';
+import ProductDetailPopup from './Popups/ProductDetailPopup';
 
 const GiftProductDetails = () => {
+
+  const [liked, setLiked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <>
     <Header title="쇼 핑" showHamburger={true} />
@@ -52,23 +57,35 @@ const GiftProductDetails = () => {
     </div>
   </div>
 
-  <div className='flex items-center justify-center w-full mt-12 overflow-scroll gap-x-4'>
-    <img src={product} alt="" />
-    <img src={product} alt="" />
-    <img src={product} alt="" />
-    <img src={product} alt="" />
-    <img src={product} alt="" />
-  </div>
+    <div className='flex items-center justify-center w-full mt-12 overflow-scroll gap-x-4'>
+      <img src={product} alt="" />
+      <img src={product} alt="" />
+      <img src={product} alt="" />
+      <img src={product} alt="" />
+      <img src={product} alt="" />
+    </div>
 
-  <p className='mt-4 text-xl w-[87%] px-4 '>여기서는 상품에 대한 상세 소개가 있을 예정
-일반적인 상품 상세페이지라고 
-생각하시면 됩니다.</p>
+    <p className='mt-4 text-xl w-[87%] px-4 '>여기서는 상품에 대한 상세 소개가 있을 예정
+      일반적인 상품 상세페이지라고 
+      생각하시면 됩니다.
+    </p>
 
-  <div className='flex items-center justify-between w-full px-3 mb-2 mt-14'>
-    <h4 className='text-2xl font-bold'>35,000원</h4>
-    <Link to='/shopping/mycart' className='hover:no-underline' ><button className='px-14 text-sm font-bold py-3 text-black rounded-3xl bg-[#FED52A]'>장바구니</button></Link>
-  </div>
-  </div>
+    <p className="w-full text-right px-4 mt-12 mb-3 text-[25px] font-[700] text-[#464441]">35,000원</p>
+
+      <div className='flex items-center justify-between w-full px-3 mb-2'>
+        <div className='bg-[#373535] h-[50px] flex items-center justify-center w-[50px] rounded-full' onClick={()=> setLiked(!liked)}>
+          <img src={`${liked ? '/heart_filled.svg' : '/heart_outline.svg'} `} alt="" className={`${liked && 'h-6'}`} />
+        </div>
+        <div className='hover:no-underline w-[80%]'>
+          <button className='px-14 text-sm font-bold py-3 text-black rounded-3xl bg-[#FED52A] w-full' onClick={()=> setIsOpen(true)}>
+            장바구니
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {isOpen && <ProductDetailPopup setIsOpen={setIsOpen} />}
+    
     <Footer address='home'/>
     </>
   )

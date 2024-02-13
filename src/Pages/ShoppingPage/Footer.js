@@ -14,12 +14,18 @@ const Footer = ({address}) => {
     <Link to='/shopping-home'><div className={`${address === 'home' ? 'bg-[#FED52A] rounded-xl  text-white' : 'text-gray-400 hover:text-[#FED52A] bg-white'} flex flex-col items-center justify-center  gap-y-1`}>
         <IoHomeOutline size={45} className='p-2 cursor-pointer'/>
       </div></Link>
+      
       <Link to='/shopping/favourte'><div className={`${address === 'favourite' ? 'bg-[#FED52A]  rounded-xl text-white' : 'text-gray-400 hover:text-[#FED52A] bg-white'} flex flex-col items-center justify-center  gap-y-1`}>
         <FaRegHeart size={45} className='p-2 cursor-pointer'/>
       </div></Link>
-      <Link to='/shopping/mycart'><div className={`${address === 'shopping' ? 'bg-[#FED52A]  rounded-xl text-white' : 'text-gray-400 hover:text-[#FED52A] bg-white'} flex flex-col items-center justify-center  gap-y-1`}>
-        <TiShoppingCart size={45} className='p-2 cursor-pointer'/>
-      </div></Link>
+      
+      <Link to='/shopping/mycart'>
+        <div className={`${address === 'shopping' ? 'bg-[#FED52A] rounded-xl text-white' : 'text-gray-400 hover:text-[#FED52A] bg-white'} relative flex items-center justify-center gap-y-1`}>
+          <TiShoppingCart size={45} className='p-2 cursor-pointer'/>
+            <span className="absolute top-[-8px] right-[-6px] bg-[#292929] text-white rounded-full px-2 py-1 text-xs">4</span>
+        </div>
+      </Link>
+      
       <Link to='/shopping/delivery-details'> <div className={`${address === 'account' ? 'bg-[#FED52A]  rounded-xl text-white' : 'text-gray-400 hover:text-[#FED52A] bg-white'} flex flex-col items-center justify-center  gap-y-1`}>
         <VscAccount size={45} className='p-2 cursor-pointer'/>
       </div></Link>

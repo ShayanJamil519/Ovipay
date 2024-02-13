@@ -7,7 +7,7 @@ import Footer from './Footer';
 const GiftDetails = () => {
   return (
     <>
-        <Header />
+        <Header title="상세내역" />
 
         <div>
 
@@ -15,7 +15,7 @@ const GiftDetails = () => {
                 {/* Success */}
                 <div className="flex items-center justify-center flex-col border-2 border-[#FED52A] w-[90%] rounded-[24px] py-4 gap-y-2 mb-4 mt-6">
                     <img src="/tick.svg" alt="" />
-                    <h1 className="text-[18px] font-[700]">사용 완료</h1>
+                    <h1 className="text-[18px] font-bold">사용 완료</h1>
                 </div>
                 
                 <div className="flex items-left w-full px-4">
@@ -48,7 +48,7 @@ const GiftDetails = () => {
                                 name="email"
                                 id="email"
                                 placeholder="박정호"
-                                className="rounded-md py-4 bg-[#F4F4F4] focus:outline-none"
+                                className="rounded-md py-4 bg-[#E9E9E9] focus:outline-none"
                                 // value={formData.email}
                                 // onChange={handleChange}
                                 required
@@ -67,7 +67,7 @@ const GiftDetails = () => {
                                 name="username"
                                 id="username"
                                 placeholder="010-2241-2223"
-                                className="rounded-md py-4 bg-[#F4F4F4] focus:outline-none"
+                                className="rounded-md py-4 bg-[#E9E9E9] focus:outline-none"
                                 // value={formData.username}
                                 // onChange={handleChange}
                                 required
@@ -86,7 +86,7 @@ const GiftDetails = () => {
                                 name="username"
                                 id="username"
                                 placeholder="새해 복 많으받으3"
-                                className="rounded-md py-4 bg-[#F4F4F4] focus:outline-none"
+                                className="rounded-md py-4 bg-[#E9E9E9] focus:outline-none"
                                 // value={formData.username}
                                 // onChange={handleChange}
                                 required
@@ -96,7 +96,7 @@ const GiftDetails = () => {
 
                 <div className="w-full px-6 mb-4">
                     <div className="flex gap-4 mt-2 px-2">
-                        <img src="/logo.svg" alt="" className="h-12 bg-gray-300 rounded-md" />
+                        <img src="/logo.png" alt="" className="h-14 bg-gray-300 rounded-md" />
                         <div className="flex flex-col justify-center">
                             <h1 className='font-[700]'>박정호</h1>
                             <p className='text-[12px] font-[400]'>010-2241-2223</p>
@@ -106,7 +106,7 @@ const GiftDetails = () => {
 
                 {/* Payment Info */}
                 <div className="w-[90%] border rounded-xl p-2 mb-4">
-                    <h1 className="mt-2 mb-4 px-2 text-black">결제정보</h1>
+                    <h1 className="mt-2 mb-4 px-2 text-black font-bold">결제정보</h1>
                     <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>
                         <div className='flex justify-between w-full items-start font-[400]'>
                             <p className='text-[#464441]'>상품 가격</p>
@@ -138,7 +138,7 @@ const GiftDetails = () => {
             </div>
         </div>
 
-        <Footer address={'account'} />
+        <Footer address={'mygift'} />
     </>
   )
 }

@@ -26,9 +26,9 @@ export default function Shipping() {
         <>
             <Header title="MY GIFT" />
 
-            <div className="px-3">
+            <div className="px-3 mt-20">
                 {/* This div is for input search-bar */}
-                <div className="flex justify-between my-4 rounded-xl ">
+                <div className="flex justify-between my-4 rounded-xl">
                     <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8]">
                         <PiMagnifyingGlass
                             size={30}
@@ -36,14 +36,13 @@ export default function Shipping() {
                         />
                         <input
                             placeholder="주문내역 검색"
-                            className="bg-transparent text-[14px]"
+                            className="bg-transparent text-[14px] border-none flex-grow outline-none"
                         />
                     </div>
 
-                    <button onClick={() => setIsOpen(true)}>
-                        <HiOutlineAdjustmentsHorizontal
-                            size={50}
-                            className="bg-[#fed52a] text-white p-[5px] rounded-xl ml-3"
+                    <button onClick={() => setIsOpen(true)} className=" ml-2 w-[60px] flex items-center justify-center h-[50px] bg-[#fed52a] rounded-xl">
+                        <img src="/setting.svg" alt=""
+                            className="h-5"
                         />
                     </button>
                 </div>

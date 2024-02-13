@@ -177,22 +177,22 @@ const SendGift = () => {
 
             </div>
             {/* Payment Info */}
-            <div className="p-4">
+            <div className="p-4 bg-white">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2 pt-3'>
-                    <div className='flex justify-between w-full items-start font-[400]'>
-                        <p className='text-[#464441]'>상품명</p>
+                    <div className='flex justify-between w-full items-start font-[400] text-[#8D8D8D]'>
+                        <p>상품명</p>
                         <p>오아 공기청정기 외 1</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>잔액</p>
+                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                        <p>잔액</p>
                         <p>100,682원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>총 상품금액</p>
+                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                        <p>총 상품금액</p>
                         <p>- 25,000원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>배송비</p>
+                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                        <p>배송비</p>
                         <p>3,000 원</p>
                     </div>
                         
@@ -200,11 +200,11 @@ const SendGift = () => {
 
                     <div className='flex justify-between w-full items-start font-[400]'>
                         <p>Total</p>
-                        <p className='text-black text-[20px] font-600'>- 28,000원</p>
+                        <p className='text-black text-[20px] font-bold'>- 28,000원</p>
                     </div>
                     <div className='flex justify-between w-full items-end text-[#406FC9]'>
-                        <p className='text-[16px]'>총 결제금액</p>
-                        <p className='font-[600] text-[20px]'>72,682원</p>
+                        <p className='text-[16px]'>잔액</p>
+                        <p className='font-bold text-[20px]'>72,682원</p>
                     </div>                       
                 </div>
 
