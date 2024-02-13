@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Header from './Header';
 import Footer from './Footer';
 import BankModal from '../Gift/Modals/BankModal';
-import FilterModal from '../Gift/Modals/FilterModal';
 import SortModal from '../Gift/Modals/SortModal';
 
 export default function ConfirmationPayment() {
@@ -16,7 +15,7 @@ export default function ConfirmationPayment() {
     };
     return (
         <>
-        <Header/>
+        <Header title="쇼 핑" showHamburger={true} />
         <div>
 
             {/* This div is for heading and description */}

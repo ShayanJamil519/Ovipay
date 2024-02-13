@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { IoIosStar } from "react-icons/io";
 import product from "../../assets/img/product-item.png";
 import { FaPlusCircle } from "react-icons/fa";
 import { FaCircleMinus } from "react-icons/fa6";
@@ -20,7 +19,7 @@ const Cart = () => {
     return (
         <>
             <Header title="장바구니" showHamburger={true} />
-            <div className="flex flex-col items-center justify-center w-full px-4 py-5">
+            <div className="flex flex-col items-center justify-center w-full px-3 py-5">
                 <h1 className="w-full text-2xl font-semibold">My Cart</h1>
                 <div className="flex flex-col items-center justify-center w-full">
                     {/* Product */}
@@ -34,18 +33,18 @@ const Cart = () => {
                                 가전제품 / 49,900원
                             </p>
                         </div>
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center gap-x-3">
                             <FaCircleMinus
                                 onClick={decrease}
                                 role="button"
-                                size={30}
-                                className="text-gray-400 cursor-pointer"
+                                size={26}
+                                className="text-[#E1E1E1] cursor-pointer"
                             />
                             {number}
                             <FaPlusCircle
                                 onClick={increase}
                                 role="button"
-                                size={30}
+                                size={26}
                                 className="text-[#FED52A] cursor-pointer"
                             />
                         </div>
@@ -60,18 +59,18 @@ const Cart = () => {
                                 가전제품 / 49,900원
                             </p>
                         </div>
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center gap-x-3">
                             <FaCircleMinus
                                 onClick={decrease}
                                 role="button"
-                                size={30}
-                                className="text-gray-400 cursor-pointer"
+                                size={26}
+                                className="text-[#E1E1E1] cursor-pointer"
                             />
                             {number}
                             <FaPlusCircle
                                 onClick={increase}
                                 role="button"
-                                size={30}
+                                size={26}
                                 className="text-[#FED52A] cursor-pointer"
                             />
                         </div>
@@ -86,18 +85,18 @@ const Cart = () => {
                                 가전제품 / 49,900원
                             </p>
                         </div>
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center gap-x-3">
                             <FaCircleMinus
                                 onClick={decrease}
                                 role="button"
-                                size={30}
-                                className="text-gray-400 cursor-pointer"
+                                size={26}
+                                className="text-[#E1E1E1] cursor-pointer"
                             />
                             {number}
                             <FaPlusCircle
                                 onClick={increase}
                                 role="button"
-                                size={30}
+                                size={26}
                                 className="text-[#FED52A] cursor-pointer"
                             />
                         </div>
@@ -112,18 +111,18 @@ const Cart = () => {
                                 가전제품 / 49,900원
                             </p>
                         </div>
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center gap-x-3">
                             <FaCircleMinus
                                 onClick={decrease}
                                 role="button"
-                                size={30}
-                                className="text-gray-400 cursor-pointer"
+                                size={26}
+                                className="text-[#E1E1E1] cursor-pointer"
                             />
                             {number}
                             <FaPlusCircle
                                 onClick={increase}
                                 role="button"
-                                size={30}
+                                size={26}
                                 className="text-[#FED52A] cursor-pointer"
                             />
                         </div>
@@ -155,7 +154,7 @@ const Cart = () => {
 
                     <Link to="/shopping/confirm-payment">
                         <button className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]">
-                            저 장
+                            결 제
                         </button>
                     </Link>
                 </div>

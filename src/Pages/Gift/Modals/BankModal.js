@@ -15,7 +15,7 @@ const BankModal = ({isOpen, setIsOpen}) => {
     <div className={`${isOpen ? 'fixed' : 'hidden'} bottom-0 left-0 right-0 bg-black bg-opacity-50 z-50 h-full`} onClick={handleClosePopup}>
         <div
             ref={popupRef}
-            className={`fixed bottom-0 left-0 right-0 overflow-y-scroll bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-3xl border-2 ${
+            className={`fixed bottom-0 left-0 right-0 overflow-y-scroll bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-2xl border-2 ${
             isOpen ? 'translate-y-0' : 'translate-y-full'
             }`}
             style={{ maxHeight: '85vh' }}

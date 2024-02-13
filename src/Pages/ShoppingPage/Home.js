@@ -13,10 +13,18 @@ import Footer from "./Footer";
 import RecommendedProducts from "../../components/Global/RecommendedProducts";
 
 const Home = () => {
+    
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedFilter, setSelectedFilter] = useState("");
     const options = ["1만원 미만", "1~2만원대", "3-4만원대", "5만원 이상"];
     const filters = ["전체", "가전제품", "식품", "욕실", "전자기기"];
+    const [liked, setLiked] = useState();
+    const [selectedOption, setSelectedOption] = useState('');
+    const [displayedProducts, setDisplayedProducts] = useState(6);
+
+    const handleSeeMore = () => {
+        setDisplayedProducts(displayedProducts + 6);
+    };
 
     const firstProducts = [
         {
@@ -94,11 +102,60 @@ const Home = () => {
             price: "149,000",
             discount: "15%",
         },
+        {
+            id: 1,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 2,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 3,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 4,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 5,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 6,
+            image: "/recommended__product__1.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
     ];
 
     return (
         <>
             <Header title="쇼 핑" showHamburger={true} />
+            
             <div className="flex flex-col items-center w-full py-4">
                 {/* Search bar for items */}
                 <FormGroup className="flex items-center justify-center w-full">
@@ -110,14 +167,14 @@ const Home = () => {
                     <Input
                         type="text"
                         placeholder="Search..."
-                        className="rounded-xl py-[25px] pl-12 border-[#FED52A] w-[95%] text-gray-400 bg-[#ffffff] focus:outline-none "
+                        className="rounded-xl py-[25px] pl-14 w-[95%] text-[#D8D4CE] bg-[#ffffff] focus:outline-none "
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex overflow-x-scroll items-center w-full px-3 mt-4 font-bold gap-x-4 gap-y-3">
+                <div className="flex overflow-x-scroll items-center w-full px-3 mt-2 font-bold gap-x-4 gap-y-3">
                     {filters.map((filter) => (
                         <h6
                             onClick={() => setSelectedFilter(filter)}
@@ -125,7 +182,7 @@ const Home = () => {
                                 selectedFilter === filter
                                     ? "bg-[#FED52A]"
                                     : "bg-white text-[#828282] border"
-                            } cursor-pointer min-w-[97px] text-center py-2 rounded-2xl`}
+                            } cursor-pointer min-w-[97px] text-center py-2 rounded-[50px]`}
                         >
                             {filter}
                         </h6>
@@ -134,7 +191,7 @@ const Home = () => {
 
                 {/* Horizontal Products */}
                 <div className="overflow-x-auto max-w-full">
-                    <h1 className="px-4 mt-8 text-[#464441]">
+                    <h1 className="px-4 mt-8 text-[#464441] text-[16px] font-semibold">
                         신지연님을 위한 추천 상품
                     </h1>
                     <div className="flex space-x-4 p-4">
@@ -148,9 +205,9 @@ const Home = () => {
                                     alt={product.title}
                                     className="w-full h-36 object-cover rounded-lg"
                                 />
-                                <div className="absolute top-2 right-2">
+                                <div className="absolute top-2 right-2" onClick={() => setLiked(product.id)}>
                                     <img
-                                        src="/heart.svg"
+                                        src={`${liked === product.id ? '/heart_filled.svg' : '/heart.svg'}`}
                                         alt="Heart"
                                         className="w-6 h-6"
                                     />
@@ -178,7 +235,7 @@ const Home = () => {
 
                 {/* Vertical Products */}
                 <div className="w-full">
-                    <h1 className="px-4 mt-6 text-[#464441]">
+                    <h1 className="px-4 mt-6 text-[#464441] font-semibold">
                         금주의 인기상품
                     </h1>
                     <div className="flex flex-col space-y-4 px-4 pb-4 pt-3">
@@ -199,12 +256,12 @@ const Home = () => {
                                             {product.id}
                                         </span>
                                     </div>
-                                    <div className="absolute top-2 right-2">
-                                        <img
-                                            src="/heart.svg"
-                                            alt="Heart"
-                                            className="w-6 h-6"
-                                        />
+                                    <div className="absolute top-2 right-2" onClick={() => setLiked(product.id)}>
+                                    <img
+                                        src={`${liked === product.id ? '/heart_filled.svg' : '/heart.svg'}`}
+                                        alt="Heart"
+                                        className="w-6 h-6"
+                                    />
                                     </div>
                                 </div>
                                 {/* Product Information */}
@@ -226,18 +283,18 @@ const Home = () => {
 
                 {/* Products Three Per Row */}
                 <div className="max-w-full">
-                    <h1 className="px-4 mt-2 text-[#464441]">
+                    <h1 className="px-4 mt-2 text-[#464441] font-semibold">
                         가격대 별 추천상품
                     </h1>
                     <div className="flex px-4 justify-between mt-6">
                         {options.map((option) => (
-                            <span className={`text-[14px] text-[#737373]`}>
+                            <span className={`text-[14px] ${selectedOption === option ? 'text-black font-[700]' : 'text-[#737373] font-[400]'} `} onClick={()=> setSelectedOption(option)}>
                                 {option}
                             </span>
                         ))}
                     </div>
                     <div className="flex flex-wrap justify-between gap-3 p-4">
-                        {secondProducts.map((product) => (
+                        {secondProducts.slice(0, displayedProducts).map((product) => (
                             <div
                                 key={product.id}
                                 className="relative flex-shrink-0 w-[30%] mb-4"
@@ -274,7 +331,7 @@ const Home = () => {
                 </div>
 
                 {/* See More */}
-                <div className="w-full px-4">
+                <div className={`w-full px-4 ${displayedProducts > 6 && 'hidden'}`} onClick={handleSeeMore}>
                     <div className="flex gap-2 border border-[#C8C8C8] items-center justify-center py-2 rounded-[10px]">
                         <p className="text-[#737373] text-[14px]">더보기</p>
                         <img src="/arrow_down.svg" alt="" />

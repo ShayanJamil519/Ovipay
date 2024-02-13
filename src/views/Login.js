@@ -183,7 +183,7 @@ const Login = () => {
                                 size={20}
                                 className="inline mx-2 mb-2"
                             /> */}
-                                <img src={talk} className="inline mx-2 mb-2" />
+                                <img src={talk} alt="" className="inline mx-2 mb-2" />
                                 카카오톡으로 로그인
                             </Button>
                         </div>
@@ -191,7 +191,7 @@ const Login = () => {
 
                     {/* Talk button for sign in */}
 
-                    <p className="text-center mt-5 text-[#062275] font-bold text-[14px]">
+                    <p className="text-center mt-4 text-[#062275] font-bold text-[14px]">
                         <span className="text-black">
                             아직 계정이 없으신가요?
                         </span>{" "}

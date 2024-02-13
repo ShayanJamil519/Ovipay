@@ -15,6 +15,7 @@ import {
     signUpWithEmail_Password,
 } from "../store/actions/authAction";
 import { useHistory } from "react-router-dom";
+import Header from "./Header";
 
 const ForgotPassword = () => {
     // states that used in this compoent
@@ -121,10 +122,7 @@ const ForgotPassword = () => {
             <Row className="pt-8 pb-16">
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
                     
-                    <div className="flex items-center justify-center mb-6 relative">
-                        <img src="/back.svg" alt="" className="absolute left-0 top-1" />
-                        <p className="text-[17px] font-[700] text-black">아이디ㆍ비밀번호 찾기</p>
-                    </div>
+                    <Header />
                     
                     {/* Form start from here */}
                     <Form onSubmit={handleSubmit} className="px-3 py-3">
@@ -159,27 +157,27 @@ const ForgotPassword = () => {
                             <div className="flex justiy-between">
                                 <input
                                     type="number"
-                                    className="mx-1  bg-[#F4F4F4] hover:bg-gray-200 border-[#FED52A] text-black rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-2 border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit1}
                                     onChange={handleDigit1}
                                     placeholder="000"
                                 />
                                 <input
                                     type="number"
-                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 focuse:outline-none border-[#FED52A] text-black rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 focus:outline-none border-2 border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit2}
                                     onChange={handleDigit2}
                                     placeholder="000"
                                 />
                                 <input
                                     type="number"
-                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-[#FED52A] text-[#373535] rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-2 border-[#FED52A] text-[#373535] rounded-xl py-[8px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit3}
                                     onChange={handleDigit3}
                                     placeholder="000"
                                 />
                                 <button
-                                    className="mx-1 bg-[#FED52A] text-[12px] min-w-[75px] focuse:outline-none border-[#FED52A] text-[#373535] rounded-xl py-[10px] w-[20%] md:w-[10%] px-[12px]"
+                                    className="mx-1 bg-[#FED52A] text-[12px] min-w-[75px] focuse:outline-none border-[#FED52A] text-[#373535] rounded-xl py-[10px] w-[24%] md:w-[10%] px-[12px]"
                                 >
                                     인증번호
                                 </button>
@@ -191,21 +189,21 @@ const ForgotPassword = () => {
                             <label className="block font-bold">인증번호</label>
                             <input
                                 type="number"
-                                className="bg-[#F4F4F4] border-[#FED52A] relative pl-[12px]  focus:outline-none py-2  rounded-xl"
+                                className="bg-[#F4F4F4] border-[#FED52A] border-2 relative pl-[12px]  focus:outline-none py-2  rounded-xl"
                                 placeholder="34322"
                                 value={formData.number}
                                 onChange={handleNumber}
                             />
-                            <button className="bg-[#FED52A] text-sm  px-[16px]  md:px-8 py-[10px] relative right-12 rounded-xl">
+                            <button className="bg-[#FED52A] text-sm  px-[16px]  md:px-8 py-[12px] relative right-12 rounded-xl">
                                 확인
                             </button>
                         </div>
 
                     </Form>
 
-                    <div className='flex flex-col pt-[80%]'>
-                        <Link to='/forgot/find'  className='text-black hover:no-underline hover:text-black mb-2'><button className='flex justify-center py-3 mx-auto mb-2 bg-[#FED52A] rounded-[50px] w-full text-[18px] font-[600]'>아이디 찾기</button></Link> 
-                        <Link to='/forgot/newpassword' className='text-white hover:no-underline hover:text-white'> <button className='flex justify-center mb-2 py-3 bg-[#353737]  w-full mx-auto rounded-[50px] text-[18px] font-[600]'>비밀번호 찾기</button></Link> 
+                    <div className='flex flex-col pt-[80px]'>
+                        <Link to='/forgot/find' ><button className='flex justify-center py-3 mx-auto mb-3 bg-[#FED52A] rounded-[50px] w-full text-[18px] font-[600]'>아이디 찾기</button></Link> 
+                        <Link to='/forgot/newpassword'> <button className='flex justify-center mb-2 py-3 bg-[#353737] text-white  w-full mx-auto rounded-[50px] text-[18px] font-[600]'>비밀번호 찾기</button></Link> 
                     </div>
 
                 </Col>

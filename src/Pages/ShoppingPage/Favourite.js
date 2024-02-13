@@ -9,9 +9,11 @@ import "swiper/css/mousewheel";
 
 // import required modules
 import SortModal from "./Modals/SortModal";
+import MyCartPopup from "./Popups/MyCartPopup";
 
 const Favourite = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const firstProducts = [
         {
@@ -116,11 +118,11 @@ const Favourite = () => {
             <div className="flex flex-col items-center justify-center w-full px-3 gap-y-5">
                 <div className="flex items-center justify-between w-full">
                     <h2 className="text-lg font-semibold px-2">찜 리스트</h2>
-                    <div className="flex items-center gap-x-2">
-                        <button className="px-3 py-1 text-sm font-bold rounded-xl text-black bg-[#FED52A]">
+                    <div className="flex items-center gap-x-2 mt-2">
+                        <button className="px-3 py-1 text-sm font-bold rounded-[50px] text-black bg-[#FED52A]">
                             선택삭제
                         </button>
-                        <button className="px-3 py-1 text-sm font-bold rounded-xl text-black bg-[#e5e5e5]">
+                        <button className="px-3 py-1 text-sm font-bold rounded-[50px] text-black bg-[#e5e5e5]">
                             전체삭제
                         </button>
                     </div>
@@ -153,7 +155,7 @@ const Favourite = () => {
                                 <div className="absolute top-1 right-2">
                                     <input
                                         type="checkbox"
-                                        className="h-4 w-4 border text-[#F6C700] checkbox"
+                                        className="h-4 w-4 border border-[#f6c700] text-[#F6C700] checkbox"
                                     />
                                 </div>
                                 <div className="p-2">
@@ -177,17 +179,17 @@ const Favourite = () => {
 
                 {/* Price and Button */}
                 <div className="w-full">
-                    <div className="flex gap-6 my-4">
+                    <div className="flex gap-6 my-4 justify-between">
                         <div className="flex flex-col items-start justify-start">
                             <h1 className="text-[14px] text-[#989898]">
                                 1개 선택
                             </h1>
-                            <p className="text-[18px] font-[900] text-[#464441]">
+                            <p className="text-[23px] font-[900] text-black">
                                 총 149,000원
                             </p>
                         </div>
-                        <div className="flex items-center justify-center w-[60%] bg-[#FED52A] rounded-[50px]">
-                            <button className="text-[12px] font-[700]">
+                        <div className="flex items-center justify-center w-[50%] bg-[#FED52A] rounded-[50px]">
+                            <button className="text-[12px] font-[700]" onClick={() => setIsPopupOpen(true)}>
                                 장바구니
                             </button>
                         </div>
@@ -196,8 +198,8 @@ const Favourite = () => {
 
                 {/* Recommended Products */}
                 <div className="px-3 my-6 w-full">
-                    <h1 className=" mb-2 text-[16px] font-medium text-[#464441]">
-                        오비의 추천상품
+                    <h1 className=" mb-2 text-[16px] font-semibold text-[#464441]">
+                        최근 본 상품
                     </h1>
                     <div className="flex w-full overflow-x-auto justify-start items-center gap-3">
                         {products.map((item, index) => (
@@ -218,7 +220,7 @@ const Favourite = () => {
                                     <p className="text-[#464441] font-[400] text-[15px]">
                                         안심한우 1++등급 ‘투뿔 스페셜...
                                     </p>
-                                    <h1 className="text-[#464441] font-[900] text-[20px] mt-2">
+                                    <h1 className="text-black font-[900] text-[20px] mt-2">
                                         149,000원
                                         <span className="text-[#F6C700] ml-2 font-[700]">
                                             15%
@@ -237,6 +239,7 @@ const Favourite = () => {
             </div>
 
             {isOpen && <SortModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+            {isPopupOpen && <MyCartPopup setIsOpen={setIsPopupOpen} />}
 
             <Footer address="favourite" />
         </>

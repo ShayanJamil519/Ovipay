@@ -29,12 +29,12 @@ const SortModal = ({isOpen, setIsOpen}) => {
         >
         <div className='flex flex-col p-3'>
             <div className='flex justify-center flex-col mt-3 gap-3 mb-8 w-full'>
-                <h1 className='mb-4 text-[#0F1121] text-[19px] font-[700]'>정렬</h1>
+                <h1 className='mb-4 text-[#0F1121] text-[19px] font-bold'>정렬</h1>
                 {
                     options.map((item, index)=> (
-                        <div key={index} className='flex justify-between h-6 mb-3' onClick={()=> handleSelection(item)}>
-                            <p className={`text-[17px] ${selectedOption === item ? 'text-[#FED52A]' : 'text-[#B9B9B9]'} font-[400]`}>{item}</p>
-                            {selectedOption === item && <img src="/tick.svg" alt="" className="ml-auto pl-auto" />}
+                        <div key={index} className='flex justify-between h-6 mb-3 w-full' onClick={()=> handleSelection(item)}>
+                            <p className={`text-[17px] ${selectedOption === item ? 'text-[#EC9D05]' : 'text-[#B9B9B9]'} font-[400]`}>{item}</p>
+                            {selectedOption === item && <img src="/tick.svg" alt="" className="h-8 w-8" />}
                         </div>
                     ))
                 }
@@ -42,7 +42,7 @@ const SortModal = ({isOpen, setIsOpen}) => {
 
             <div>
                 <button
-                    className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[17px]"
+                    className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-bold text-[17px]"
                 >
                     닫 기
                 </button>

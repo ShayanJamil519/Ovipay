@@ -7,13 +7,17 @@ import logo from '../assets/img/authentication-logo.png';
 import talk from "../assets/img/talk.svg";
 import { useDispatch } from 'react-redux';
 import { login } from '../store/actions/authAction';
+import LoginPopup from './LoginPopup';
 
 const ThirdPageLikeLogin = () => {
+  
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -94,6 +98,7 @@ const ThirdPageLikeLogin = () => {
             {/* Sign in button */}
             <div className='w-full mt-12 text-center'>
               <Button
+                onClick={()=> setIsOpen(true)}
                 type='submit'
                 className='w-full bg-[#FED52A] text-black border-none hover:bg-[#f2ce3e] font-bold text-[18px] px-24 py-[12px] rounded-full'>
                 로그인
@@ -146,6 +151,8 @@ const ThirdPageLikeLogin = () => {
           </p>
         </Col>
       </Row>
+
+      {isOpen && <LoginPopup isOpen={isOpen} setIsOpen={setIsOpen} />}
     </Container>
   );
 };

@@ -265,37 +265,6 @@ const Signup = () => {
                             />
                         </FormGroup>
 
-                        {/* <FormGroup className="md:w-[75%] mx-auto">
-                            <Label
-                                for="username"
-                                className="font-extrabold text-[18px]"
-                            >
-                                6자리 간편 비밀번호 설정
-                            </Label>
-                            <div className="relative">
-                                <Input
-                                    type={showPasscode ? "text" : "password"}
-                                    name="passcode"
-                                    id="passcode"
-                                    placeholder="비밀번호"
-                                    className="rounded-xl py-4  border-[#FED52A] bg-[#F4F4F4] focus:outline-none pr-12"
-                                    value={formData.passcode}
-                                    onChange={handlePasscode}
-                                    required
-                                />
-                                <span
-                                    className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
-                                    onClick={toggleShowPassCode}
-                                >
-                                    {showPasscode ? (
-                                        <FiEyeOff size={20} />
-                                    ) : (
-                                        <FiEye size={20} />
-                                    )}
-                                </span>
-                            </div>
-                        </FormGroup> */}
-
                         {/* Four Buttons */}
 
                         <div className="my-4 md:w-[75%] mx-auto">
@@ -360,14 +329,14 @@ const Signup = () => {
                         </div>
 
                         {/* Sign up button */}
-                        <div className="mt-12 text-center w-full">
+                        <Link to="/saved-login" className="mt-12 text-center w-full">
                             <Button
                                 type="submit"
                                 className="w-full bg-[#FED52A] font-bold text-[18px] border-none text-[#373535] px-[85px] py-[12px] rounded-full hover:bg-[#f2ce3e]"
                             >
                                 회원가입
                             </Button>
-                        </div>
+                        </Link>
                     </Form>
 
                     {/* other methods for sign up */}
@@ -405,7 +374,7 @@ const Signup = () => {
                                 size={20}
                                 className="inline mx-2 mb-2"
                             /> */}
-                                <img src={talk} className="inline mx-2 mb-2" />
+                                <img src={talk} alt="" className="inline mx-2 mb-2" />
                                 카카오톡으로 로그인
                             </Button>
                         </div>

@@ -16,6 +16,7 @@ import {
     signUpWithEmail_Password,
 } from "../store/actions/authAction";
 import { useHistory } from "react-router-dom";
+import Header from "./Header";
 
 const NewPassword = () => {
     // states that used in this compoent
@@ -42,37 +43,6 @@ const NewPassword = () => {
 
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
-    };
-
-    const handleNumber = (e) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            number: parseInt(e.target.value, 10),
-        }));
-    };
-    const handleNumber2 = (e) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            number2: parseInt(e.target.value, 10),
-        }));
-    };
-    const handleDigit1 = (e) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            digit1: parseInt(e.target.value, 10),
-        }));
-    };
-    const handleDigit2 = (e) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            digit2: parseInt(e.target.value, 10),
-        }));
-    };
-    const handleDigit3 = (e) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            digit3: parseInt(e.target.value, 10),
-        }));
     };
 
     const handleChange = (e) => {
@@ -124,13 +94,10 @@ const NewPassword = () => {
 
     return (
         <Container>
-            <Row className="pt-8 pb-16">
+            <Row className="pt-8 pb-16 relative h-screen">
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
                     
-                    <div className="flex items-center justify-center mb-6 relative">
-                        <img src="/back.svg" alt="" className="absolute left-0 top-1" />
-                        <p className="text-[17px] font-[700] text-black">아이디ㆍ비밀번호 찾기</p>
-                    </div>
+                    <Header />
                     
                     {/* Form start from here */}
                     <Form onSubmit={handleSubmit} className="px-3 mx-auto mt-12">
@@ -197,7 +164,7 @@ const NewPassword = () => {
                         </FormGroup>
                     </Form>
 
-                    <div className='flex flex-col pt-[80%]'>
+                    <div className='flex flex-col absolute bottom-1 w-[92%]'>
                         <Link to='/forgot/find'  className='text-black hover:no-underline hover:text-black mb-2'><button className='flex justify-center py-3 mx-auto mb-2 bg-[#FED52A] rounded-[50px] w-full text-[18px] font-[600]'>로그인</button></Link> 
                     </div>
 
