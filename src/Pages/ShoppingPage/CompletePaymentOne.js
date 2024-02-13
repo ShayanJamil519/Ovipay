@@ -3,7 +3,7 @@ import Footer from './Footer';
 import Header from '../Charge/Header';
 
 
-const CompletePayment = () => {
+const CompletePaymentOne = () => {
   return (
     <>
         <Header title="쇼 핑" showHamburger={true} />
@@ -33,23 +33,23 @@ const CompletePayment = () => {
                 <div className="w-[90%] border rounded-xl p-2 mb-4">
                     <h1 className="mt-2 mb-4 px-2 text-black">결제정보</h1>
                     <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>
-                        <div className='flex justify-between w-full items-start font-[400]'>
-                            <p className='text-[#464441]'>상품 가격</p>
+                        <div className='flex justify-between w-full items-start font-[400] text-[#9c9b99]'>
+                            <p>상품 가격</p>
                             <p>35,000 원</p>
                         </div>
-                        <div className='flex justify-between w-full items-end font-[400]'>
-                            <p className='text-[#464441]'>할인금액</p>
+                        <div className='flex justify-between w-full items-end font-[400] text-[#9c9b99]'>
+                            <p>할인금액</p>
                             <p>0 원</p>
                         </div>
-                        <div className='flex justify-between w-full items-end font-[400]'>
-                            <p className='text-[#464441]'>배송비</p>
+                        <div className='flex justify-between w-full items-end font-[400] text-[#9c9b99]'>
+                            <p>배송비</p>
                             <p>3,000 원</p>
                         </div>
                         
                         <hr className='w-full h-[1px] bg-[#9c9b99] my-2' />
 
-                        <div className='flex justify-between w-full items-start font-[400]'>
-                            <p className='text-[#464441]'>신용카드결제</p>
+                        <div className='flex justify-between w-full items-start font-[400] text-[#9c9b99]'>
+                            <p>신용카드결제</p>
                             <p>35,000 원</p>
                         </div>
                         <div className='flex justify-between w-full items-end'>
@@ -60,11 +60,6 @@ const CompletePayment = () => {
                     </div>
                 </div>
 
-                <div className="w-[90%] border rounded-xl p-2 mb-4 py-4">
-                    <p className='text-center text-[#136ED8]'>입금계좌 <br />오비뱅크 000000-000000</p>
-                </div>
-
-                <p className='text-center text-[#BD0F0F] text-[15px] font-[400]'>24시간 내에 입금 내역이 없을 시 <br/>주문이 자동 취소됩니다.</p>
                 
                 <div className="w-[90%] mx-3 mt-4 mb-4">
                     <button
@@ -82,4 +77,4 @@ const CompletePayment = () => {
   )
 }
 
-export default CompletePayment
+export default CompletePaymentOne

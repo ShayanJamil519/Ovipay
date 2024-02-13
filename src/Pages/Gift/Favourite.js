@@ -11,6 +11,7 @@ const Favourite = () => {
     const handleTrue = () => {
         setIsTrue(!isTrue);
     };
+    
     const cards = [
         {
             id: 0,
@@ -31,6 +32,7 @@ const Favourite = () => {
             id: 5,
         },
     ];
+    
     return (
         <>
             <Header title="" />
@@ -54,26 +56,23 @@ const Favourite = () => {
                     >
                         <img src={product} alt="" />
                         <div className="w-[95%] ">
+                        <p className="text-sm text-gray-400">BHC</p>
+                            <p className="text-[14px] text-[#464441] font-[400]">온 가족이 따뜻하고 오...</p>
                             <h6 className="text-lg font-bold text-black">
-                                BHC 20,000원
+                                20,000원
                             </h6>
-                            <p className="text-sm text-gray-400">치킨</p>
                             <div className="flex flex-col items-end justify-center w-full ">
                                 {isTrue ? (
                                     <FaRegSquare
                                         size={25}
-                                        className="text-[#FED52A] cursor-pointer relative bottom-12 "
+                                        className="text-[#FED52A] cursor-pointer relative bottom-16"
                                     />
                                 ) : (
                                     <FaRegSquareCheck
                                         size={25}
-                                        className="text-[#FED52A] cursor-pointer relative bottom-12"
+                                        className="bg-[#FED52A] text-white cursor-pointer relative bottom-16"
                                     />
                                 )}
-
-                                <h6 className="text-[#FED52A] font-semibold text-xl">
-                                    49,000원
-                                </h6>
                             </div>
                         </div>
                     </div>
@@ -84,34 +83,32 @@ const Favourite = () => {
                     >
                         <img src={product} alt="" />
                         <div className="w-[95%] ">
+                            <p className="text-sm text-gray-400">BHC</p>
+                            <p className="text-[14px] text-[#464441] font-[400]">온 가족이 따뜻하고 오...</p>
                             <h6 className="text-lg font-bold text-black">
-                                BHC 20,000원
+                                20,000원
                             </h6>
-                            <p className="text-sm text-gray-400">치킨</p>
                             <div className="flex flex-col items-end justify-center w-full ">
                                 {isTrue ? (
                                     <FaRegSquare
                                         size={25}
-                                        className="text-[#FED52A] cursor-pointer relative bottom-12 "
+                                        className="text-[#FED52A] cursor-pointer relative bottom-16"
                                     />
                                 ) : (
                                     <FaRegSquareCheck
                                         size={25}
-                                        className="text-[#FED52A] cursor-pointer relative bottom-12"
+                                        className="bg-[#FED52A] text-white cursor-pointer relative bottom-16"
                                     />
                                 )}
-                                <h6 className="text-[#FED52A] font-semibold text-xl">
-                                    49,000원
-                                </h6>
                             </div>
                         </div>
                     </div>
 
                     <div className="w-full p-3 mt-3">
                         <h1 className="text-[14px] text-[#989898]">1개 선택</h1>
-                        <p className="text-[23px] font-[900]">총 40,000원</p>
+                        <p className="text-[23px] font-[900] text-[#464441]">총 40,000원</p>
 
-                        <div className="w-full flex gap-5 my-4">
+                        <div className="w-full flex gap-2 my-4">
                             <div className="flex items-center justify-center w-1/2 bg-[#373535] py-2 rounded-[50px] text-white">
                                 <Link to="/gift/send">
                                     <button className="">선물하기</button>
@@ -135,9 +132,10 @@ const Favourite = () => {
                         {cards.map((item, index) => (
                             <div
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-gray-500/70 rounded-3xl h-[250px] ${
-                                    item.id % 2 === 0 ? " mt-0" : "mt-8"
+                                className={`flex flex-col px-4 justify-end py-3 shadow-inner bg-gray-500/70 rounded-3xl h-[200px] ${
+                                    item.id % 2 === 0 ? " mt-0" : "mt-6"
                                 }`}
+                                style={{background: "linear-gradient(2.5deg, #000000 -47.86%, rgba(0, 0, 0, 0) 100%)"}}
                             >
                                 <h1 className="text-lg font-bold text-white">
                                     기프티콘 테스트

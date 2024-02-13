@@ -1,13 +1,12 @@
 import React from 'react'
 import Header from './Header'
-import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 import Footer from './Footer';
 
 
 const OrderDetails = () => {
   return (
     <>
-        <Header />
+        <Header title="쇼 핑" />
 
         <div>
 

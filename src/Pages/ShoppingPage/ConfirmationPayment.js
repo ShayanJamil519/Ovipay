@@ -6,6 +6,7 @@ import BankModal from '../Gift/Modals/BankModal';
 import SortModal from '../Gift/Modals/SortModal';
 import LocationModal from '../Gift/Modals/LocationModal';
 import CardPaymentPopup from './Popups/CardPaymentPopup';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
@@ -242,7 +243,15 @@ export default function ConfirmationPayment() {
 
             {/* Payment Button */}
             <div className='mx-3 mt-4'>
-                <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]' onClick={()=> setIsPaymentOpen(true)}>결 제</button>
+                    {
+                        (currentOption === 0 || 1 )
+                        ?
+                        <Link to={`${currentOption === 0 ? '/shopping/complete-payment-one' : currentOption === 2 ? '/shopping/complete-payment' : '/shopping/complete-payment' }`}>
+                            <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]' onClick={()=> setIsPaymentOpen(true)}>결 제</button>
+                        </Link>
+                        :
+                        <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]' onClick={()=> setIsPaymentOpen(true)}>결 제</button>
+                    }
             </div>
 
 
@@ -251,7 +260,7 @@ export default function ConfirmationPayment() {
         {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} />}
         {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen} />}
         {isLocationOpen && <LocationModal isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
-        {isPaymentOpen && <CardPaymentPopup isOpen={isPaymentOpen} />}
+        {(currentOption === 1 && isPaymentOpen) && <CardPaymentPopup isOpen={isPaymentOpen} />}
         
         <Footer address={'none'}/>
      </>

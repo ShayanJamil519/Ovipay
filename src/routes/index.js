@@ -52,6 +52,7 @@ import CompletePayment from "../Pages/ShoppingPage/CompletePayment";
 import AffiliatedStores from "../Pages/Affiliated/AffiliatedStore";
 import StoreDetails from "../Pages/Affiliated/StoreDetails";
 import DeliveryTracking from "../Pages/ShoppingPage/DeliveryTracking";
+import CompletePaymentOne from "../Pages/ShoppingPage/CompletePaymentOne";
 
 let routes = [
     {
@@ -187,6 +188,11 @@ let routes = [
     {
         path: "/shopping/complete-payment",
         component: CompletePayment,
+        layout: "main",
+    },
+    {
+        path: "/shopping/complete-payment-one",
+        component: CompletePaymentOne,
         layout: "main",
     },
 
