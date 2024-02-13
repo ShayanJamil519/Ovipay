@@ -12,13 +12,7 @@ body {
     height: calc(100vh - 50px);
 }
 
-.checkbox:checked {
-    accent-color: #FED52A;
-    border-color: #FED52A;
-}
-
 input[type=checkbox] {
     accent-color: #FED52A;
     border-color: #FED52A;
-    color: white;
 }
