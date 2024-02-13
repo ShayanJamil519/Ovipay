@@ -130,7 +130,10 @@ const HeroSection = () => {
                                 숙박 예약
                             </p>
                         </Link>
-                        <div className="flex flex-col justify-center items-center">
+                        <Link
+                            to="/gift/delivery-details"
+                            className="flex flex-col justify-center items-center"
+                        >
                             <img
                                 src="/my__gift.svg"
                                 alt="logo"
@@ -139,7 +142,7 @@ const HeroSection = () => {
                             <p className="mt-1 text-[12px] font-normal text-center text-[#171717]">
                                 MyGift
                             </p>
-                        </div>
+                        </Link>
                     </div>
 
                     <div className="flex flex-col justify-center items-center gap-2">

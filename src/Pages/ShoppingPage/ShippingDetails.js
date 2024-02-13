@@ -41,7 +41,7 @@ export default function Shipping() {
 
     return (
         <>
-            <Header title="상세내역" showHamburger={true} />
+            <Header title="MY Shopping" showHamburger={true} />
 
             <div className="px-3">
                 {/* This div is for input search-bar */}

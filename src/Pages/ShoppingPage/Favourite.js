@@ -10,18 +10,58 @@ import "swiper/css/mousewheel";
 // import required modules
 import SortModal from "./Modals/SortModal";
 
-
 const Favourite = () => {
-    
     const [isOpen, setIsOpen] = useState(false);
 
     const firstProducts = [
-        { id: 1, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
-        { id: 2, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
-        { id: 3, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
-        { id: 1, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
-        { id: 2, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
-        { id: 3, image: '/product.png', title: '매장명', description: '안심한우 1++등급...', price: '149,000', discount: '15%' },
+        {
+            id: 1,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 2,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 3,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 1,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 2,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
+        {
+            id: 3,
+            image: "/product.png",
+            title: "매장명",
+            description: "안심한우 1++등급...",
+            price: "149,000",
+            discount: "15%",
+        },
     ];
 
     const products = [
@@ -71,8 +111,8 @@ const Favourite = () => {
 
     return (
         <>
-            <Header />
-            
+            <Header title="찜" showHamburger={true} />
+
             <div className="flex flex-col items-center justify-center w-full px-3 gap-y-5">
                 <div className="flex items-center justify-between w-full">
                     <h2 className="text-lg font-semibold px-2">찜 리스트</h2>
@@ -88,26 +128,47 @@ const Favourite = () => {
 
                 {/* More Modal */}
                 <div className="flex items-start justify-start w-full mt-2">
-                    <div className="flex justify-start gap-2 border px-3 py-2 rounded-[50px]" onClick={()=> setIsOpen(true)}>
+                    <div
+                        className="flex justify-start gap-2 border px-3 py-2 rounded-[50px]"
+                        onClick={() => setIsOpen(true)}
+                    >
                         <p className="text-[#828282] text-[10px]">담은순</p>
                         <img src="/arrow_down.svg" alt="" />
                     </div>
                 </div>
 
-
                 {/* Three Products Per Row */}
                 <div className="w-full">
                     <div className="flex flex-wrap justify-between gap-3">
                         {firstProducts.map((product) => (
-                            <div key={product.id} className="relative flex-shrink-0 w-[30%] mb-4">
-                                <img src={product.image} alt={product.title} className="w-full h-28 object-cover rounded-xl" />
+                            <div
+                                key={product.id}
+                                className="relative flex-shrink-0 w-[30%] mb-4"
+                            >
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    className="w-full h-28 object-cover rounded-xl"
+                                />
                                 <div className="absolute top-1 right-2">
-                                    <input type="checkbox" className="h-4 w-4 border text-[#F6C700] checkbox" />
+                                    <input
+                                        type="checkbox"
+                                        className="h-4 w-4 border text-[#F6C700] checkbox"
+                                    />
                                 </div>
                                 <div className="p-2">
-                                    <p className="text-[14px] font-semibold mb-1"><span className="text-[#F6C700] mr-2">{product.discount}</span>{product.price}</p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.title}</p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.description}</p>
+                                    <p className="text-[14px] font-semibold mb-1">
+                                        <span className="text-[#F6C700] mr-2">
+                                            {product.discount}
+                                        </span>
+                                        {product.price}
+                                    </p>
+                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
+                                        {product.title}
+                                    </p>
+                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
+                                        {product.description}
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -118,11 +179,17 @@ const Favourite = () => {
                 <div className="w-full">
                     <div className="flex gap-6 my-4">
                         <div className="flex flex-col items-start justify-start">
-                            <h1 className="text-[14px] text-[#989898]">1개 선택</h1>
-                            <p className="text-[18px] font-[900] text-[#464441]">총 149,000원</p>
+                            <h1 className="text-[14px] text-[#989898]">
+                                1개 선택
+                            </h1>
+                            <p className="text-[18px] font-[900] text-[#464441]">
+                                총 149,000원
+                            </p>
                         </div>
                         <div className="flex items-center justify-center w-[60%] bg-[#FED52A] rounded-[50px]">
-                            <button className="text-[12px] font-[700]">장바구니</button>
+                            <button className="text-[12px] font-[700]">
+                                장바구니
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -139,14 +206,24 @@ const Favourite = () => {
                                 style={{
                                     flex: "0 0 70%", // 80% width for each product
                                     marginRight: "0.7rem", // Adjust as needed for the gap
-                                    boxShadow: "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
+                                    boxShadow:
+                                        "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
                                 }}
                                 className="flex flex-col  items-center rounded-[12px] justify-center px-3 pt-4 pb-3"
                             >
                                 <div className="w-full mb-2">
-                                    <p className="text-[#8D8D8D] text-[12px] font-[400]">매장명</p>
-                                    <p className="text-[#464441] font-[400] text-[15px]">안심한우 1++등급 ‘투뿔 스페셜...</p>
-                                    <h1 className="text-[#464441] font-[900] text-[20px] mt-2">149,000원<span className="text-[#F6C700] ml-2 font-[700]">15%</span></h1>
+                                    <p className="text-[#8D8D8D] text-[12px] font-[400]">
+                                        매장명
+                                    </p>
+                                    <p className="text-[#464441] font-[400] text-[15px]">
+                                        안심한우 1++등급 ‘투뿔 스페셜...
+                                    </p>
+                                    <h1 className="text-[#464441] font-[900] text-[20px] mt-2">
+                                        149,000원
+                                        <span className="text-[#F6C700] ml-2 font-[700]">
+                                            15%
+                                        </span>
+                                    </h1>
                                 </div>
                                 <img
                                     src={item.image}
@@ -160,7 +237,7 @@ const Favourite = () => {
             </div>
 
             {isOpen && <SortModal isOpen={isOpen} setIsOpen={setIsOpen} />}
-            
+
             <Footer address="favourite" />
         </>
     );

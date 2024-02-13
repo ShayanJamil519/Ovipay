@@ -106,7 +106,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                             </h6>
                         </Link>
                         <Link
-                            to="/gift-home"
+                            to="/gift/delivery-details"
                             onClick={handleToggle}
                             className="hover:no-underline hover:text-white"
                         >
