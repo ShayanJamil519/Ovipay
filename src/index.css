@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 
 * {
     /* border: 0.1px solid black !important; */
 }
 
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Noto Sans KR", sans-serif !important;
 }
 
 .h-custom {
     height: calc(100vh - 50px);
 }
 
-input[type=checkbox] {
-    accent-color: #FED52A;
-    border-color: #FED52A;
+input[type="checkbox"] {
+    accent-color: #fed52a;
+    border-color: #fed52a;
 }
