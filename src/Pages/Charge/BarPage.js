@@ -4,6 +4,7 @@ import ConfirmationModal from "../../components/modals/ConfirmationModal";
 import Header from "./Header";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import { IoChevronDownSharp } from "react-icons/io5";
+import { goldenGradient, silverGradient } from "../../utils";
 
 export default function BarPage() {
     const [confirm, setConfirm] = useState(false);
@@ -89,14 +90,14 @@ export default function BarPage() {
                     <div className='flex gap-x-3'>
                         {/* First Button */}
                         <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-[1px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
-                            <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                            <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>계좌이체</p>
                         </button>
 
                         {/* Second Button */}
 
                         <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-[1px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
-                            <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                            <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                         </button>
 

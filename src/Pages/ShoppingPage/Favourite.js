@@ -10,6 +10,7 @@ import "swiper/css/mousewheel";
 // import required modules
 import SortModal from "./Modals/SortModal";
 import MyCartPopup from "./Popups/MyCartPopup";
+import FavouriteProducts from "./Components/FavouriteProducts";
 
 const Favourite = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -143,36 +144,7 @@ const Favourite = () => {
                 <div className="w-full">
                     <div className="flex flex-wrap justify-between gap-3">
                         {firstProducts.map((product) => (
-                            <div
-                                key={product.id}
-                                className="relative flex-shrink-0 w-[30%] mb-4"
-                            >
-                                <img
-                                    src={product.image}
-                                    alt={product.title}
-                                    className="w-full h-28 object-cover rounded-xl"
-                                />
-                                <div className="absolute top-1 right-2">
-                                    <input
-                                        type="checkbox"
-                                        className="h-4 w-4 border border-[#f6c700] text-[#F6C700] checkbox"
-                                    />
-                                </div>
-                                <div className="p-2">
-                                    <p className="text-[14px] font-semibold mb-1">
-                                        <span className="text-[#F6C700] mr-2">
-                                            {product.discount}
-                                        </span>
-                                        {product.price}
-                                    </p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
-                                        {product.title}
-                                    </p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
-                                        {product.description}
-                                    </p>
-                                </div>
-                            </div>
+                            <FavouriteProducts product={product} />
                         ))}
                     </div>
                 </div>
@@ -184,8 +156,8 @@ const Favourite = () => {
                             <h1 className="text-[14px] text-[#989898]">
                                 1개 선택
                             </h1>
-                            <p className="text-[23px] font-[900] text-black">
-                                총 149,000원
+                            <p className="text-[23px] font-[900] text-[#464441]">
+                                <span className="text-[18px] font-[500]">총</span> 149,000원
                             </p>
                         </div>
                         <div className="flex items-center justify-center w-[50%] bg-[#FED52A] rounded-[50px]">

@@ -72,7 +72,7 @@ const AffiliatedStores = () => {
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full px-4 mt-2 font-bold gap-x-2 gap-y-4">
+                <div className="flex flex-wrap items-center w-full px-4 mt-2 font-bold gap-x-2 gap-y-3">
                     {filters.map((filter, index) => (
                         <h6
                         key={index}
@@ -84,7 +84,7 @@ const AffiliatedStores = () => {
                             selectedCategory === filter.name
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer text-[10px] min-w-[70px] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
+                        } cursor-pointer text-[10px] w-[23%] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
                         >
                         {filter.name}
                         </h6>

@@ -16,5 +16,10 @@ body {
 
 input[type="checkbox"] {
     accent-color: #fed52a;
-    border-color: #fed52a;
+    color: #ffffff !important;
+    background-color: #fff !important;
+}
+
+input[type="checkbox"]::before {
+    color: #ffffff; /* Set tick color to white */
 }

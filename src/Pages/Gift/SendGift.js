@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { goldenGradient, silverGradient } from '../../utils';
 
 const SendGift = () => {
 
@@ -29,19 +30,19 @@ const SendGift = () => {
                 <div className='flex gap-x-2 justify-between'>
                     {/* First Button */}
                     <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
                     <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} text-[#DDDDDD] pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
                     <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                     </button>
 

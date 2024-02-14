@@ -3,7 +3,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { FormGroup, Input } from 'reactstrap';
 
-const LocationModal = ({isOpen, setIsOpen}) => {
+const LocationModal = ({title, isOpen, setIsOpen}) => {
   const popupRef = useRef();
 
     const results=[
@@ -24,10 +24,10 @@ const LocationModal = ({isOpen, setIsOpen}) => {
     <div className="fixed bottom-0 left-0 right-0 bg-black bg-opacity-50 z-50 h-full" onClick={handleClosePopup}>
       <div
         ref={popupRef}
-        className={`fixed bottom-0 left-0 right-0 bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-2xl border-2 ${
+        className={`fixed bottom-0 left-0 overflow-y-scroll right-0 bg-white z-50 transform transition-all ease-in-out duration-300 rounded-t-2xl border-2 ${
           isOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
-        style={{ minHeight: '85vh' }}
+        style={{ maxHeight: '85vh' }}
       >
         <div className='flex flex-col'>
             <div className="w-full my-2">
@@ -42,7 +42,7 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                         />
 
                         <h6 className="text-[17px] font-bold text-black">
-                            위치 설정
+                            {title}
                         </h6>
 
                         {/* menu icon */}
@@ -58,7 +58,7 @@ const LocationModal = ({isOpen, setIsOpen}) => {
             
             {/* Search bar for items */}
             <Link to="/gift/location">
-                <FormGroup className="flex items-center justify-center w-full px-3">
+                <FormGroup className="flex items-center border-none justify-center w-full px-3">
                     <img
                         src="/search.svg"
                         alt=""
@@ -67,9 +67,9 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                     <Input
                         type="text"
                         placeholder="지번, 도로명, 건물명으로 검색"
-                        className="rounded-xl py-[25px] pl-14 w-[95%] text-gray-400 bg-[#F5F6F8] focus:outline-none "
+                        className="rounded-xl py-[25px] border-none pl-14 w-[95%] text-gray-400 bg-[#F5F6F8] focus:outline-none "
                     />
-                    <img src="/cross.svg" alt="" className="cursor-pointer z-10 absolute bg-[#D9D9D9] right-[10%] p-2 rounded-xl text-white" />
+                    {/* <img src="/cross.svg" alt="" className="cursor-pointer z-10 absolute bg-[#D9D9D9] right-[10%] p-2 rounded-xl text-white" /> */}
                 </FormGroup>
             </Link>
             
@@ -89,7 +89,7 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                             <div className='flex gap-3 items-start'>
                                 <img src={result.image} alt="" className='flex items-start justify-start h-4 mt-1' />
                                 <div className="">
-                                    <p className="text-[14px] font-bold">{result.heading}</p>
+                                    <p className={`text-[14px] ${result.heading === 'Home' ? 'font-[600]' : 'font-[400]'}`}>{result.heading}</p>
                                     <p className='text-[12px] font-[400] text-[#AAAAAA]'>{result.subtitle}</p>
                                 </div>
                             </div>
@@ -126,6 +126,13 @@ const LocationModal = ({isOpen, setIsOpen}) => {
                             />
                         </div>
                     </div>
+
+                    <button
+                        className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-[600] text-[18px] mt-16 mb-4"
+                        onClick={()=> setIsOpen(true)}
+                    >
+                        주소설정
+                    </button>
             </div>
 
         </div>

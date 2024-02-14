@@ -131,7 +131,7 @@ const ForgotPassword = () => {
                         <FormGroup className="md:w-[75%] mx-auto">
                             <Label
                                 for="username"
-                                className="font-extrabold text-[18px]"
+                                className="font-[700] text-[14px]"
                             >
                                 이름
                             </Label>
@@ -140,7 +140,7 @@ const ForgotPassword = () => {
                                 name="username"
                                 id="username"
                                 placeholder="신지연"
-                                className="rounded-xl py-4  border-[#FED52A] bg-[#F4F4F4] focus:outline-none"
+                                className="rounded-xl py-4 border-[1px] border-[#FED52A] bg-[#F4F4F4] focus:outline-none"
                                 value={formData.username}
                                 onChange={handleChange}
                                 required
@@ -150,28 +150,28 @@ const ForgotPassword = () => {
                         {/* Four Buttons */}
 
                         <div className="my-4 md:w-[75%] mx-auto">
-                            <h2 className="mb-2 font-bold text-[18px]">
+                            <h2 className="mb-2 font-bold text-[14px]">
                                 전화번호 인증
                             </h2>
 
                             <div className="flex justiy-between">
                                 <input
                                     type="number"
-                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-2 border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-[1px] border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit1}
                                     onChange={handleDigit1}
                                     placeholder="000"
                                 />
                                 <input
                                     type="number"
-                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 focus:outline-none border-2 border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 focus:outline-none border-[1px] border-[#FED52A] text-black rounded-xl py-[10px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit2}
                                     onChange={handleDigit2}
                                     placeholder="000"
                                 />
                                 <input
                                     type="number"
-                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-2 border-[#FED52A] text-[#373535] rounded-xl py-[8px] w-[22%] md:w-[10%] px-[10px]"
+                                    className="mx-1 bg-[#F4F4F4] hover:bg-gray-200 border-[1px] border-[#FED52A] text-[#373535] rounded-xl py-[8px] w-[22%] md:w-[10%] px-[10px]"
                                     value={formData.digit3}
                                     onChange={handleDigit3}
                                     placeholder="000"
@@ -186,15 +186,15 @@ const ForgotPassword = () => {
 
                         {/* Below 4 buttons  like a swapable thing half blue color half gray */}
                         <div className="border-[#FED52A] md:w-[75%] mx-auto mt-3 mb-2">
-                            <label className="block font-bold">인증번호</label>
+                            <label className="block font-bold text-[14px]">인증번호</label>
                             <input
                                 type="number"
-                                className="bg-[#F4F4F4] border-[#FED52A] border-2 relative pl-[12px]  focus:outline-none py-2  rounded-xl"
+                                className="bg-[#F4F4F4] border-[#FED52A] border-[1px] relative pl-[12px]  focus:outline-none py-2  rounded-xl"
                                 placeholder="34322"
                                 value={formData.number}
                                 onChange={handleNumber}
                             />
-                            <button className="bg-[#FED52A] text-sm  px-[16px]  md:px-8 py-[12px] relative right-12 rounded-xl">
+                            <button className="bg-[#FED52A] text-[12px] font-[500]  px-[22px]  md:px-8 py-[14px] relative right-12 rounded-xl">
                                 확인
                             </button>
                         </div>

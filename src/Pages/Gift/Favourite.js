@@ -95,7 +95,7 @@ const Favourite = () => {
                                         className="text-[#FED52A] cursor-pointer relative bottom-16"
                                     />
                                 ) : (
-                                    <FaRegSquareCheck
+                                    <FaRegSquareCheck 
                                         size={25}
                                         className="bg-[#FED52A] text-white cursor-pointer relative bottom-16"
                                     />

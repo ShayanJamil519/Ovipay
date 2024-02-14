@@ -74,7 +74,7 @@ const Home = () => {
                 <div
                     className="flex items-center justify-center w-full hover:no-underline"
                 >
-                    <button className="w-[95%] flex items-center text-center font-bold text-sm rounded-xl text-black py-2.5 px-3 shadow-md mb-3 bg-[#FED52A] gap-x-1" onClick={()=> setIsOpen(true)}>
+                    <button className="w-[95%] flex items-center text-center font-[500] text-[12px] rounded-xl text-black py-2.5 px-3 shadow-md mb-3 bg-[#FED52A] gap-x-1" onClick={()=> setIsOpen(true)}>
                         <FaLocationDot size={18} className="text-black" /> 이
                         곳을 터치하여 주소를 설정하세요!
                     </button>
@@ -143,7 +143,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {isOpen && <LocationModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+            {isOpen && <LocationModal title="위치 설정" isOpen={isOpen} setIsOpen={setIsOpen} />}
             <Footer address={"home"} />
         </>
     );

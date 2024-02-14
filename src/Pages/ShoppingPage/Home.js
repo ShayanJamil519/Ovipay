@@ -21,8 +21,7 @@ const Home = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedFilter, setSelectedFilter] = useState("");
     const options = ["1만원 미만", "1~2만원대", "3-4만원대", "5만원 이상"];
-    const filters = ["전체", "가전제품", "식품", "욕실", "전자기기", "가구", "의류", "생활용품", "반려동물", "유아ㆍ아동", "캠핑ㆍ레저"];
-    const [liked, setLiked] = useState();
+    const filters = ["전체", "가전제품", "식품", "욕실", "전자기기", "가구", "의류", "생활용품", "반려동물", "유아ㆍ아동", "캠핑ㆍ레저", "데코ㆍ식물", "뷰티"];
     const [selectedOption, setSelectedOption] = useState('');
     const [displayedProducts, setDisplayedProducts] = useState(6);
 

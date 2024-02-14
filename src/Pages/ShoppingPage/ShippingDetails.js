@@ -11,14 +11,14 @@ const cardData = [
         expiry: "기간 만료 30일 남음",
         category: "매장명",
         description: "안심한우 1++등급 ‘투뿔 스...",
-        price: "149,000원",
+        price: "149,000",
     },
     {
         id: 2,
         expiry: "기간 만료 30일 남음",
         category: "매장명",
         description: "안심한우 1++등급 ‘투뿔 스...",
-        price: "149,000원",
+        price: "149,000",
     },
 ];
 
@@ -40,8 +40,8 @@ export default function Shipping() {
                             className="text-gray-300 text-start"
                         />
                         <input
-                            placeholder="주문내역 검색"
-                            className="text-[14px] bg-transparent"
+                            placeholder="검색"
+                            className="text-[14px] text-[#AAAAAA] bg-transparent"
                         />
                     </div>
 
@@ -82,7 +82,7 @@ export default function Shipping() {
                                         {card.description}
                                     </p>
                                     <h6 className="text-[18px] font-[900] text-black">
-                                        {card.price}
+                                        {card.price} <span className="text-[18px] font-[300]">원</span>
                                     </h6>
                                     <div className="flex items-end justify-end w-full mt-3 gap-1">
                                         <button
@@ -145,9 +145,9 @@ export default function Shipping() {
                                     <p className="text-sm text-[#464441] mb-2">
                                         {card.description}
                                     </p>
-                                    <h6 className="text-[18px] font-[900] text-black">
-                                        {card.price}
-                                    </h6>
+                                    <p className="text-[18px] font-[900] text-black">
+                                        {card.price} <span className="text-[18px] font-[300]">원</span>
+                                    </p>
                                     <Link
                                         to="/shopping/order-details"
                                         className="flex flex-col items-end justify-center w-full mt-3"

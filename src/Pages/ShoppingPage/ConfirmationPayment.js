@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Header from './Header';
-import Footer from './Footer';
 import BankModal from '../Gift/Modals/BankModal';
 import SortModal from '../Gift/Modals/SortModal';
 import LocationModal from '../Gift/Modals/LocationModal';
 import CardPaymentPopup from './Popups/CardPaymentPopup';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { goldenGradient, silverGradient } from '../../utils';
 
 export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
@@ -19,12 +19,13 @@ export default function ConfirmationPayment() {
     return (
         <>
         <Header title="쇼 핑" showHamburger={true} />
+        
         <div>
 
             {/* This div is for heading and description */}
             <div className='pt-3 pl-3'>
-                <h1 className='font-bold text-[22px]'>결제하기</h1>
-                <p className='mt-3 font-semibold'>배달 주소</p>
+                <h1 className='font-bold text-[20px]'>결제하기</h1>
+                <p className='mt-3 font-semibold text-[16px]'>배달 주소</p>
             </div>
 
             {/* This div is for Cards */}
@@ -33,8 +34,8 @@ export default function ConfirmationPayment() {
                 {/* First Card */}
                 <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl' onClick={() =>setIsLocationOpen(true)}>
                     <div>
-                        <p className='text-lg font-bold'>Home</p>
-                        <p>서울특별시 홍길동로 삼겹살</p>
+                        <p className='text-[16px] font-bold'>Home</p>
+                        <p className='text-[#AAAAAA] text-[12px] font-[400]'>서울특별시 홍길동로 삼겹살</p>
                     </div>
                 <input
                     type="radio"
@@ -53,8 +54,8 @@ export default function ConfirmationPayment() {
       {/* Second Card */}
       <div className='flex items-center justify-between px-4 py-3 mt-3 shadow-md rounded-xl'>
         <div>
-          <p className='text-lg font-bold'>Office</p>
-          <p>서울특별시 홍길동로 삼겹살</p>
+          <p className='text-[16px] font-bold'>Office</p>
+          <p className='text-[#AAAAAA] text-[12px] font-[400]'>서울특별시 홍길동로 삼겹살</p>
         </div>
         <input
           type="radio"
@@ -74,27 +75,27 @@ export default function ConfirmationPayment() {
             {/* This div is for below the card 3 buttons */}
 
             <div className='mx-3'>
-                <h2 className='font-bold text-[20px] px-2 py-3 mt-4'>결제 방법</h2>
+                <h2 className='font-bold text-[16px] px-2 py-3 mt-4'>결제 방법</h2>
 
                 {/* This div is for three buttons */}
                 <div className='flex justify-between gap-x-1'>
                     {/* First Button */}
                     <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 0 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A] border-solid border-2 border-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
 
                     <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 1 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
 
                     <button className={`flex flex-col justify-start px-4 pt-3 ${currentOption === 2 ? 'border-[2px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
-                        <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                     </button>
                 </div>
@@ -359,7 +360,7 @@ export default function ConfirmationPayment() {
 
         {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} />}
         {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen} />}
-        {isLocationOpen && <LocationModal isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
+        {isLocationOpen && <LocationModal title="주소 설정" isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
         {(currentOption === 1 && isPaymentOpen) && <CardPaymentPopup isOpen={isPaymentOpen} />}
         
      </>
