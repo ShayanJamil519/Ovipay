@@ -104,7 +104,7 @@ const Home = () => {
                             handleSelectCategory(filter.name);
                         }}
                         className={`${
-                            selectedCategory === filter.name
+                            (selectedCategory === filter.name || index === 0)
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
                         } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
@@ -135,12 +135,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-full mt-4 gap-y-6">
-                    <h6 className="w-full text-xl font-semibold px-3">
-                        금주의 인기 GIFT
-                    </h6>
+                <div className="h-[2px] w-[90%] bg-[#d1d1d1] px-4"></div>
 
-                    <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                <div className="flex flex-col items-center justify-center w-full mt-4 px-3">
+
+                    <div className="w-full grid grid-cols-2 gap-x-4 gap-y-4">
                         {cards.map((item) => (
                             <Link
                                 to="/gift/gift-product-details"

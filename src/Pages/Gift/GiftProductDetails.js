@@ -70,9 +70,9 @@ const ProductDetails = () => {
 
         <p className='mt-4 text-xl w-[87%] px-4 '>여기서는 상품에 대한 상세 소개가 있을 예정 일반적인 상품 상세페이지라고 생각하시면 됩니다.</p>
 
-        <div className='flex items-center justify-between w-full px-3 mb-2 mt-14 gap-4'>
+        <div className='flex items-center justify-between w-full px-3 mb-2 mt-24 gap-4'>
           <img src="/heart_outline.svg" alt="" />
-          <button className='w-full px-14 text-sm font-bold py-3 text-black rounded-3xl bg-[#FED52A]' onClick={togglePopup}>장바구니</button>
+          <button className='w-full px-14 text-[18px] font-[600] py-3 text-black rounded-[50px] bg-[#FED52A]' onClick={togglePopup}>장바구니</button>
         </div>
       </div>
 

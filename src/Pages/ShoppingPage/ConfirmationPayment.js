@@ -98,6 +98,111 @@ export default function ConfirmationPayment() {
                         <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                     </button>
                 </div>
+
+                {
+                    currentOption === 0 &&
+                    <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-4'>
+                        <p className='flex text-[12px] text-[#171717]'> <img src="/logo.svg" alt="" /> OviPay</p>
+                        <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
+                    </div>
+                }
+
+                {
+                currentOption === 2 &&
+                <div className="mt-4">
+                    <h1 className="mb-3 font-[600]">입금은행</h1>
+                    <div className="flex justify-between border rounded-xl px-4 py-2">
+                        <p className="text-[#A19B91]">은행 선택</p>
+                        <img src="/arrow_down.svg" alt="" />
+                    </div>
+
+                    <div className='mt-4'>
+                        <div className="flex gap-3 items-center mb-1">
+                            <input type="checkbox" className='h-4 w-4' />
+                            <p className='text-[14px] font-[700]'>ATM으로 입금</p>
+                        </div>
+                        <p className='text-[#A7A7A7]'>* ATM은 동전을 입금할 수 없습니다.</p>
+                        <div className='px-3 mt-3'>
+                            <p className='mb-1'>입금자명을 입력해주세요.</p>
+                            <input type="text" className='border w-full rounded-lg p-2' placeholder="이OO" />
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+
+            {/* Radio Options */}
+            <div className='mt-4'>
+              {/* First Radio Button */}
+              <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                  <input
+                      type="radio"
+                      id="receiptRadio"
+                      name="receipt"
+                      value="home"
+                      className='p-1 sr-only' 
+                  />
+                  <label
+                      id="homeLabel"
+                      htmlFor="receiptRadio"
+                      className='p-1 radio-label' 
+                  ></label>
+                  <p className='font-[600]'>현금영수증 발행 안함</p>
+              </div>
+
+              {/* Second Radio Button */}
+              <div>
+                <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                    <input
+                        type="radio"
+                        id="businessRadio"
+                        name="business"
+                        value="home"
+                        className='p-1 sr-only' 
+                    />
+                    <label
+                        id="homeLabel"
+                        htmlFor="businessRadio"
+                        className='p-1 radio-label' 
+                    ></label>
+                    <p className='font-[600]'>현금영수증 발행 안함</p>
+                </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+              </div>
+
+              {/* Third Radio Button */}
+              <div>
+                <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                    <input
+                        type="radio"
+                        id="homeRadio"
+                        name="email"
+                        value="home"
+                        className='p-1 sr-only' 
+                    />
+                    <label
+                        id="homeLabel"
+                        htmlFor="homeRadio"
+                        className='p-1 radio-label' 
+                    ></label>
+                    <p className='font-[600]'>사업자증빙용 / 세금계산서</p>
+                </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>사업자 상호를 기재해주세요.</p>
+                  <input type="text" placeholder="사업자 상호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="사업자등록번호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="000000@naver.com" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+              </div>
             </div>
 
             <div className='px-3'>

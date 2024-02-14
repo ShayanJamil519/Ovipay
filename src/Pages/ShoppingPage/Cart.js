@@ -26,10 +26,10 @@ const Cart = () => {
                     <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3">
                         <img src={product} alt="" />
                         <div className="">
-                            <h6 className="text-lg font-bold text-black">
+                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
                                 오아 공기청정기
                             </h6>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
                                 가전제품 / 49,900원
                             </p>
                         </div>
@@ -52,10 +52,10 @@ const Cart = () => {
                     <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3">
                         <img src={product} alt="" />
                         <div className="">
-                            <h6 className="text-lg font-bold text-black">
+                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
                                 오아 공기청정기
                             </h6>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
                                 가전제품 / 49,900원
                             </p>
                         </div>
@@ -78,10 +78,10 @@ const Cart = () => {
                     <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3">
                         <img src={product} alt="" />
                         <div className="">
-                            <h6 className="text-lg font-bold text-black">
+                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
                                 오아 공기청정기
                             </h6>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
                                 가전제품 / 49,900원
                             </p>
                         </div>
@@ -153,7 +153,7 @@ const Cart = () => {
                     </div>
 
                     <Link to="/shopping/confirm-payment">
-                        <button className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]">
+                        <button className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-[600] text-[18px]">
                             결 제
                         </button>
                     </Link>

@@ -26,17 +26,17 @@ const SendGift = () => {
                 <h2 className='font-bold text-[20px] py-3'>결제 방법</h2>
 
                 {/* This div is for three buttons */}
-                <div className='flex gap-x-2'>
+                <div className='flex gap-x-2 justify-between'>
                     {/* First Button */}
                     <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                         <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
-                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>오비페이</p>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
                     <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                         <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} text-[#DDDDDD] pr-4 rounded-full`}></span>
-                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>신용카드</p>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
@@ -218,7 +218,7 @@ const SendGift = () => {
                         <p>3,000 원</p>
                     </div>
                         
-                    <hr className='w-full h-[1px] bg-[#464441] my-2' />
+                    <hr className='w-full h-[0.5px] bg-[#bebebd] my-2' />
 
                     <div className='flex justify-between w-full items-start font-[400]'>
                         <p>Total</p>

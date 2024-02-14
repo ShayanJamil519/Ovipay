@@ -60,14 +60,14 @@ const AffiliatedStores = () => {
                 {/* Search bar for items */}
                 <FormGroup className="flex items-center justify-center w-full px-3">
                     <CiSearch
-                        size={40}
+                        size={36}
                         type="submit"
                         className="cursor-pointer bg-[#FED52A] z-10 absolute left-[9%] p-2 rounded-xl text-white"
                     />
                     <Input
                         type="text"
                         placeholder="찾으시는 가게가 있으신가요?"
-                        className="rounded-xl py-[25px] pl-14 w-[95%] text-gray-400 bg-[#ffffff] focus:outline-none "
+                        className="rounded-xl py-[25px] text-[14px] font-[400] pl-14 w-[95%] text-[#d8d4ce] bg-[#ffffff] focus:outline-none "
                     />
                 </FormGroup>
 
@@ -101,7 +101,7 @@ const AffiliatedStores = () => {
 
                 <div className="flex flex-col items-center justify-center w-full mt-4 gap-y-3">
 
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-3 w-full px-3">
                         {cards.map((item) => (
                             <Link
                                 to="/affiliate/store-details"

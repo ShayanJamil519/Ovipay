@@ -14,7 +14,7 @@ const CompletePayment = () => {
                 {/* Success */}
                 <div className="flex items-center justify-center flex-col w-[90%] rounded-[24px] py-4 gap-y-2 mb-4 mt-4">
                     <img src="/tick.svg" alt="" />
-                    <h1 className="text-[18px] font-[700]">사용 완료</h1>
+                    <h1 className="text-[18px] font-[700]">결제완료!</h1>
                     <p className="text-[12px] font-[400] text-[#8A8A8E]">오비페이를 이용해주셔서 감사합니다.</p>
                 </div>
                 
@@ -46,10 +46,10 @@ const CompletePayment = () => {
                             <p>3,000 원</p>
                         </div>
                         
-                        <hr className='w-full h-[1px] bg-[#9c9b99] my-2' />
+                        <hr className='w-full h-[0.5px] bg-[#bdbcbc] my-2' />
 
                         <div className='flex justify-between w-full items-start font-[400]'>
-                            <p className='text-[#464441]'>신용카드결제</p>
+                            <p className='text-[#464441]'>무통장입금</p>
                             <p>35,000 원</p>
                         </div>
                         <div className='flex justify-between w-full items-end'>

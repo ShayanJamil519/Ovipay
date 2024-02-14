@@ -106,7 +106,7 @@ const Favourite = () => {
 
                     <div className="w-full p-3 mt-3">
                         <h1 className="text-[14px] text-[#989898]">1개 선택</h1>
-                        <p className="text-[23px] font-[900] text-[#464441]">총 40,000원</p>
+                        <p className="text-[23px] font-[900] text-[#464441]"><span className="text-[18px] font-[500]">총</span> 40,000원</p>
 
                         <div className="w-full flex gap-2 my-4">
                             <div className="flex items-center justify-center w-1/2 bg-[#373535] py-2 rounded-[50px] text-white">

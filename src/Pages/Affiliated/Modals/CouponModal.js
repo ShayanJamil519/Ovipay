@@ -39,7 +39,7 @@ const CouponModal = ({isOpen, setIsOpen}) => {
                     </div>
                 </div>
                 <button
-                    className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-[700] text-[17px]"
+                    className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-[700] text-[17px]"
                 >
                     닫 기
                 </button>

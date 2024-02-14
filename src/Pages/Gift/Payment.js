@@ -31,22 +31,22 @@ const Payment = () => {
                     <h2 className='font-bold text-[20px] py-3'>결제 방법</h2>
 
                     {/* This div is for three buttons */}
-                    <div className='flex gap-x-3'>
+                    <div className='flex gap-x-4 justify-between'>
                         {/* First Button */}
-                        <button className='flex flex-col justify-start px-3 pt-3 border rounded-xl' onClick={()=> setCurrentOption(0)}>
-                            <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>오비페이</p>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                            <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-6 rounded-full`}></span>
+                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
                         </button>
 
                         {/* Second Button */}
-                        <button className='flex flex-col justify-start px-3 pt-3 border rounded-xl' onClick={()=> setCurrentOption(1)}>
-                            <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>신용카드</p>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                            <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-6 rounded-full`}></span>
+                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
                         </button>
 
                         {/* Third Button */}
-                        <button className='flex flex-col justify-start px-3 pt-3 border rounded-xl' onClick={()=> setCurrentOption(2)}>
-                            <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                            <span className={`h-[15px] w-[30px] ${currentOption === 2 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-6 rounded-full`}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                         </button>
 
@@ -56,7 +56,7 @@ const Payment = () => {
             {
                 currentOption === 0 &&
                 <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
-                    <p className='flex text-[12px] text-[#171717]'> <img src="/logo.svg" alt="" /> OviPay</p>
+                    <p className='flex text-[12px] text-[#171717] font-[500]'> <img src="/logo.svg" alt="" /> OviPay</p>
                     <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
                 </div>
             }
@@ -142,7 +142,7 @@ const Payment = () => {
                         <p>3,000 원</p>
                     </div>
                         
-                    <hr className='w-full h-[1px] bg-[#464441] my-2' />
+                    <hr className='w-full h-[1px] bg-[#b6b4b1] my-2' />
 
                     <div className='flex justify-between w-full items-start font-[400]'>
                         <p>Total</p>

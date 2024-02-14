@@ -18,9 +18,9 @@ const FilterModal = ({isOpen, setIsOpen}) => {
     { name: '감성 선물', value: '' },
     { name: '상품권', value: '' },
     { name: '집들이', value: '' },
-    { name: '교환권', value: '' },
-    { name: '설 선물', value: '' },
-    { name: '내 주변위치', value: '' },
+    // { name: '교환권', value: '' },
+    // { name: '설 선물', value: '' },
+    // { name: '내 주변위치', value: '' },
 ];
 
 const filterOne = [
@@ -67,7 +67,7 @@ const filterOne = [
                             selectedCategory === filter.name
                                 ? 'bg-[#FED52A]'
                                 : 'bg-white text-[#AAAAAA] border border-[#DDDDDD]'
-                            } cursor-pointer min-w-[110px] text-[14px] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
+                            } cursor-pointer min-w-[110px] text-[14px] font-[400] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
                         >
                             {filter.name}
                         </h6>
@@ -92,7 +92,7 @@ const filterOne = [
                                 selectedCategoryTwo === filter.name
                                     ? 'bg-[#FED52A]'
                                     : 'bg-white text-[#AAAAAA] border border-[#DDDDDD]'
-                                } cursor-pointer min-w-[110px] text-[14px] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
+                                } cursor-pointer min-w-[110px] text-[14px] font-[400] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
                             >
                                 {filter.name}
                             </h6>

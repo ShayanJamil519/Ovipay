@@ -65,7 +65,7 @@ const Footer = ({ address }) => {
                                 } flex flex-col items-center justify-center  gap-y-1`}
                             >
                                 <div className="p-2">
-                                    <img src="/mygift__footer.svg" />
+                                    <img src="/mygift__footer.svg" alt="" className="h-6" />
                                 </div>
                             </div>
                         </Link>
@@ -80,7 +80,7 @@ const Footer = ({ address }) => {
                                 } flex flex-col items-center justify-center  gap-y-1`}
                             >
                                 <div className="p-2">
-                                    <img src="/mygift__notvisit.svg" />
+                                    <img src="/mygift__notvisit.svg" alt="" className="h-6" />
                                 </div>
                             </div>
                         </Link>

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { PiMagnifyingGlass } from "react-icons/pi";
-import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import Footer from "./Footer";
 import Header from "./Header";
-import SaveHistory from "../../components/SaveHistory";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import FilterModal from "../Gift/Modals/FilterModal";
 
@@ -35,8 +33,8 @@ export default function Shipping() {
 
             <div className="px-3">
                 {/* This div is for input search-bar */}
-                <div className="flex justify-between my-4 rounded-xl ">
-                    <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#F5F6F8]">
+                <div className="flex justify-between my-4 rounded-xl">
+                    <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8] mt-2">
                         <PiMagnifyingGlass
                             size={30}
                             className="text-gray-300 text-start"
@@ -47,7 +45,7 @@ export default function Shipping() {
                         />
                     </div>
 
-                    <button onClick={() => setIsOpen(true)} className=" ml-2 w-[60px] flex items-center justify-center h-[50px] bg-[#fed52a] rounded-xl">
+                    <button onClick={() => setIsOpen(true)} className=" ml-2 w-[60px] flex items-center justify-center h-[50px] bg-[#fed52a] rounded-xl mt-2">
                         <img src="/setting.svg" alt=""
                             className="h-5"
                         />
@@ -62,10 +60,10 @@ export default function Shipping() {
                 {/* Save History */}
                 {/* This div is for card */}
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <h1 className="px-2 w-full text-[#464441] text-[16px] font-bold">주문내역</h1>
+                    <h1 className="px-2 w-full text-[#464441] text-[16px] font-[500]">주문내역</h1>
                     <div className="mb-2 flex items-center w-full mt-3">
                         <img src="/dot.svg" alt="" className="mr-2" />
-                        <h1 className="text-[#303030] w-full font-bold">쇼핑</h1>
+                        <h1 className="text-[#303030] w-full text-[16px] font-[500]">쇼핑</h1>
                     </div>
 
                     <div className="w-full flex items-center flex-col">
@@ -125,7 +123,7 @@ export default function Shipping() {
                 <div className="flex flex-col items-center justify-center pt-8 border-t">
                     <div className="mb-2 flex items-center w-full">
                         <img src="/dot.svg" alt="" className="mr-2" />
-                        <h1 className="w-full text-[#464441]">배송완료내역</h1>
+                        <h1 className="w-full text-[#464441] text-[16px]">배송완료내역</h1>
                     </div>
                     <h1 className="text-[#E3BB17] w-full mt-3 font-[600] text-[15px]">
                         2024. 01. 20

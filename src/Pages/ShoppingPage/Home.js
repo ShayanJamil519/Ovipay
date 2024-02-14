@@ -19,7 +19,7 @@ const Home = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedFilter, setSelectedFilter] = useState("");
     const options = ["1만원 미만", "1~2만원대", "3-4만원대", "5만원 이상"];
-    const filters = ["전체", "가전제품", "식품", "욕실", "전자기기"];
+    const filters = ["전체", "가전제품", "식품", "욕실", "전자기기", "가구", "의류", "생활용품", "반려동물", "유아ㆍ아동", "캠핑ㆍ레저"];
     const [liked, setLiked] = useState();
     const [selectedOption, setSelectedOption] = useState('');
     const [displayedProducts, setDisplayedProducts] = useState(6);
@@ -184,7 +184,7 @@ const Home = () => {
                                 selectedFilter === filter
                                     ? "bg-[#FED52A]"
                                     : "bg-white text-[#828282] border"
-                            } cursor-pointer min-w-[97px] text-center py-2 rounded-[50px]`}
+                            } cursor-pointer min-w-[97px] text-center text-[14px] font-[400] py-2 rounded-[50px]`}
                         >
                             {filter}
                         </h6>
@@ -248,8 +248,7 @@ const Home = () => {
                             </h1>
                             <div className="flex flex-col space-y-4 px-4 pb-4 pt-3">
                                 {firstProducts.map((product) => (
-                                    <Link
-                                        to="/shopping/product-details"
+                                    <div
                                         key={product.id}
                                         className="flex border-b pb-3"
                                     >
@@ -285,7 +284,7 @@ const Home = () => {
                                                 {product.price}원
                                             </p>
                                         </div>
-                                    </Link>
+                                    </div>
                                 ))}
                             </div>
                         </div>
