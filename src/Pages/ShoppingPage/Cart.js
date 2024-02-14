@@ -1,21 +1,10 @@
-import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import product from "../../assets/img/product-item.png";
-import { FaPlusCircle } from "react-icons/fa";
-import { FaCircleMinus } from "react-icons/fa6";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import CartItem from "../../components/Global/CartItem";
 
 const Cart = () => {
-    const [number, setNumber] = useState(0);
-    const increase = () => {
-        setNumber(number + 1);
-    };
-    const decrease = () => {
-        if (number > 0) {
-            setNumber(number - 1);
-        }
-    };
+    
     return (
         <>
             <Header title="장바구니" showHamburger={true} />
@@ -23,110 +12,11 @@ const Cart = () => {
                 <h1 className="w-full text-2xl font-semibold">My Cart</h1>
                 <div className="flex flex-col items-center justify-center w-full">
                     {/* Product */}
-                    <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white" style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
-                        <img src={product} alt="" />
-                        <div className="">
-                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
-                                오아 공기청정기
-                            </h6>
-                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
-                                가전제품 / 49,900원
-                            </p>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <FaCircleMinus
-                                onClick={decrease}
-                                role="button"
-                                size={26}
-                                className="text-[#E1E1E1] cursor-pointer"
-                            />
-                            {number}
-                            <FaPlusCircle
-                                onClick={increase}
-                                role="button"
-                                size={26}
-                                className="text-[#FED52A] cursor-pointer"
-                            />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white" style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
-                        <img src={product} alt="" />
-                        <div className="">
-                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
-                                오아 공기청정기
-                            </h6>
-                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
-                                가전제품 / 49,900원
-                            </p>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <FaCircleMinus
-                                onClick={decrease}
-                                role="button"
-                                size={26}
-                                className="text-[#E1E1E1] cursor-pointer"
-                            />
-                            {number}
-                            <FaPlusCircle
-                                onClick={increase}
-                                role="button"
-                                size={26}
-                                className="text-[#FED52A] cursor-pointer"
-                            />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white" style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
-                        <img src={product} alt="" />
-                        <div className="">
-                            <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
-                                오아 공기청정기
-                            </h6>
-                            <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
-                                가전제품 / 49,900원
-                            </p>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <FaCircleMinus
-                                onClick={decrease}
-                                role="button"
-                                size={26}
-                                className="text-[#E1E1E1] cursor-pointer"
-                            />
-                            {number}
-                            <FaPlusCircle
-                                onClick={increase}
-                                role="button"
-                                size={26}
-                                className="text-[#FED52A] cursor-pointer"
-                            />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white" style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
-                        <img src={product} alt="" />
-                        <div className="">
-                            <h6 className="text-lg font-bold text-black">
-                                오아 공기청정기
-                            </h6>
-                            <p className="text-sm text-gray-400">
-                                가전제품 / 49,900원
-                            </p>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <FaCircleMinus
-                                onClick={decrease}
-                                role="button"
-                                size={26}
-                                className="text-[#E1E1E1] cursor-pointer"
-                            />
-                            {number}
-                            <FaPlusCircle
-                                onClick={increase}
-                                role="button"
-                                size={26}
-                                className="text-[#FED52A] cursor-pointer"
-                            />
-                        </div>
-                    </div>
+                    {
+                        [1, 2, 3, 4].map(()=> (
+                            <CartItem />
+                        ))
+                    }
                 </div>
 
                 <h6 className="w-full mt-5 text-[14px] font-[400]">4 개의 상품</h6>

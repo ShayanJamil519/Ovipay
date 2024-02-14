@@ -3,6 +3,7 @@ import ConfirmationDone from "../../components/modals/ConfirmationDone";
 import ConfirmationModal from "../../components/modals/ConfirmationModal";
 import Header from "./Header";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import { IoChevronDownSharp } from "react-icons/io5";
 
 export default function BarPage() {
     const [confirm, setConfirm] = useState(false);
@@ -87,14 +88,14 @@ export default function BarPage() {
                     {/* This div is for three buttons */}
                     <div className='flex gap-x-3'>
                         {/* First Button */}
-                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-[1px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                             <span className={`h-[15px] w-[30px] ${currentOption === 0 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>계좌이체</p>
                         </button>
 
                         {/* Second Button */}
 
-                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-[1px] border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                             <span className={`h-[15px] w-[30px] ${currentOption === 1 ? 'bg-[#FED52A]' : 'bg-[#DDDDDD]'} pr-4 rounded-full`}></span>
                             <p className='pt-3 pb-2 text-[13px] font-semibold'>무통장 입금</p>
                         </button>
@@ -120,10 +121,18 @@ export default function BarPage() {
                 </div>
 
                 <div className="flex mx-3 flex-col my-4 gap-y-3">
-                    <div className="w-full font-[600]">
-                        <select className="min-w-full text-[#A19B91] h-[45px] border border-[#ECECEA] px-2 rounded-xl" placeholder="은행 선택">
-                            <option disabled>은행 선택</option>
+                    <div className="relative">
+                        <select
+                            placeholder="은행 선택"
+                            value="100,000"
+                            className="rounded-[12px] text-[#A19B91] text-[14px]  w-full py-[13px] px-3 border-[1px] appearance-none bg-transparent  focus:outline-[#0F9AFF] focus:border-[1px]"
+                        >
+                            <option>은행 선택</option>
+                            <option>은행 선택</option>
                         </select>
+                        <span className="absolute top-1/2 right-3 z-10 -translate-y-1/2">
+                            <IoChevronDownSharp className="text-[#A19B91] text-[16px] " />
+                        </span>
                     </div>
                     <div className="flex flex-col mt-2">
                         <input
