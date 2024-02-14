@@ -22,60 +22,72 @@ const Cart = () => {
   return (
     <>
      <Header/>
-    <div className='flex flex-col items-center justify-center w-full px-4 py-5'>
+    <div className='flex flex-col items-center justify-center w-full px-4 py-4'>
         <h1 className='w-full text-2xl font-semibold'>My Cart</h1>
         <div className='flex flex-col items-center justify-center w-full'>
         
-        {/* Product */}
-        <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3'>
-         <img src={product} alt="" />
-         <div className=''>
-             <h6 className='text-lg font-bold text-black'>오아 공기청정기</h6>
-             <p className='text-sm text-gray-400'>가전제품 / 49,900원</p>
-         </div>
-         <div className='flex items-center gap-x-2'>
-           <FaCircleMinus onClick={decrease} role='button' size={30} className='text-gray-400 cursor-pointer'/>
-           {number}
-           <FaPlusCircle onClick={increase} role='button' size={30} className='text-[#FED52A] cursor-pointer'/>
-         </div>  
-        </div>
-        <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3'>
-         <img src={product} alt="" />
-         <div className=''>
-             <h6 className='text-lg font-bold text-black'>오아 공기청정기</h6>
-             <p className='text-sm text-gray-400'>가전제품 / 49,900원</p>
-         </div>
-         <div className='flex items-center gap-x-2'>
-           <FaCircleMinus onClick={decrease} role='button' size={30} className='text-gray-400 cursor-pointer'/>
-           {number}
-           <FaPlusCircle onClick={increase} role='button' size={30} className='text-[#FED52A] cursor-pointer'/>
-         </div>  
-        </div>
-        <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3'>
-         <img src={product} alt="" />
-         <div className=''>
-             <h6 className='text-lg font-bold text-black'>오아 공기청정기</h6>
-             <p className='text-sm text-gray-400'>가전제품 / 49,900원</p>
-         </div>
-         <div className='flex items-center gap-x-2'>
-           <FaCircleMinus onClick={decrease} role='button' size={30} className='text-gray-400 cursor-pointer'/>
-           {number}
-           <FaPlusCircle onClick={increase} role='button' size={30} className='text-[#FED52A] cursor-pointer'/>
-         </div>  
-        </div>
-        <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3'>
-         <img src={product} alt="" />
-         <div className=''>
-             <h6 className='text-lg font-bold text-black'>오아 공기청정기</h6>
-             <p className='text-sm text-gray-400'>가전제품 / 49,900원</p>
-         </div>
-         <div className='flex items-center gap-x-2'>
-           <FaCircleMinus onClick={decrease} role='button' size={30} className='text-gray-400 cursor-pointer'/>
-           {number}
-           <FaPlusCircle onClick={increase} role='button' size={30} className='text-[#FED52A] cursor-pointer'/>
-         </div>  
-        </div>
-        </div>
+            {/* Product */}
+            <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white' style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
+            <img src={product} alt="" />
+            <div className=''>
+                <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
+                    오아 공기청정기
+                </h6>
+                <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
+                    가전제품 / 49,900원
+                </p>
+            </div>
+            <div className='flex items-center gap-x-2'>
+            <FaCircleMinus onClick={decrease} role='button' size={26} className='text-gray-400 cursor-pointer'/>
+            {number}
+            <FaPlusCircle onClick={increase} role='button' size={26} className='text-[#FED52A] cursor-pointer'/>
+            </div>  
+            </div>
+            <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white' style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
+            <img src={product} alt="" />
+            <div className=''>
+                <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
+                    오아 공기청정기
+                </h6>
+                <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
+                    가전제품 / 49,900원
+                </p>
+            </div>
+            <div className='flex items-center gap-x-2'>
+            <FaCircleMinus onClick={decrease} role='button' size={26} className='text-gray-400 cursor-pointer'/>
+            {number}
+            <FaPlusCircle onClick={increase} role='button' size={26} className='text-[#FED52A] cursor-pointer'/>
+            </div>  
+            </div>
+            <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white' style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
+            <img src={product} alt="" />
+            <div className=''>
+                <h6 className="text-[14px] font-[600] text-black" style={{lineHeight: '19.07px'}}>
+                    오아 공기청정기
+                </h6>
+                <p className="text-[14px] font-[400] text-[#AAAAAA]" style={{lineHeight: '19.07px'}}>
+                    가전제품 / 49,900원
+                </p>
+            </div>
+            <div className='flex items-center gap-x-2'>
+            <FaCircleMinus onClick={decrease} role='button' size={26} className='text-gray-400 cursor-pointer'/>
+            {number}
+            <FaPlusCircle onClick={increase} role='button' size={26} className='text-[#FED52A] cursor-pointer'/>
+            </div>  
+            </div>
+            <div className='flex items-center justify-between w-full p-2 mt-4 shadow-md rounded-xl gap-x-3 bg-white' style={{boxShadow: '10px 24px 54px 0px #0000000A'}}>
+            <img src={product} alt="" />
+            <div className=''>
+                <h6 className='text-lg font-bold text-black'>오아 공기청정기</h6>
+                <p className='text-sm text-gray-400'>가전제품 / 49,900원</p>
+            </div>
+            <div className='flex items-center gap-x-2'>
+            <FaCircleMinus onClick={decrease} role='button' size={26} className='text-gray-400 cursor-pointer'/>
+            {number}
+            <FaPlusCircle onClick={increase} role='button' size={26} className='text-[#FED52A] cursor-pointer'/>
+            </div>  
+            </div>
+            </div>
 
         <h6 className='w-full mt-5 text-[14px]'>4 개의 상품</h6>
 
@@ -83,15 +95,15 @@ const Cart = () => {
         <div className="w-full mt-4">
             <div className='flex flex-col items-center justify-center mb-6 w-full gap-2'>
                 <div className='flex justify-between w-full items-start'>
-                    <p className='text-[#464441]'>상품 가격</p>
+                    <p className='text-[#afaeac]'>상품 가격</p>
                     <p>199,600 원</p>
                 </div>
                 <div className='flex justify-between w-full items-end'>
-                    <p className='text-[#464441]'>할인금액</p>
+                    <p className='text-[#afaeac]'>할인금액</p>
                     <p>3,000 원</p>
                 </div>
                 <div className='flex justify-between w-full items-end border-b pb-3'>
-                    <p className='text-[#464441]'>배송비</p>
+                    <p className='text-[#afafac]'>배송비</p>
                     <p>0 원</p>
                 </div>
                 <div className='flex justify-between w-full items-end pt-3'>
@@ -102,7 +114,7 @@ const Cart = () => {
 
             <Link to='/shopping/confirm-payment'>
               <button
-                  className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
+                  className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-[600] text-[18px]"
               >
                   저 장
               </button>

@@ -67,12 +67,12 @@ const AffiliatedStores = () => {
                     <Input
                         type="text"
                         placeholder="찾으시는 가게가 있으신가요?"
-                        className="rounded-xl py-[25px] text-[14px] font-[400] pl-14 w-[95%] text-[#d8d4ce] bg-[#ffffff] focus:outline-none "
+                        className="rounded-xl py-[25px] text-[14px] font-[400] pl-16 w-[95%] text-[#d8d4ce] bg-[#ffffff] focus:outline-none "
                     />
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full px-4 mt-2 font-bold gap-x-3 gap-y-4">
+                <div className="flex flex-wrap items-center w-full px-4 mt-2 font-bold gap-x-2 gap-y-4">
                     {filters.map((filter, index) => (
                         <h6
                         key={index}
@@ -84,7 +84,7 @@ const AffiliatedStores = () => {
                             selectedCategory === filter.name
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[12px] shadow-md`}
+                        } cursor-pointer text-[10px] min-w-[70px] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
                         >
                         {filter.name}
                         </h6>
@@ -109,7 +109,7 @@ const AffiliatedStores = () => {
                                 className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
                                 style={{background: "linear-gradient(2.5deg, #000000 -47.86%, rgba(0, 0, 0, 0) 100%)"}}
                             >
-                                <p className="text-[14px] font-[600] text-white">기프티콘 테스트</p>
+                                <p className="text-[14px] font-[600] text-white">교촌치킨 마곡점</p>
                                 <p className="text-gray-100 text-[12px] font-[400]">치킨</p>
                             </Link>
                         ))}

@@ -10,25 +10,36 @@ const FilterModal = ({isOpen, setIsOpen}) => {
   // Array of different filters
   const filters = [
     { name: '생일', value: '' },
-    { name: '부모님 선물', value: '' },
-    { name: '부담없는 선물', value: '' },
-    { name: '먹거리', value: '' },
-    { name: '명품 선물', value: '' },
-    { name: '키즈', value: '' },
-    { name: '감성 선물', value: '' },
-    { name: '상품권', value: '' },
-    { name: '집들이', value: '' },
-    // { name: '교환권', value: '' },
-    // { name: '설 선물', value: '' },
-    // { name: '내 주변위치', value: '' },
+    { name: '가전제품', value: '가전제품' },
+    { name: '반려동물', value: '반려동물' },
+    { name: '욕실', value: '욕실' },
+    { name: '전자기기', value: '전자기기' },
+    { name: '가구', value: '가구' },
+    { name: '의류', value: '의류' },
+    { name: '생활용품', value: '생활용품' },
+    { name: '식품', value: '식품' },
+    { name: '유아ㆍ아동', value: '유아ㆍ아동' },
+    { name: '뷰티', value: '뷰티' },
+    { name: '데코ㆍ식물', value: '데코ㆍ식물' },
+    { name: '캠핑ㆍ레저', value: '캠핑ㆍ레저' },
 ];
 
 const filterOne = [
     { name: '전체', value: '전체' },
     { name: '1만원 이하', value: '1만원 이하' },
     { name: '1~2만원대', value: '1~2만원대' },
-    { name: '먹거리', value: '' },
+    { name: '3~4만원대', value: '3~4만원대' },
+    { name: '5만원 이상', value: '5만원 이상' },
 ];
+
+const filterTwo = [
+    { name: '전체', value: '전체' },
+    { name: '1주일', value: '1주일' },
+    { name: '1개월', value: '1개월' },
+    { name: '1년', value: '1년' },
+    { name: '1년이상', value: '1년이상' },
+];
+
 
 
   const handleClosePopup = (e) => {
@@ -82,7 +93,7 @@ const filterOne = [
                 <h1 className="px-4 py-1 font-[600]">기간</h1>
                 <div className="overflow-x-auto whitespace-nowrap">
                     <div className="flex items-center px-3 mt-2 font-bold gap-y-5">
-                        {filters.map((filter, index) => (
+                        {filterTwo.map((filter, index) => (
                             <h6
                                 key={index}
                                 onClick={() => {
@@ -123,9 +134,9 @@ const filterOne = [
                 </div>
             </div>
 
-            <div className="w-[90%] mx-3 mt-8 mb-4">
+            <div className="w-[90%] mx-3 mt-12 mb-4">
                 <button
-                    className="w-full bg-[#FED52A] py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]"
+                    className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-bold text-[17px]"
                     onClick={()=>setIsOpen(false)}
                 >
                     적 용

@@ -6,7 +6,7 @@ import Footer from './Footer';
 const OrderDetails = () => {
   return (
     <>
-        <Header title="쇼 핑" />
+        <Header title="상세내역" showHamburger={true} />
 
         <div>
 
@@ -25,8 +25,8 @@ const OrderDetails = () => {
                 <div className='w-[90%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3 mb-4'>
                     <img src="/product.png" alt="" />
                     <div className='w-full mt-2'>
-                         <p className='text-sm text-[#8D8D8D]'>오아 공기청정기</p>
-                        <p className='text-sm text-[#464441] mb-2'>35,000원 · 1개</p>
+                        <p className='text-[15px] font-[700] text-[#464441]'>오아 공기청정기</p>
+                        <p className='text-[12px] font-[400] text-[#928F8B] mb-2'>35,000원 · 1개</p>
                         <div to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
                             <button className='bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
                         </div>

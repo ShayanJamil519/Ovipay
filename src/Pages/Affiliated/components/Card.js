@@ -29,7 +29,7 @@ const Card = ({card, setIsOpen}) => {
                     <p className='text-[18] text-[#464441] font-[700] mb-2'>{card.description}</p>
                     <h6 className='text-[10px] font-[500] text-[#ACACAC]'>{card.price}</h6>
                     <div to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3' onClick={()=> setIsBarcode(true)}>
-                        <button className='bg-[#FED52A] px-3 text-sm py-1 rounded-[50px]'>상세내역</button>
+                        <button className='bg-[#FED52A] px-3 text-sm py-1 rounded-[50px]'>쿠폰받기</button>
                     </div>
                 </div>
             </div>

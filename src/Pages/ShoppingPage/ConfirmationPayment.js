@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Header from './Header';
 import Footer from './Footer';
 import BankModal from '../Gift/Modals/BankModal';
@@ -205,24 +205,6 @@ export default function ConfirmationPayment() {
               </div>
             </div>
 
-            <div className='px-3'>
-                    <div className="w-full">
-                        <h1 className="font-[600] my-4">간편 결제</h1>
-                        <div className="w-full flex flex-col py-14 items-center jutify-center border rounded-[20px]" onClick={()=> setIsBankOpen(true)}>
-                            <img src="/plus_circle.svg" alt="" className="rounded-full border mb-2" />
-                            <p className="text-[#A0A0A0] text-[14px] font-[400]">카드를 등록하고 간편하게 결제하세요</p>
-                        </div>
-                    </div>
-
-                    <div className="mt-4">
-                        <h1 className="mb-3 font-[600]">일반 결제</h1>
-                        <div className="flex justify-between border rounded-xl px-4 py-2" onClick={()=> setIsFilterOpen(true)}>
-                            <p className="text-[#A19B91]">은행 선택</p>
-                            <img src="/arrow_down.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
-
 
             <div>
                 {showInputs && (
@@ -326,28 +308,40 @@ export default function ConfirmationPayment() {
 
             </div>
 
-            {/* This div is for payment calculation */}
+            {/* Payment Info */}
+            <div className="p-4">
+                <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2 pt-3'>
+                    <div className='flex justify-between w-full items-start font-[400]'>
+                        <p className='text-[#464441]'>상품명</p>
+                        <p>오아 공기청정기 외 1</p>
+                    </div>
+                    <div className='flex justify-between w-full items-end font-[400]'>
+                        <p className='text-[#464441]'>잔액</p>
+                        <p>100,682원</p>
+                    </div>
+                    <div className='flex justify-between w-full items-end font-[400]'>
+                        <p className='text-[#464441]'>총 상품금액</p>
+                        <p>- 25,000원</p>
+                    </div>
+                    <div className='flex justify-between w-full items-end font-[400]'>
+                        <p className='text-[#464441]'>배송비</p>
+                        <p>3,000 원</p>
+                    </div>
+                        
+                    <hr className='w-full h-[1px] bg-[#b6b4b1] my-2' />
 
-            <div className='mx-4 mt-5'>
-                {/* First Row */}
-                <div className='flex justify-between font-semibold text-gray-400'>
-                    <p>총 상품금액</p>
-                    <p>25,000원</p>
+                    <div className='flex justify-between w-full items-start font-[400]'>
+                        <p>Total</p>
+                        <p className='text-black text-[20px] font-600'>- 28,000원</p>
+                    </div>
+                    <div className='flex justify-between w-full items-end text-[#406FC9]'>
+                        <p className='text-[16px]'>총 결제금액</p>
+                        <p className='font-[600] text-[20px]'>72,682원</p>
+                    </div>                       
                 </div>
-                {/* Second Row */}
-                <div className='flex justify-between font-semibold text-gray-400'>
-                    <p>배송비</p>
-                    <p>3,000원</p>
-                </div>
-                {/* Third Row */}
-                <div className='flex justify-between font-semibold mt-3'>
-                    <p className='font-bold'>Total</p>
-                    <p className='font-bold text-[18px]'>28,000원</p>
-                </div>
-            </div>
 
-            {/* Payment Button */}
-            <div className='mx-3 mt-4'>
+                {/* Sign in button */}
+                <div className="mt-6 text-center flex flex-col">
                     {
                         (currentOption === 0 || 1 )
                         ?
@@ -357,6 +351,7 @@ export default function ConfirmationPayment() {
                         :
                         <button className='w-full bg-[#FED52A] py-3 font-[600] text-[18px] rounded-[50px]' onClick={()=> setIsPaymentOpen(true)}>결 제</button>
                     }
+                </div>
             </div>
 
 
@@ -367,7 +362,6 @@ export default function ConfirmationPayment() {
         {isLocationOpen && <LocationModal isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
         {(currentOption === 1 && isPaymentOpen) && <CardPaymentPopup isOpen={isPaymentOpen} />}
         
-        <Footer address={'none'}/>
      </>
     )
 }

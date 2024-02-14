@@ -6,7 +6,7 @@ import product from "../../assets/img/product-item.svg";
 const DeliveryTracking = () => {
     return (
         <>
-            <Header title="상세내역" showHamburger={true} />
+            <Header title="배송조회" showHamburger={true} />
 
             <div className="w-[90%] mx-auto pt-3 ">
                 <h1 className="text-[16px] text-[#464441] mb-4">배송중인 상품</h1>

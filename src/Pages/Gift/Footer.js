@@ -16,7 +16,7 @@ const Footer = ({ address }) => {
                             className={`${
                                 address === "home"
                                     ? "bg-[#FED52A] rounded-xl  text-white"
-                                    : "text-gray-400 hover:text-[#FED52A] bg-white"
+                                    : "text-[#d9d9d9] hover:text-[#FED52A] bg-white"
                             } flex flex-col items-center justify-center  gap-y-1`}
                         >
                             <IoHomeOutline
@@ -30,7 +30,7 @@ const Footer = ({ address }) => {
                             className={`${
                                 address === "favourite"
                                     ? "bg-[#FED52A]  rounded-xl text-white"
-                                    : "text-gray-400 hover:text-[#FED52A] bg-white"
+                                    : "text-[#d9d9d9] hover:text-[#FED52A] bg-white"
                             } flex flex-col items-center justify-center  gap-y-1`}
                         >
                             <FaRegHeart
@@ -44,7 +44,7 @@ const Footer = ({ address }) => {
                             className={`${
                                 address === "shopping"
                                     ? "bg-[#FED52A]  rounded-xl text-white"
-                                    : "text-gray-400 hover:text-[#FED52A] bg-white"
+                                    : "text-[#d9d9d9] hover:text-[#FED52A] bg-white"
                             } flex flex-col items-center justify-center  gap-y-1`}
                         >
                             <TiShoppingCart

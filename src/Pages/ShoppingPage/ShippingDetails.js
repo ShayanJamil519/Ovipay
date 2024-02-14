@@ -70,7 +70,8 @@ export default function Shipping() {
                         {cardData.map((card) => (
                             <div
                                 key={card.id}
-                                className="w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4"
+                                className="w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4 bg-white"
+                                style={{boxShadow: '0px 2px 48px 0px #0000000A'}}
                             >
                                 <img src="/product.png" alt="" />
                                 <div className="w-full mt-2">
@@ -133,7 +134,8 @@ export default function Shipping() {
                         {cardData.map((card) => (
                             <div
                                 key={card.id}
-                                className="w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3"
+                                className="w-[98%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3 bg-white"
+                                style={{boxShadow: '0px 2px 48px 0px #0000000A'}}
                             >
                                 <img src="/product.png" alt="" />
                                 <div className="w-full mt-2">
