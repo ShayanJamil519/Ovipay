@@ -131,7 +131,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                         </Link>
 
                         <Link
-                            to="/shopping-home"
+                            to="/shopping/delivery-details"
                             onClick={handleToggle}
                             className="hover:no-underline hover:text-white"
                         >

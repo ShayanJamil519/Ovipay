@@ -53,7 +53,7 @@ export default function MyCouponPage() {
     };
     return (
         <>
-            <Header title="" showHamburger={true} />
+            <Header title="MY COUPON" showHamburger={true} />
             <div className="py-4 bg-[#FCFCFC] min-h-[100vh]">
                 <div className="flex flex-col mx-3 mb-4 bg-white shadow-sm rounded-xl">
                     <p className="pt-3 pl-3 text-[14px] text-[#0F1121]">

@@ -93,7 +93,7 @@ const HeroSection = () => {
                         >
                             <div className="flex flex-col justify-center items-center">
                                 <img
-                                    src="/shopping.png"
+                                    src="/shopping.svg"
                                     alt="logo"
                                     className="w-[45px]"
                                 />

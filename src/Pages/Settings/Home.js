@@ -92,8 +92,14 @@ const Home = () => {
 
                 {/* History Container */}
                 <div className="flex my-4 justify-between items-center gap-2">
-                    {[1, 2, 3, 4].map((item, index) => (
-                        <div
+                    {[
+                        "/shopping/delivery-details",
+                        "/my-ovipay",
+                        "/gift/delivery-details",
+                        "/my-coupon",
+                    ].map((item, index) => (
+                        <Link
+                            to={item}
                             key={index}
                             style={{
                                 boxShadow: "2px 2px 7px 0px #00000026",
@@ -111,7 +117,7 @@ const Home = () => {
                                 alt="icon"
                                 className="absolute bottom-2 right-2"
                             />
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

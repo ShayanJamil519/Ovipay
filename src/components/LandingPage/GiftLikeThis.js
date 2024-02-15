@@ -12,7 +12,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 const GiftLikeThis = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full mb-5 px-3 ">
-            <h5 className="w-full mb-3 text-[16px] font-medium text-[#464441]">
+            <h5 className="w-full mb-1 text-[16px] font-medium text-[#464441]">
                 이런 선물은 어때요?
             </h5>
 
