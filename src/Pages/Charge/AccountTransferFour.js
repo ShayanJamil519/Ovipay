@@ -5,7 +5,7 @@ const AccountTransferFour = () => {
   return (
     <>
             {/* Header */}
-            <Header />
+            <Header title="계좌이체" />
 
 
             <div className="h-custom flex items-center justify-center flex-col px-4">
@@ -24,7 +24,7 @@ const AccountTransferFour = () => {
                 
                 <div className="w-[90%] mx-3 mt-16 absolute bottom-[5%]">
                     <button
-                        className="w-full bg-[#373535] py-2 px-3 bottom-1 rounded-[50px] font-bold text-white text-[22px]"
+                        className="w-full bg-[#373535] py-3 px-3 bottom-1 rounded-[50px] font-bold text-white text-[18px]"
                     >
                         충전하기
                     </button>
