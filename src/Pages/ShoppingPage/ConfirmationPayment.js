@@ -7,6 +7,8 @@ import LocationModal from '../Gift/Modals/LocationModal';
 import CardPaymentPopup from './Popups/CardPaymentPopup';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { goldenGradient, silverGradient } from '../../utils';
+import { MdOutlineRadioButtonChecked } from "react-icons/md";
+
 
 export default function ConfirmationPayment() {
     const [showInputs, setShowInputs] = useState(false);
@@ -37,13 +39,9 @@ export default function ConfirmationPayment() {
                         <p className='text-[16px] font-bold'>Home</p>
                         <p className='text-[#AAAAAA] text-[12px] font-[400]'>서울특별시 홍길동로 삼겹살</p>
                     </div>
-                <input
-                    type="radio"
-                    id="homeRadio"
-                    name="location"
-                    value="home"
-                    className='p-1 sr-only' 
-                />
+                    
+                <MdOutlineRadioButtonChecked className='text-[#aaaaaa]' />
+
                 <label
                     id="homeLabel"
                     htmlFor="homeRadio"
