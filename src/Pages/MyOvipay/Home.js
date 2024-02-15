@@ -84,7 +84,7 @@ const MyOvipayPage = () => {
                     </div>
                 </div>
                 {/* Links Container */}
-                <div className="flex items-center mt-4 mb-4 justify-end w-full gap-x-2">
+                <div className="flex items-center mt-4 mb-4 justify-center w-full gap-x-2">
                     <Link
                         style={{
                             boxShadow: "0px 4px 4px 0px #0000001F",
@@ -143,7 +143,7 @@ const MyOvipayPage = () => {
             {/* ======== */}
             <div className="w-[90%] mx-auto pt-3 pb-10">
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full  mt-2 font-bold gap-x-2 ">
+                <div className="flex flex-wrap items-center justify-center w-full  mt-2 font-bold gap-x-1 ">
                     {filters.map((filter, index) => (
                         <h6
                             key={index}

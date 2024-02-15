@@ -36,7 +36,7 @@ const Home = () => {
 
                     <div className="flex items-center mt-2 justify-end w-full gap-x-2">
                         <Link
-                            to="/charge/bar-input"
+                            to="/my-ovipay"
                             className="hover:no-underline hover:text-[#fed52a]"
                         >
                             {" "}
