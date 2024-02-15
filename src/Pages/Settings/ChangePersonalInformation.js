@@ -53,16 +53,18 @@ const ChangePersonalInformation = () => {
                 {/* 3 Div */}
                 <div className="">
                     <p className="font-bold text-[14px] mb-1">인증번호</p>
-                    <input
-                        type="number"
-                        className="rounded-[12px] text-center text-[15px] py-3 px-3 border-[1px] border-[#D4D4D4] bg-[#f9f8f8] focus:outline-none relative"
-                        placeholder="인증번호"
-                        value={"34322"}
-                        // onChange={handleNumber}
-                    />
-                    <button className="bg-[#FED52A] rounded-[12px] text-[12px] font-medium py-[20px] px-7  relative right-12">
-                        확인
-                    </button>
+                    <div className=" relative">
+                        <input
+                            type="number"
+                            className="rounded-[12px] w-[70%] text-center text-[15px] py-3 px-3 border-[1px] border-[#D4D4D4] bg-[#f9f8f8] focus:outline-none "
+                            placeholder="인증번호"
+                            value={"34322"}
+                            // onChange={handleNumber}
+                        />
+                        <button className="bg-[#FED52A] w-fit rounded-[12px] text-[12px] font-medium py-[20px] px-7  relative right-12">
+                            확인
+                        </button>
+                    </div>
                 </div>
 
                 <div className="absolute bottom-2 text-center w-full">
