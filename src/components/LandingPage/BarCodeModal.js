@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
     Button,
     Modal,
@@ -12,7 +12,7 @@ import {
 import logo from "../../assets/img/Vector.png";
 import { Link, useHistory } from "react-router-dom";
 
-const BarCodeModal = ({ setIsOpen }) => {
+const BarCodeModal = ({ isOpen, setIsOpen }) => {
     const popupRef = useRef();
 
     const handleClosePopup = (e) => {
@@ -20,6 +20,7 @@ const BarCodeModal = ({ setIsOpen }) => {
             setIsOpen(false);
         }
     };
+
     return (
         <div
             onClick={handleClosePopup}
@@ -27,7 +28,7 @@ const BarCodeModal = ({ setIsOpen }) => {
         >
             <div
                 ref={popupRef}
-                className=" w-[90%] sm:w-fit rounded-[8px] mb-28 "
+                className=" w-[90%] sm:w-fit rounded-[8px] mb-40 "
             >
                 <div className="rounded-[20px] bg-[#fed52a] w-full shadow pb-3 pt-5 px-6">
                     <div className="relative w-full  py-1 bg-white border rounded-lg">

@@ -144,7 +144,10 @@ const Index = () => {
             <Footer isOpen={barCodeModalOpen} setIsOpen={setBarCodeModalOpen} />
 
             {barCodeModalOpen && (
-                <BarCodeModal setIsOpen={setBarCodeModalOpen} />
+                <BarCodeModal
+                    setIsOpen={setBarCodeModalOpen}
+                    isOpen={barCodeModalOpen}
+                />
             )}
         </div>
     );

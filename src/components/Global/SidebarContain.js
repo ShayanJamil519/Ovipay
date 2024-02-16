@@ -26,7 +26,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
         <div className="relative">
             {menuToggle && (
                 <div
-                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"
+                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-50"
                     onClick={toggle}
                 />
             )}
@@ -145,10 +145,10 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                     </div>
                     <div
                         onClick={toggle}
-                        className="flex flex-col hover:bg-[#fed52a] mt-2  cursor-pointer hover:text-white justify-center w-full px-4 font-semibold text-[#fed52a] gap-y-7 "
+                        className="flex flex-col hover:bg-[#fed52a] mt-2  cursor-pointer hover:text-white justify-center w-full px-4  text-[#fed52a] gap-y-7 "
                     >
                         <div className="flex items-center  py-2 gap-x-4 ">
-                            <RiShutDownLine size={28} className="text-[" />
+                            <RiShutDownLine size={28} className="" />
                             <h6 className="text-black ">로그아웃</h6>
                         </div>
                     </div>
