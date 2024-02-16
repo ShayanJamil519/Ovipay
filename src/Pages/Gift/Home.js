@@ -11,7 +11,7 @@ import HorizontalCard from "./Components/HorizontalCard";
 
 const Home = () => {
         
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState('생일');
     const [isOpen, setIsOpen] = useState(false);
     
     const cards = [
@@ -43,7 +43,7 @@ const Home = () => {
 
     // Array of different filters
     const filters = [
-        { name: '생일', value: '' },
+        { name: '생일', value: '생일' },
         { name: '부모님 선물', value: '' },
         { name: '부담없는 선물', value: '' },
         { name: '먹거리', value: '' },
@@ -72,7 +72,7 @@ const Home = () => {
             <Header title="GIFT" />
             <div className="flex flex-col items-center w-full py-4">
                 <div
-                    className="flex items-center justify-center w-full hover:no-underline"
+                    className="flex items-center justify-center w-full hover:no-underline px-2"
                 >
                     <button className="w-[95%] flex items-center text-center font-[500] text-[12px] rounded-xl text-black py-2.5 px-3 shadow-md mb-3 bg-[#FED52A] gap-x-1" onClick={()=> setIsOpen(true)}>
                         <FaLocationDot size={18} className="text-black" /> 이
@@ -81,11 +81,11 @@ const Home = () => {
                 </div>
                 
                 {/* Search bar for items */}
-                <FormGroup className="flex items-center justify-center w-full">
+                <FormGroup className="flex items-center justify-center w-full px-2">
                     <CiSearch
                         size={40}
                         type="submit"
-                        className="cursor-pointer bg-[#FED52A] z-10 absolute left-[3.8%] p-2 rounded-xl text-white"
+                        className="cursor-pointer bg-[#FED52A] z-10 absolute left-[7%] p-2 rounded-xl text-white"
                     />
                     <Input
                         type="text"
@@ -95,7 +95,7 @@ const Home = () => {
                 </FormGroup>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-2 gap-y-5">
+                <div className="flex flex-wrap items-center w-full px-3 mt-2 font-bold gap-x-2 gap-y-3">
                     {filters.map((filter, index) => (
                         <h6
                         key={index}
@@ -104,10 +104,10 @@ const Home = () => {
                             handleSelectCategory(filter.name);
                         }}
                         className={`${
-                            (selectedCategory === filter.name || index === 0)
+                            (selectedCategory === filter.name)
                             ? 'bg-[#FED52A]'
                             : 'bg-white'
-                        } cursor-pointer text-[10px] font-[700] text-center py-2 px-3 border rounded-[8px] shadow-md`}
+                        } cursor-pointer text-[10px] w-[23%] font-[700] text-center py-2 border rounded-[8px] shadow-md`}
                         >
                         {filter.name}
                         </h6>
@@ -116,8 +116,8 @@ const Home = () => {
 
                 <div className="overflow-x-auto max-w-full max-h-[300px]">
                     <div className="flex space-x-4 p-4">
-                        {products.map((product) => (
-                            <HorizontalCard product={product} />
+                        {products.map((product, index) => (
+                            <HorizontalCard product={product} key={index} />
                         ))}
                     </div>
                 </div>

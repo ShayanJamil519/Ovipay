@@ -15,15 +15,15 @@ const VerticalProduct = ({product}) => {
                     className="w-full h-36 object-cover rounded-lg"
                 />
                 <div className="absolute top-2 left-2 bg-[#FED52A] text-white px-2 rounded-[5px]">
-                        <span className="text-[14px] font-[900]">
-                            {product.id}
+                    <span className="text-[14px] font-[900]">
+                        {product.id}
                     </span>
                 </div>
                 <div className="absolute top-2 right-2" onClick={() => setLiked(!liked)}>
                     <img
                         src={`${liked ? '/heart_filled.svg' : '/heart.svg'}`}
                         alt="Heart"
-                        className="w-6 h-6"
+                        className="w-5 h-5"
                     />
                 </div>
             </div>

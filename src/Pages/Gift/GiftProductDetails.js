@@ -14,6 +14,7 @@ import CouponModal from './Modals/CouponModal';
 // import required modules
 import {  Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { IoIosStar } from 'react-icons/io';
+import CouponPopup from './Modals/Popups/CouponPopup';
 
 const ProductDetails = () => {
 
@@ -68,7 +69,7 @@ const ProductDetails = () => {
           <img src={product} alt="" />
         </div>
 
-        <p className='mt-4 text-xl w-[87%] px-4 '>여기서는 상품에 대한 상세 소개가 있을 예정 일반적인 상품 상세페이지라고 생각하시면 됩니다.</p>
+        <p className='mt-6 text-[17px] font-medium w-[87%] px-4 ' style={{ lineHeight: '25px', letterSpacing: '1px', textAlign: 'left'}}>여기서는 상품에 대한 상세 소개가 있을 예정 일반적인 상품 상세페이지라고 생각하시면 됩니다.</p>
 
         <div className='flex items-center justify-between w-full px-3 mb-2 mt-24 gap-4'>
           <img src="/heart_outline.svg" alt="" />
@@ -77,7 +78,8 @@ const ProductDetails = () => {
       </div>
 
       {/* Modal */}
-      {isOpen && <CouponModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {/* {isOpen && <CouponModal isOpen={isOpen} setIsOpen={setIsOpen} />} */}
+      {isOpen && <CouponPopup isOpen={isOpen} setIsOpen={setIsOpen} />}
       
       <Footer address='home'/>
     </>

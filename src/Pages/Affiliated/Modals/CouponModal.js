@@ -20,7 +20,7 @@ const CouponModal = ({isOpen, setIsOpen}) => {
       >
         <div className='flex flex-col mb-8'>
             <div className='flex items-center justify-center flex-col mt-12'>
-                <img src="/barcode.svg" alt="" style={{height: '6%', width: '70%'}} />
+                <img src="/barcode.svg" alt="" style={{width: '70%'}} />
                 <img src="/dish.png" alt="" style={{height: '20vh'}} />
                 <p className='text-[17px] text-center text-[#696969] my-2'>허니콤보세트</p>
                 <h1 className='text-[25px] font-[700] text-center text-[#464441]'> <span className='text-[50px]'>5%</span><br />할인쿠폰</h1>
@@ -29,11 +29,11 @@ const CouponModal = ({isOpen, setIsOpen}) => {
 
             <div className="w-[90%] mx-3 mt-16">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2'>
-                    <div className='flex justify-between w-full items-start'>
+                    <div className='flex justify-between w-full items-start text-[15px] font-medium'>
                         <p>저장날짜</p>
                         <p>2023. 01. 02</p>
                     </div>
-                    <div className='flex justify-between w-full items-end text-[#CA1C1C]'>
+                    <div className='flex justify-between w-full text-[15px] font-medium items-end text-[#CA1C1C]'>
                         <p>만료기한</p>
                         <p>2024. 01. 02 까지</p>
                     </div>

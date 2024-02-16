@@ -8,7 +8,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const AffiliatedStores = () => {
         
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState('치킨');
     const cards = [
         {
             id: 0,
@@ -91,7 +91,7 @@ const AffiliatedStores = () => {
                     ))}
                 </div>
 
-                <div className="flex justify-between w-full px-4 mt-4">
+                <div className="flex justify-between w-full px-4 mt-6">
                     <p className="text-[#464441] font-[700]">치킨 가맹점</p>
                     <div className="flex gap-1 items-center">
                         <p className="text-[#7D7D7D] text-[13px] font-[400]">거리순</p>

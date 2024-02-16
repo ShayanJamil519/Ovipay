@@ -60,7 +60,7 @@ export default function Shipping() {
                 {/* Save History */}
                 {/* This div is for card */}
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <h1 className="px-2 w-full text-[#464441] text-[16px] font-[500]">주문내역</h1>
+                    <h1 className="px-2 w-full text-[#464441] text-[16px] font-medium">주문내역</h1>
                     <div className="mb-2 flex items-center w-full mt-3">
                         <img src="/dot.svg" alt="" className="mr-2" />
                         <h1 className="text-[#303030] w-full text-[16px] font-[500]">쇼핑</h1>
@@ -75,18 +75,18 @@ export default function Shipping() {
                             >
                                 <img src="/product.png" alt="" />
                                 <div className="w-full mt-2">
-                                    <p className="text-sm text-[#8D8D8D]">
+                                    <p className="text-[11px] font-[400] text-[#8D8D8D]">
                                         {card.category}
                                     </p>
-                                    <p className="text-sm text-[#464441] mb-2">
+                                    <p className="text-[14px] fonr-[400] text-[#464441] mb-2">
                                         {card.description}
                                     </p>
                                     <h6 className="text-[18px] font-[900] text-black">
-                                        {card.price} <span className="text-[18px] font-[300]">원</span>
+                                        {card.price} <span className="font-[300]">원</span>
                                     </h6>
                                     <div className="flex items-end justify-end w-full mt-3 gap-1">
                                         <button
-                                            className="bg-[#F2F2F2] px-3 text-[10px] font-[700] py-1 rounded-[50px]"
+                                            className="bg-[#F2F2F2] px-3 text-[10px] w-[80px] h-[24px] font-[700] text-[#272727] py-1 rounded-[50px]"
                                             onClick={() =>
                                                 history.push(
                                                     "/shopping/order-details"
@@ -96,7 +96,7 @@ export default function Shipping() {
                                             상세내역
                                         </button>
                                         <button
-                                            className="bg-[#FED52A] px-3 text-[10px] font-[700] py-1 rounded-[50px]"
+                                            className="bg-[#FED52A] px-3 text-[10px] w-[80px] h-[24px] font-[700] py-1 rounded-[50px]"
                                             onClick={() =>
                                                 history.push(
                                                     "/shopping/delivery-tracking"
@@ -124,7 +124,7 @@ export default function Shipping() {
                 <div className="flex flex-col items-center justify-center pt-8 border-t">
                     <div className="mb-2 flex items-center w-full">
                         <img src="/dot.svg" alt="" className="mr-2" />
-                        <h1 className="w-full text-[#464441] text-[16px]">배송완료내역</h1>
+                        <h1 className="w-full text-[#464441] text-[16px] font-[500]">배송완료내역</h1>
                     </div>
                     <h1 className="text-[#E3BB17] w-full mt-3 font-[600] text-[15px]">
                         2024. 01. 20
@@ -139,20 +139,20 @@ export default function Shipping() {
                             >
                                 <img src="/product.png" alt="" />
                                 <div className="w-full mt-2">
-                                    <p className="text-sm text-[#8D8D8D]">
+                                    <p className="text-[11px] font-[400] text-[#8D8D8D]">
                                         {card.category}
                                     </p>
-                                    <p className="text-sm text-[#464441] mb-2">
+                                    <p className="text-[14px] font-[400] text-[#464441] mb-2">
                                         {card.description}
                                     </p>
                                     <p className="text-[18px] font-[900] text-black">
-                                        {card.price} <span className="text-[18px] font-[300]">원</span>
+                                        {card.price} <span className="font-[300]">원</span>
                                     </p>
                                     <Link
                                         to="/shopping/order-details"
                                         className="flex flex-col items-end justify-center w-full mt-3"
                                     >
-                                        <button className="bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl">
+                                        <button className="bg-[#F2F2F2] px-3 w-[80px] h-[24px] text-[10px] font-[700] py-1 rounded-[50px]">
                                             상세내역
                                         </button>
                                     </Link>

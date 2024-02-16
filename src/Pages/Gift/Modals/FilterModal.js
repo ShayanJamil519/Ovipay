@@ -5,10 +5,10 @@ const FilterModal = ({isOpen, setIsOpen}) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedCategoryTwo, setSelectedCategoryTwo] = useState(null);
     const [selectedCategoryThree, setSelectedCategoryThree] = useState(null);
-  const popupRef = useRef();
+    const popupRef = useRef();
 
-  // Array of different filters
-  const filters = [
+    // Array of different filters
+    const filters = [
     { name: '생일', value: '' },
     { name: '가전제품', value: '가전제품' },
     { name: '반려동물', value: '반려동물' },
@@ -22,23 +22,23 @@ const FilterModal = ({isOpen, setIsOpen}) => {
     { name: '뷰티', value: '뷰티' },
     { name: '데코ㆍ식물', value: '데코ㆍ식물' },
     { name: '캠핑ㆍ레저', value: '캠핑ㆍ레저' },
-];
+    ];
 
-const filterOne = [
-    { name: '전체', value: '전체' },
-    { name: '1만원 이하', value: '1만원 이하' },
-    { name: '1~2만원대', value: '1~2만원대' },
-    { name: '3~4만원대', value: '3~4만원대' },
-    { name: '5만원 이상', value: '5만원 이상' },
-];
+    const filterOne = [
+        { name: '전체', value: '전체' },
+        { name: '1만원 이하', value: '1만원 이하' },
+        { name: '1~2만원대', value: '1~2만원대' },
+        { name: '3~4만원대', value: '3~4만원대' },
+        { name: '5만원 이상', value: '5만원 이상' },
+    ];
 
-const filterTwo = [
-    { name: '전체', value: '전체' },
-    { name: '1주일', value: '1주일' },
-    { name: '1개월', value: '1개월' },
-    { name: '1년', value: '1년' },
-    { name: '1년이상', value: '1년이상' },
-];
+    const filterTwo = [
+        { name: '전체', value: '전체' },
+        { name: '1주일', value: '1주일' },
+        { name: '1개월', value: '1개월' },
+        { name: '1년', value: '1년' },
+        { name: '1년이상', value: '1년이상' },
+    ];
 
 
 
@@ -76,9 +76,9 @@ const filterTwo = [
                             }}
                             className={`${
                             selectedCategory === filter.name
-                                ? 'bg-[#FED52A]'
-                                : 'bg-white text-[#AAAAAA] border border-[#DDDDDD]'
-                            } cursor-pointer min-w-[110px] text-[14px] font-[400] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
+                                ? 'bg-[#FED52A] font-semibold'
+                                : 'bg-white text-[#AAAAAA] border border-[#DDDDDD] font-normal'
+                            } cursor-pointer min-w-[110px] text-[14px] text-center py-[12px] rounded-[50px] border border-[#DDDDDD] mr-2`}
                         >
                             {filter.name}
                         </h6>
@@ -101,9 +101,9 @@ const filterTwo = [
                                 }}
                                 className={`${
                                 selectedCategoryTwo === filter.name
-                                    ? 'bg-[#FED52A]'
-                                    : 'bg-white text-[#AAAAAA] border border-[#DDDDDD]'
-                                } cursor-pointer min-w-[110px] text-[14px] font-[400] text-center py-2 rounded-[50px] border border-[#DDDDDD] mr-2`}
+                                    ? 'bg-[#FED52A] font-semibold'
+                                    : 'bg-white text-[#AAAAAA] border border-[#DDDDDD] font-normal'
+                                } cursor-pointer min-w-[110px] text-[14px] text-center py-[12px] rounded-[50px] border border-[#DDDDDD] mr-2`}
                             >
                                 {filter.name}
                             </h6>
@@ -124,9 +124,9 @@ const filterTwo = [
                             }}
                             className={`${
                                 selectedCategoryThree === filter.name
-                                ? 'bg-[#FED52A]'
-                                : 'bg-white text-[#AAAAAA] border border-[#DDDDDD]'
-                            } cursor-pointer min-w-[100px] font-[400] text-[14px] text-center px-2 py-2 rounded-[50px]`}
+                                ? 'bg-[#FED52A] font-semibold'
+                                : 'bg-white text-[#AAAAAA] border border-[#DDDDDD] font-normal'
+                            } cursor-pointer min-w-[100px] text-[14px] text-center py-[12px] rounded-[50px]`}
                         >
                             {filter.name}
                         </h6>

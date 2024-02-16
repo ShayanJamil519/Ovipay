@@ -23,11 +23,11 @@ const AccountTransferThree = () => {
                 </div>
 
                 <div className="w-[90%] mx-3 mt-16 absolute bottom-[5%]">
-                    <div className="flex items-center justify-center mb-10">
+                    <div className="flex items-center justify-center mb-10 gap-2">
                         <p className="text-center text-[16px] text-[#666666]">
                             다음에도 이 계좌를 사용할게요.
                         </p>
-                        <img src="/tick.svg" alt="" className="ml-2 h-6" />
+                        <input type="checkbox" className="h-5 w-5" />
                     </div>
                     <Link to="/charge/confirmation">
                         <button className="w-full bg-[#FED52A] py-3 px-3 bottom-1 rounded-[50px] font-bold text-[16px]">

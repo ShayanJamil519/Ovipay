@@ -15,6 +15,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 import OtherCategories from "./OtherCategories";
 import VerticalProduct from "./Components/VerticalProduct";
 import HorizontalProduct from "./Components/HorizontalProduct";
+import RecommendedProduct from "./Components/RecommendedProducts";
 
 const Home = () => {
     
@@ -22,7 +23,7 @@ const Home = () => {
     const [selectedFilter, setSelectedFilter] = useState("");
     const options = ["1만원 미만", "1~2만원대", "3-4만원대", "5만원 이상"];
     const filters = ["전체", "가전제품", "식품", "욕실", "전자기기", "가구", "의류", "생활용품", "반려동물", "유아ㆍ아동", "캠핑ㆍ레저", "데코ㆍ식물", "뷰티"];
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('1만원 미만');
     const [displayedProducts, setDisplayedProducts] = useState(6);
 
     const handleSeeMore = () => {
@@ -185,7 +186,7 @@ const Home = () => {
                                 selectedFilter === filter
                                     ? "bg-[#FED52A]"
                                     : "bg-white text-[#828282] border"
-                            } cursor-pointer min-w-[97px] text-center text-[14px] font-[400] py-2 rounded-[50px]`}
+                            } cursor-pointer min-w-[90px] text-center text-[14px] font-[400] px-3 py-2 rounded-[50px]`}
                         >
                             {filter}
                         </h6>
@@ -237,45 +238,14 @@ const Home = () => {
                             </div>
                             <div className="flex flex-wrap justify-between gap-3 p-4">
                                 {secondProducts.slice(0, displayedProducts).map((product) => (
-                                    <Link
-                                        to="/shopping/product-details"
-                                        key={product.id}
-                                        className="relative flex-shrink-0 w-[30%] mb-4"
-                                    >
-                                        <img
-                                            src={product.image}
-                                            alt={product.title}
-                                            className="w-full h-28 object-cover rounded-xl"
-                                        />
-                                        <div className="absolute top-1 right-1">
-                                            <img
-                                                src="/heart.svg"
-                                                alt="Heart"
-                                                className="w-6 h-6"
-                                            />
-                                        </div>
-                                        <div className="p-2">
-                                            <p className="text-[14px] font-semibold mb-1">
-                                                <span className="text-[#F6C700] mr-2">
-                                                    {product.discount}
-                                                </span>
-                                                {product.price}
-                                            </p>
-                                            <p className="text-[12px] text-[#8D8D8D] font-[400]">
-                                                {product.title}
-                                            </p>
-                                            <p className="text-[12px] text-[#8D8D8D] font-[400]">
-                                                {product.description}
-                                            </p>
-                                        </div>
-                                    </Link>
+                                    <RecommendedProduct product={product} />
                                 ))}
                             </div>
                         </div>
 
                         {/* See More */}
                         <div className={`w-full px-4 ${displayedProducts > 6 && 'hidden'}`} onClick={handleSeeMore}>
-                            <div className="flex gap-2 border border-[#C8C8C8] items-center justify-center py-2 rounded-[10px]">
+                            <div className="flex gap-2 border border-[#C8C8C8] items-center justify-center py-[12px] rounded-[10px]">
                                 <p className="text-[#737373] text-[14px]">더보기</p>
                                 <img src="/arrow_down.svg" alt="" />
                             </div>

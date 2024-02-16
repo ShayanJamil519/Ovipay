@@ -29,24 +29,24 @@ const Payment = () => {
 
             {/* This div is for below the card 3 buttons */}
             <div className=''>
-                    <h2 className='font-bold text-[20px] py-3'>결제 방법</h2>
+                    <h2 className='font-semibold text-[16px] py-3'>결제 방법</h2>
 
                     {/* This div is for three buttons */}
                     <div className='flex gap-x-4 justify-between'>
                         {/* First Button */}
-                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                             <span className={`h-[15px] w-[30px] pr-6 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
                         </button>
 
                         {/* Second Button */}
-                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                             <span className={`h-[15px] w-[30px] rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
                         </button>
 
                         {/* Third Button */}
-                        <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
                             <span className={`h-[15px] w-[30px] pr-6 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                         </button>
@@ -89,7 +89,7 @@ const Payment = () => {
                     </Swiper>
 
                     <div className="mt-4">
-                        <h1 className="mb-3 font-[600]">일반 결제</h1>
+                        <h1 className="mb-3 text-[14px] font-[600]">일반 결제</h1>
                         <div className="flex justify-between border rounded-xl px-4 py-2">
                             <p className="text-[#A19B91]">은행 선택</p>
                             <img src="/arrow_down.svg" alt="" />
@@ -110,12 +110,12 @@ const Payment = () => {
                     <div className='mt-4'>
                         <div className="flex gap-3 items-center mb-1">
                             <input type="checkbox" className='h-4 w-4' />
-                            <p className='text-[14px] font-[700]'>ATM으로 입금</p>
+                            <p className='text-[14px] font-[400] text-[#000000]'>ATM으로 입금</p>
                         </div>
-                        <p className='text-[#A7A7A7]'>* ATM은 동전을 입금할 수 없습니다.</p>
+                        <p className='text-[#A7A7A7] text-[14px] font-[400]'>* ATM은 동전을 입금할 수 없습니다.</p>
                         <div className='px-3 mt-3'>
-                            <p className='mb-1'>입금자명을 입력해주세요.</p>
-                            <input type="text" className='border w-full rounded-lg p-2' placeholder="이OO" />
+                            <p className='mb-1 text-[12px] font-[400]'>입금자명을 입력해주세요.</p>
+                            <input type="text" className='border w-full rounded-lg p-2 text-[12px]' placeholder="이OO" />
                         </div>
                     </div>
                 </div>
@@ -124,34 +124,34 @@ const Payment = () => {
         </div>
             
             {/* Payment Info */}
-            <div className="p-4">
+            <div className="p-4 bg-white">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2 pt-3'>
-                    <div className='flex justify-between w-full items-start font-[400]'>
-                        <p className='text-[#464441]'>상품명</p>
-                        <p>오아 공기청정기 외 1</p>
+                    <div className='flex justify-between w-full items-start text-[14px] font-[400] text-[#8D8D8D]'>
+                        <p className='font-[400]'>상품명</p>
+                        <p className='font-bold'>오아 공기청정기 외 1</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>잔액</p>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
+                        <p>잔액</p>
                         <p>100,682원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>총 상품금액</p>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
+                        <p>총 상품금액</p>
                         <p>- 25,000원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400]'>
-                        <p className='text-[#464441]'>배송비</p>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
+                        <p>배송비</p>
                         <p>3,000 원</p>
                     </div>
                         
-                    <hr className='w-full h-[1px] bg-[#b6b4b1] my-2' />
+                    <hr className='w-full h-[0.5px] bg-[#bebebd] my-2' />
 
                     <div className='flex justify-between w-full items-start font-[400]'>
-                        <p>Total</p>
-                        <p className='text-black text-[20px] font-600'>- 28,000원</p>
+                        <p className='text-[16px] font-normal'>Total</p>
+                        <p className='text-black text-[20px] font-semibold'>- 28,000원</p>
                     </div>
                     <div className='flex justify-between w-full items-end text-[#406FC9]'>
-                        <p className='text-[16px]'>총 결제금액</p>
-                        <p className='font-[600] text-[20px]'>72,682원</p>
+                        <p className='text-[16px] font-normal'>잔액</p>
+                        <p className='font-semibold text-[20px]'>72,682원</p>
                     </div>                       
                 </div>
 

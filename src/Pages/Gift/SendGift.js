@@ -29,20 +29,20 @@ const SendGift = () => {
                 {/* This div is for three buttons */}
                 <div className='flex gap-x-2 justify-between'>
                     {/* First Button */}
-                    <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                         <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
-                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
-                    <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
-                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
-                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
+                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                        <span className={`h-[15px] w-[30px] pr-3 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
+                        <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
-                    <button className={`flex flex-col justify-start px-3 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
-                        <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
+                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                        <span className={`h-[15px] w-[30px] pr-2 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                     </button>
 
@@ -53,7 +53,7 @@ const SendGift = () => {
             {
                 currentOption === 0 &&
                 <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
-                    <p className='flex text-[12px] text-[#171717]'> <img src="/logo.svg" alt="" /> OviPay</p>
+                    <p className='flex text-[12px] text-[#171717] gap-1'> <img src="/ovipayLogo.svg" alt="" className="h-[20px]" /> OviPay</p>
                     <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
                 </div>
             }
@@ -202,19 +202,19 @@ const SendGift = () => {
             {/* Payment Info */}
             <div className="p-4 bg-white">
                 <div className='flex flex-col items-center justify-center mb-6 w-full px-2 gap-2 pt-3'>
-                    <div className='flex justify-between w-full items-start font-[400] text-[#8D8D8D]'>
-                        <p>상품명</p>
-                        <p>오아 공기청정기 외 1</p>
+                    <div className='flex justify-between w-full items-start text-[14px] font-[400] text-[#8D8D8D]'>
+                        <p className='font-[400]'>상품명</p>
+                        <p className='font-bold'>오아 공기청정기 외 1</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
                         <p>잔액</p>
                         <p>100,682원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
                         <p>총 상품금액</p>
                         <p>- 25,000원</p>
                     </div>
-                    <div className='flex justify-between w-full items-end font-[400] text-[#8D8D8D]'>
+                    <div className='flex justify-between w-full items-end text-[14px] font-[400] text-[#8D8D8D]'>
                         <p>배송비</p>
                         <p>3,000 원</p>
                     </div>
@@ -222,12 +222,12 @@ const SendGift = () => {
                     <hr className='w-full h-[0.5px] bg-[#bebebd] my-2' />
 
                     <div className='flex justify-between w-full items-start font-[400]'>
-                        <p>Total</p>
-                        <p className='text-black text-[20px] font-bold'>- 28,000원</p>
+                        <p className='text-[16px] font-normal'>Total</p>
+                        <p className='text-black text-[20px] font-semibold'>- 28,000원</p>
                     </div>
                     <div className='flex justify-between w-full items-end text-[#406FC9]'>
-                        <p className='text-[16px]'>잔액</p>
-                        <p className='font-bold text-[20px]'>72,682원</p>
+                        <p className='text-[16px] font-normal'>잔액</p>
+                        <p className='font-semibold text-[20px]'>72,682원</p>
                     </div>                       
                 </div>
 

@@ -93,7 +93,7 @@ export default function BarPage() {
                     <div className="flex gap-x-3">
                         {/* First Button */}
                         <button
-                            className={`flex flex-col justify-start px-3 pt-3 ${
+                            className={`flex min-w-[98px] flex-col justify-start px-3 pt-3 ${
                                 currentOption === 0
                                     ? "border-[1px] border-[#FED52A]"
                                     : "border"
@@ -108,7 +108,7 @@ export default function BarPage() {
                                         : silverGradient
                                 }
                             ></span>
-                            <p className="pt-3 pb-2 text-[13px] font-semibold">
+                            <p className="pt-3 pb-2 text-[14px] font-[400] text-black">
                                 계좌이체
                             </p>
                         </button>
@@ -131,7 +131,7 @@ export default function BarPage() {
                                         : silverGradient
                                 }
                             ></span>
-                            <p className="pt-3 pb-2 text-[13px] font-semibold">
+                            <p className="pt-3 pb-2 text-[14px] font-[400] text-black">
                                 무통장 입금
                             </p>
                         </button>
@@ -181,13 +181,14 @@ export default function BarPage() {
                                 </span>
                             </div>
 
-                            <div className=" mt-2">
+                            <div className="flex mt-2">
                                 <input
                                     placeholder="계좌번호 입력"
                                     value=""
                                     name="계좌번호 입력"
                                     className="rounded-[12px] text-[14px]  w-full py-[15px] px-3 border-[1px]  bg-transparent  focus:outline-[#0F9AFF] focus:border-[1px]"
                                 />
+                                <button className="bg-[#FED52A] w-[150px] ml-3 text-[14px] font-bold rounded-full">등록</button>
                             </div>
                         </div>
                     </>

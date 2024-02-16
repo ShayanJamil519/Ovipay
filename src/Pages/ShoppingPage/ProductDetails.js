@@ -12,7 +12,6 @@ import product from '../../assets/img/empty-product.png'
 
 // import required modules
 import {  Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { IoIosStar } from 'react-icons/io';
 import ProductDetailPopup from './Popups/ProductDetailPopup';
 
@@ -28,22 +27,22 @@ const GiftProductDetails = () => {
         
     <div className='flex items-center justify-center w-full mt-12'>
 
-<Swiper
-  slidesPerView={1}
-  pagination={true}
-  modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-  className='flex items-center justify-center w-full '
->
-  <SwiperSlide className='flex items-center justify-center'>
-    <img src={image} alt="Slide 1" />
-  </SwiperSlide>
-  <SwiperSlide className='flex items-center justify-center'>
-  <img src={image} alt="Slide 1" />
-  </SwiperSlide>
-  <SwiperSlide className='flex items-center justify-center'>
-  <img src={image} alt="Slide 1" />
-  </SwiperSlide>
-</Swiper>
+    <Swiper
+      slidesPerView={1}
+      pagination={true}
+      modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+      className='flex items-center justify-center w-full '
+    >
+      <SwiperSlide className='flex items-center justify-center'>
+        <img src={image} alt="Slide 1" />
+      </SwiperSlide>
+      <SwiperSlide className='flex items-center justify-center'>
+      <img src={image} alt="Slide 1" />
+      </SwiperSlide>
+      <SwiperSlide className='flex items-center justify-center'>
+      <img src={image} alt="Slide 1" />
+      </SwiperSlide>
+    </Swiper>
 
   </div>
   <div className='flex items-center justify-between px-4 mt-2'>
@@ -57,7 +56,7 @@ const GiftProductDetails = () => {
     </div>
   </div>
 
-    <div className='flex items-center justify-center w-full mt-12 overflow-scroll gap-x-4'>
+    <div className='flex items-center justify-center w-full mt-12 overflow-x-scroll gap-x-2'>
       <img src={product} alt="" />
       <img src={product} alt="" />
       <img src={product} alt="" />
@@ -65,8 +64,8 @@ const GiftProductDetails = () => {
       <img src={product} alt="" />
     </div>
 
-    <p className='mt-4 text-xl w-[87%] px-4 '>여기서는 상품에 대한 상세 소개가 있을 예정
-      일반적인 상품 상세페이지라고 
+    <p className='text-[17px]' style={{ lineHeight: '25px', letterSpacing: '1px', textAlign: 'left', margin: '22px'}}>여기서는 상품에 대한 상세 소개가 있을 예정
+      일반적인 상품 상세페이지라고 <br />
       생각하시면 됩니다.
     </p>
 

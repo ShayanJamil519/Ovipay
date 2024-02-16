@@ -15,20 +15,20 @@ const OrderDetails = () => {
                 <div className="flex items-center justify-center flex-col border-2 border-[#FED52A] w-[90%] rounded-[24px] py-4 gap-y-2 mb-4 mt-6">
                     <img src="/tick.svg" alt="" />
                     <p className="text-[#8A8A8E] text-[14px] font-[400]">2024. 1. 21(일)</p>
-                    <h1 className="text-[18px] font-[700]">사용 완료</h1>
+                    <h1 className="text-[18px] font-[700]">배송 완료</h1>
                 </div>
                 
                 <div className="flex items-left w-full px-4">
-                    <h1 className="text-left text-[#464441] mb-2">2024. 1. 20 주문</h1>
+                    <h1 className="text-left text-[16px] font-medium text-[#464441] mb-2">2024. 1. 20 주문</h1>
                 </div>
                 
-                <div className='w-[90%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3 mb-4'>
+                <div className='w-[90%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3 mx-3 mb-4 relative'>
                     <img src="/product.png" alt="" />
                     <div className='w-full mt-2'>
                         <p className='text-[15px] font-[700] text-[#464441]'>오아 공기청정기</p>
                         <p className='text-[12px] font-[400] text-[#928F8B] mb-2'>35,000원 · 1개</p>
-                        <div to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
-                            <button className='bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
+                        <div to="/gift/details" className='flex flex-col items-end justify-end w-full mt-3'>
+                            <button className='bg-[#F2F2F2] absolute bottom-2 right-2 w-[80px] h-[24px] px-3 text-[10px] font-[700] py-1 rounded-xl'>상세내역</button>
                         </div>
                     </div>
                 </div>

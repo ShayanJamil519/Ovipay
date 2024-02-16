@@ -29,7 +29,7 @@ const SaveHistory = ({setIsOpen}) => {
                                 <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
                                 <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
                                 <div className='flex flex-col items-end justify-center w-full mt-3'>
-                                    <button className='bg-[#FED52A] px-3 text-sm py-1 rounded-xl' onClick={()=> setIsOpen(true)}>쿠폰보기</button>
+                                    <button className='bg-[#FED52A] text-[10px] font-bold w-[80px] h-[24px] py-1 rounded-[50px]' onClick={()=> setIsOpen(true)}>쿠폰보기</button>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ const SaveHistory = ({setIsOpen}) => {
                                 <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
                                 <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
                                 <Link to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
-                                    <button className='bg-[#F2F2F2] px-3 text-sm py-1 rounded-xl'>상세내역</button>
+                                    <button className='bg-[#F2F2F2] w-[80px] h-[24px] text-[10px] font-bold py-1 rounded-[50px]'>상세내역</button>
                                 </Link>
                             </div>
                         </div>

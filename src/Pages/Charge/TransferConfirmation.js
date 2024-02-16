@@ -36,7 +36,7 @@ const TransferConfirmation = () => {
                             </p>
                         </div>
                     </div>
-                    <button className="w-full bg-[#373535] text-white py-2 px-3 bottom-1 rounded-[50px] font-bold text-[22px]">
+                    <button className="w-full bg-[#373535] text-white py-3 px-3 bottom-1 rounded-[50px] font-bold text-[16px]">
                         돌아가기
                     </button>
                 </div>
