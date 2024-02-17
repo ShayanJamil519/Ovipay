@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import { FormGroup, Input } from "reactstrap";
-import { CiSearch } from "react-icons/ci";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,14 +6,9 @@ import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 
 // import required modules
-import Footer from "./Footer";
-import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const OtherCategories = () => {
     
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selectedFilter, setSelectedFilter] = useState("");
-    const filters = ["전체", "가전제품", "식품", "욕실", "전자기기"];
     const [liked, setLiked] = useState();
 
     const firstProducts = [
@@ -88,7 +80,7 @@ const OtherCategories = () => {
                                     <img
                                         src={`${liked === product.id ? '/heart_filled.svg' : '/heart.svg'}`}
                                         alt="Heart"
-                                        className="w-6 h-6 z-50"
+                                        className="w-5 h-5 z-50"
                                     />
                                 </div>
                                 <div className="p-2">
@@ -98,10 +90,10 @@ const OtherCategories = () => {
                                         </span>
                                         {product.price}
                                     </p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
+                                    <p className="text-[11px] text-[#8D8D8D] font-[400]">
                                         {product.title}
                                     </p>
-                                    <p className="text-[12px] text-[#8D8D8D] font-[400]">
+                                    <p className="text-[11px] text-[#464441] font-[400]">
                                         {product.description}
                                     </p>
                                 </div>

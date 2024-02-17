@@ -251,7 +251,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <RecommendedProducts />
+                        <RecommendedProducts isHome={false} />
                     </>
                 }
 

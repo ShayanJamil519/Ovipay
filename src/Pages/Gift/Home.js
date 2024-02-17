@@ -131,11 +131,11 @@ const Home = () => {
                             <Link
                                 to="/gift/gift-product-details"
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 bg-[#C4C4C4] border rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
+                                className={`flex flex-col px-3 justify-end py-3 shadow-inner gap-y-1 bg-[#C4C4C4] border rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
                                 style={{background: "linear-gradient(2.5deg, #000000 -47.86%, rgba(0, 0, 0, 0) 100%)"}}
                             >
                                 <p className="text-[14px] font-[600] text-white">기프티콘 테스트</p>
-                                <p className="text-gray-100">치킨</p>
+                                <p className="text-[#FFFFFF99] text-[12px] font-[400]">치킨</p>
                             </Link>
                         ))}
                     </div>

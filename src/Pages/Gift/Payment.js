@@ -12,7 +12,7 @@ import "swiper/css/mousewheel";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { goldenGradient, silverGradient } from '../../utils'
 
-const Payment = () => {
+const GiftMethodOne = () => {
 
     const [currentOption, setCurrentOption] = useState(0);
     const [isBankModalOpen, setIsBankModalOpen] = useState(false);
@@ -24,7 +24,7 @@ const Payment = () => {
 
         <div className="flex flex-col p-4 gap-y-4">
             <div>
-                <h1 className="text-[20px] font-[600]">GIFT 선물하기</h1>
+                <h1 className="text-[20px] font-[600]">GIFT 결제하기</h1>
             </div>
 
             {/* This div is for below the card 3 buttons */}
@@ -34,19 +34,19 @@ const Payment = () => {
                     {/* This div is for three buttons */}
                     <div className='flex gap-x-4 justify-between'>
                         {/* First Button */}
-                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                        <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                             <span className={`h-[15px] w-[30px] pr-6 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>오비페이</p>
                         </button>
 
                         {/* Second Button */}
-                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                        <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                             <span className={`h-[15px] w-[30px] rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
-                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black pr-2'>신용카드</p>
+                            <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>신용카드</p>
                         </button>
 
                         {/* Third Button */}
-                        <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                        <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
                             <span className={`h-[15px] w-[30px] pr-6 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                             <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                         </button>
@@ -57,7 +57,7 @@ const Payment = () => {
             {
                 currentOption === 0 &&
                 <div className='flex justify-between items-center w-full rounded-xl bg-[#FED52A] p-4 mt-2'>
-                    <p className='flex text-[12px] text-[#171717] font-[500]'> <img src="/logo.svg" alt="" /> OviPay</p>
+                    <p className='flex text-[12px] text-[#171717] font-medium'> <img src="/logo.svg" alt="" /> OviPay</p>
                     <p className='text-[#292929] font-[700] text-[25px]'>100,682 원</p>
                 </div>
             }
@@ -172,4 +172,4 @@ const Payment = () => {
   )
 }
 
-export default Payment
+export default GiftMethodOne

@@ -27,8 +27,8 @@ export default function Shipping() {
 
             <div className="px-3 mt-20">
                 {/* This div is for input search-bar */}
-                <div className="flex justify-between my-4 rounded-xl">
-                    <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8]">
+                <div className="flex justify-between mt-4 mb-3 rounded-xl">
+                    <div className="rounded-[14px] flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8]">
                         <PiMagnifyingGlass
                             size={30}
                             className="text-gray-300 text-start"
@@ -65,7 +65,7 @@ export default function Shipping() {
                                 : "text-[#67697A]"
                         }`}
                     >
-                        <p className="text-[14px] text-center">저장 내역</p>
+                        <p className="text-[14px] font-[400] text-center">저장 내역</p>
                     </div>
                     <div
                         onClick={() => toggleMenu(1)}
@@ -75,7 +75,7 @@ export default function Shipping() {
                                 : "bg-[#fff] text-[#000]"
                         }`}
                     >
-                        <p className="text-[14px] text-center ">선물 내역</p>
+                        <p className="text-[14px] font-[400] text-center ">선물 내역</p>
                     </div>
                 </div>
 

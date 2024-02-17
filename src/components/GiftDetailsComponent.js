@@ -49,7 +49,7 @@ const GiftDetailsComponent = ({setIsOpen}) => {
                     <div
                         key={index}
                         style={{
-                            flex: "0 0 70%",
+                            flex: "0 0 60%",
                             marginRight: "0.7rem",
                             boxShadow: "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
                         }}
@@ -60,11 +60,11 @@ const GiftDetailsComponent = ({setIsOpen}) => {
                             {
                                 item.giftUsed 
                                 ?
-                                <p className="w-full text-right text-[#C5C5C5] text-[12px]">기간만료</p>
+                                <p className="w-full text-right text-[#C5C5C5] text-[11px] font-[500]">기간만료</p>
                                 :
-                                <p className="w-full text-right text-[#DC3131] text-[12px]">D-365</p>
+                                <p className="w-full text-right text-[#DC3131] text-[11px] font-[500]">D-365</p>
                             }
-                            <p className="text-[#8D8D8D] text-[12px]">BHC</p>
+                            <p className="text-[#8D8D8D] text-[12px] font-[400]">BHC</p>
                             <p className="text-[#464441] font-[400] text-[15px] mb-3">
                               안심한우 1++등급...
                             </p>
@@ -97,7 +97,7 @@ const GiftDetailsComponent = ({setIsOpen}) => {
                     <div
                         key={index}
                         style={{
-                            flex: "0 0 70%", // 80% width for each product
+                            flex: "0 0 60%", // 80% width for each product
                             marginRight: "0.7rem", // Adjust as needed for the gap
                             boxShadow: "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
                         }}
@@ -107,11 +107,11 @@ const GiftDetailsComponent = ({setIsOpen}) => {
                             {
                                 item.giftUsed 
                                 ?
-                                <p className="w-full text-right text-[#DC3131] text-[12px]">D-365</p>
+                                <p className="w-full text-right text-[#DC3131] text-[11px] font-[500]">D-365</p>
                                 :
-                                <p className="w-full text-right text-[#5966D7] text-[12px]">사용완료</p>
+                                <p className="w-full text-right text-[#5966D7] text-[11px] font-[500]">사용완료</p>
                             }
-                            <p className="text-[#8D8D8D] text-[12px]">BHC</p>
+                            <p className="text-[#8D8D8D] text-[12px] font-[400]">BHC</p>
                             <p className="text-[#464441] font-[400] text-[15px] mb-3">
                               안심한우 1++등급...
                             </p>

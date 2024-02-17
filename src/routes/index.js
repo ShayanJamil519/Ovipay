@@ -40,8 +40,7 @@ import PaymentMethodManagement from "../Pages/Settings/PaymentMethodManagement";
 import LocationSettings from "../Pages/Gift/LocationSettings";
 import GiftProductDetails from "../Pages/Gift/GiftProductDetails";
 import GiftDetails from "../Pages/Gift/GiftDetails";
-import SendGift from "../Pages/Gift/SendGift";
-import Payment from "../Pages/Gift/Payment";
+import GiftMethodOne from "../Pages/Gift/Payment";
 import MyOvipayPage from "../Pages/MyOvipay/Home";
 import OvipayWithdrawal from "../Pages/MyOvipay/OvipayWithdrawal";
 import GiftPoints from "../Pages/MyOvipay/GiftPoints";
@@ -54,6 +53,7 @@ import StoreDetails from "../Pages/Affiliated/StoreDetails";
 import DeliveryTracking from "../Pages/ShoppingPage/DeliveryTracking";
 import CompletePaymentOne from "../Pages/ShoppingPage/CompletePaymentOne";
 import OtherCategories from "../Pages/ShoppingPage/OtherCategories";
+import SendGift from "../Pages/Gift/SendGift";
 
 let routes = [
     {
@@ -90,11 +90,6 @@ let routes = [
         path: "/verify",
         component: CodeVerifier,
         layout: "auth",
-    },
-    {
-        path: "/shopping/confirm-payment",
-        component: ConfirmationPayment,
-        layout: "main",
     },
     {
         path: "/",
@@ -182,6 +177,11 @@ let routes = [
         layout: "main",
     },
     {
+        path: "/shopping/confirm-payment",
+        component: ConfirmationPayment,
+        layout: "main",
+    },
+    {
         path: "/shopping/product-details",
         component: ProductDetails,
         layout: "main",
@@ -254,7 +254,7 @@ let routes = [
     },
     {
         path: "/gift/payment",
-        component: Payment,
+        component: GiftMethodOne,
         layout: "main",
     },
     {

@@ -29,19 +29,19 @@ const SendGift = () => {
                 {/* This div is for three buttons */}
                 <div className='flex gap-x-2 justify-between'>
                     {/* First Button */}
-                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
+                    <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 0 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(0)}>
                         <span className={`h-[15px] w-[30px] pr-4 rounded-full`} style={currentOption === 0 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>오비페이</p>
                     </button>
 
                     {/* Second Button */}
-                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
+                    <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 1 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(1)}>
                         <span className={`h-[15px] w-[30px] pr-3 rounded-full`} style={currentOption === 1 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>신용카드</p>
                     </button>
 
                     {/* Third Button */}
-                    <button className={`flex w-[31%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
+                    <button className={`flex w-[30%] flex-col justify-start px-2 pt-3 ${currentOption === 2 ? 'border-2 border-[#FED52A]' : 'border'} rounded-xl`} onClick={()=> setCurrentOption(2)}>
                         <span className={`h-[15px] w-[30px] pr-2 rounded-full`} style={currentOption === 2 ? goldenGradient : silverGradient}></span>
                         <p className='pt-3 pb-2 text-[14px] font-[400] text-black'>무통장 입금</p>
                     </button>

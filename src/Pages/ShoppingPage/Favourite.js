@@ -178,8 +178,8 @@ const Favourite = () => {
                             <div
                                 key={index}
                                 style={{
-                                    flex: "0 0 70%", // 80% width for each product
-                                    marginRight: "0.7rem", // Adjust as needed for the gap
+                                    flex: "0 0 80%",
+                                    marginRight: "0.7rem",
                                     boxShadow:
                                         "0px 2px 48px 0px rgba(0, 0, 0, 0.04)",
                                 }}
@@ -193,7 +193,7 @@ const Favourite = () => {
                                         안심한우 1++등급 ‘투뿔 스페셜...
                                     </p>
                                     <h1 className="text-black font-[900] text-[20px] mt-2">
-                                        149,000원
+                                        149,000 <span className="font-[300]">원</span>
                                         <span className="text-[#F6C700] ml-2 font-[700]">
                                             15%
                                         </span>

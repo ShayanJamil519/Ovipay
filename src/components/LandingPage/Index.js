@@ -60,7 +60,7 @@ const Index = () => {
 
             <HeroSection />
             <div className="bg-[#FBFBFB]">
-                <RecommendedProducts />
+                <RecommendedProducts isHome={true} />
                 <GiftLikeThis />
 
                 <div>

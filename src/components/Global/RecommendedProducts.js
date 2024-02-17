@@ -24,7 +24,7 @@ const products = [
     }
 ];
 
-const RecommendedProducts = () => {
+const RecommendedProducts = ({isHome}) => {
 
     const [currentProductIndex, setCurrentProductIndex] = useState(0);
 
@@ -71,17 +71,21 @@ const RecommendedProducts = () => {
                 ))}
             </div>
 
-            <div className="flex justify-center mt-3">
-                {products.map((_, index) => (
-                <button
-                    key={index}
-                    className={`mx-1 w-2 h-2 rounded-full ${
-                    currentProductIndex === index ? 'bg-[#FED52A]' : 'bg-[#E5E5EA]'
-                    }`}
-                    onClick={() => handleDotClick(index)}
-                />
-                ))}
-            </div>
+            {
+                isHome &&
+                <div className="flex justify-center mt-3">
+                    {products.map((_, index) => (
+                    <button
+                        key={index}
+                        className={`mx-1 w-2 h-2 rounded-full ${
+                        currentProductIndex === index ? 'bg-[#FED52A]' : 'bg-[#E5E5EA]'
+                        }`}
+                        onClick={() => handleDotClick(index)}
+                    />
+                    ))}
+                </div>
+            }
+
         </div>
     );
 };

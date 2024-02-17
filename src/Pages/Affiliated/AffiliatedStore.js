@@ -106,11 +106,11 @@ const AffiliatedStores = () => {
                             <Link
                                 to="/affiliate/store-details"
                                 key={item.id}
-                                className={`flex flex-col px-4 justify-end py-3 shadow-inner gap-y-2 rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
+                                className={`flex flex-col px-3 justify-end py-4 shadow-inner gap-y-1 rounded-3xl h-[200px] ${item.id % 2 === 0 ? " mt-0" : "mt-6"}`}
                                 style={{background: "linear-gradient(2.5deg, #000000 -47.86%, rgba(0, 0, 0, 0) 100%)"}}
                             >
-                                <p className="text-[14px] font-[600] text-white">교촌치킨 마곡점</p>
-                                <p className="text-gray-100 text-[12px] font-[400]">치킨</p>
+                                <p className="text-[14px] font-semibold text-white">교촌치킨 마곡점</p>
+                                <p className="text-[#FFFFFF99] text-[12px] font-[400]">치킨</p>
                             </Link>
                         ))}
                     </div>

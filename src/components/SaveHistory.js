@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const SaveHistory = ({setIsOpen}) => {
 
     const cardData = [
-        { id: 1, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000원" },
-        { id: 2, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000원" },
+        { id: 1, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000" },
+        { id: 2, expiry: "기간 만료 30일 남음", category: "매장명", description: "안심한우 1++등급 ‘투뿔 스...", price: "149,000" },
     ];
 
   return (
@@ -21,13 +21,13 @@ const SaveHistory = ({setIsOpen}) => {
 
                 <div className='w-full'>
                     {cardData.map((card) => (
-                        <div key={card.id} className='w-[95%] rounded-xl shadow-md flex gap-x-3 p-3 mt-4'>
+                        <div key={card.id} className='w-[99%] rounded-xl shadow-md flex gap-x-3 px-3 py-2 mt-3' style={{boxShadow: '0px 2px 48px 0px #0000000A'}}>
                             <img src="/card_img.png" alt="" />
                             <div className='w-full mt-2'>
-                                <p className='flex flex-col items-end justify-center w-full text-[#DC3131] text-[12px]'>{card.expiry}</p>
-                                <p className='text-sm text-[#8D8D8D]'>{card.category}</p>
-                                <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
-                                <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
+                                <p className='flex flex-col items-end justify-center w-full text-[#DC3131] font-[500] text-[11px]'>{card.expiry}</p>
+                                <p className='text-[11px] text-[#8D8D8D]'>{card.category}</p>
+                                <p className='text-[14px] text-[#464441] mb-2'>{card.description}</p>
+                                <h6 className='text-[18px] font-[900] text-black'>{card.price}<span className='font-[300]'>원</span></h6>
                                 <div className='flex flex-col items-end justify-center w-full mt-3'>
                                     <button className='bg-[#FED52A] text-[10px] font-bold w-[80px] h-[24px] py-1 rounded-[50px]' onClick={()=> setIsOpen(true)}>쿠폰보기</button>
                                 </div>
@@ -56,13 +56,13 @@ const SaveHistory = ({setIsOpen}) => {
 
                 <div className='w-full'>
                     {cardData.map((card) => (
-                        <div key={card.id} className='w-[95%] rounded-xl shadow-md flex gap-x-3 p-3 mt-3'>
+                        <div key={card.id} className='w-[99%] rounded-xl shadow-md flex gap-x-3 px-3 py-2 mt-3' style={{boxShadow: '0px 2px 48px 0px #0000000A'}}>
                             <img src="/card_img.png" alt="" />
                             <div className='w-full mt-2'>
                                 <p className='flex flex-col items-end justify-center w-full text-[#5966D7] text-[12px]'>사용완료</p>
                                 <p className='text-sm text-[#8D8D8D]'>{card.category}</p>
                                 <p className='text-sm text-[#464441] mb-2'>{card.description}</p>
-                                <h6 className='text-[18px] font-[900] text-black'>{card.price}</h6>
+                                <h6 className='text-[18px] font-[900] text-black'>{card.price}<span className='font-[300]'>원</span></h6>
                                 <Link to="/gift/details" className='flex flex-col items-end justify-center w-full mt-3'>
                                     <button className='bg-[#F2F2F2] w-[80px] h-[24px] text-[10px] font-bold py-1 rounded-[50px]'>상세내역</button>
                                 </Link>

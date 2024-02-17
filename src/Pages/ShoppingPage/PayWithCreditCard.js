@@ -14,17 +14,15 @@ import "swiper/css/mousewheel";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { goldenGradient, silverGradient } from '../../utils';
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
-import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 
-export default function ConfirmationPayment() {
+export default function PayWithCreditCard() {
     const [showInputs, setShowInputs] = useState(false);
     const [isBankOpen, setIsBankOpen] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [isLocationOpen, setIsLocationOpen] = useState(false);
     const [isPaymentOpen, setIsPaymentOpen] = useState(false);
     const [currentOption, setCurrentOption] = useState(0);
-    const history = useHistory();
 
     return (
         <>
@@ -45,7 +43,7 @@ export default function ConfirmationPayment() {
                 <div className='flex items-center justify-between px-4 py-3 mt-5 shadow-md rounded-xl' onClick={() =>setIsLocationOpen(true)} style={{boxShadow: '10px 24px 54px 0px #0000000F'}}>
                     <div>
                         <p className='text-[16px] font-bold'>Home</p>
-                        <p className='text-[#AAAAAA] text-[12px] font-[400]'>{currentOption === 1 ? '서울특별시 홍길동로 삼겹살' : '여기를 터치하여 주소를 설정해주세요!'}</p>
+                        <p className='text-[#AAAAAA] text-[12px] font-[400]'>서울특별시 홍길동로 삼겹살</p>
                     </div>
                     
                     <MdOutlineRadioButtonChecked className='text-[#aaaaaa]' />
@@ -174,83 +172,79 @@ export default function ConfirmationPayment() {
             }
             </div>
 
-            {
-                (currentOption === 0 || currentOption === 2 )
-                &&
-                <div className='mt-4'>
-                {/* First Radio Button */}
+            {/* Radio Options */}
+            <div className='mt-4'>
+              {/* First Radio Button */}
+              <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                  <input
+                      type="radio"
+                      id="receiptRadio"
+                      name="receipt"
+                      value="home"
+                      className='p-1 sr-only' 
+                  />
+                  <label
+                      id="homeLabel"
+                      htmlFor="receiptRadio"
+                      className='p-1 radio-label' 
+                  ></label>
+                  <p className='font-[600]'>현금영수증 발행 안함</p>
+              </div>
+
+              {/* Second Radio Button */}
+              <div>
                 <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
                     <input
                         type="radio"
-                        id="receiptRadio"
-                        name="receipt"
+                        id="businessRadio"
+                        name="business"
                         value="home"
                         className='p-1 sr-only' 
                     />
                     <label
                         id="homeLabel"
-                        htmlFor="receiptRadio"
+                        htmlFor="businessRadio"
                         className='p-1 radio-label' 
                     ></label>
                     <p className='font-[600]'>현금영수증 발행 안함</p>
                 </div>
-
-                {/* Second Radio Button */}
-                <div>
-                    <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
-                        <input
-                            type="radio"
-                            id="businessRadio"
-                            name="business"
-                            value="home"
-                            className='p-1 sr-only' 
-                        />
-                        <label
-                            id="homeLabel"
-                            htmlFor="businessRadio"
-                            className='p-1 radio-label' 
-                        ></label>
-                        <p className='font-[600]'>현금영수증 발행 안함</p>
-                    </div>
-                    <div className="px-10">
-                    <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
-                    <input type="text" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
-                    </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
                 </div>
+              </div>
 
-                {/* Third Radio Button */}
-                <div>
-                    <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
-                        <input
-                            type="radio"
-                            id="homeRadio"
-                            name="email"
-                            value="home"
-                            className='p-1 sr-only' 
-                        />
-                        <label
-                            id="homeLabel"
-                            htmlFor="homeRadio"
-                            className='p-1 radio-label' 
-                        ></label>
-                        <p className='font-[600]'>사업자증빙용 / 세금계산서</p>
-                    </div>
-                    <div className="px-10">
-                    <p className='font-[400] text-[12px]'>사업자 상호를 기재해주세요.</p>
-                    <input type="text" placeholder="사업자 상호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
-                    </div>
-                    <div className="px-10 mt-4">
-                    <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
-                    <input type="text" placeholder="사업자등록번호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
-                    </div>
-                    <div className="px-10 mt-4">
-                    <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
-                    <input type="text" placeholder="000000@naver.com" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
-                    </div>
+              {/* Third Radio Button */}
+              <div>
+                <div className='flex items-center px-4 py-3 rounded-xl gap-3'>
+                    <input
+                        type="radio"
+                        id="homeRadio"
+                        name="email"
+                        value="home"
+                        className='p-1 sr-only' 
+                    />
+                    <label
+                        id="homeLabel"
+                        htmlFor="homeRadio"
+                        className='p-1 radio-label' 
+                    ></label>
+                    <p className='font-[600]'>사업자증빙용 / 세금계산서</p>
                 </div>
+                <div className="px-10">
+                  <p className='font-[400] text-[12px]'>사업자 상호를 기재해주세요.</p>
+                  <input type="text" placeholder="사업자 상호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
                 </div>
-            }
-
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="사업자등록번호" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+                <div className="px-10 mt-4">
+                  <p className='font-[400] text-[12px]'>휴대폰 번호를 입력해주세요.</p>
+                  <input type="text" placeholder="000000@naver.com" className='w-[90%] rounded-lg border p-2 mt-2 focus:outline-[#0F9AFF]' />
+                </div>
+              </div>
+            </div>
 
 
             <div>
@@ -392,7 +386,6 @@ export default function ConfirmationPayment() {
                         <Button
                             type="submit"
                             className="bg-[#FED52A] font-bold text-[18px] border-none px-24 py-[12px] rounded-full hover:bg-[#f2ce3e] text-black"
-                            onClick={()=> currentOption === 0 ? history.push('/shopping/complete-payment-one') : currentOption === 2 ? history.push('/shopping/complete-payment') : setIsPaymentOpen(true)}
                         >
                             결 제
                         </Button>
@@ -402,7 +395,7 @@ export default function ConfirmationPayment() {
 
         </div>
 
-        {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} extra={false} />}
+        {isBankOpen && <BankModal isOpen={isBankOpen} setIsOpen={setIsBankOpen} extra={true} />}
         {isFilterOpen && <SortModal isOpen={isFilterOpen} setIsOpen={setIsFilterOpen} />}
         {isLocationOpen && <LocationModal title="주소 설정" isOpen={isLocationOpen} setIsOpen={setIsLocationOpen} />}
         {(currentOption === 1 && isPaymentOpen) && <CardPaymentPopup isOpen={isPaymentOpen} />}

@@ -14,8 +14,8 @@ const HorizontalCard = ({product}) => {
                 </div>
                 <div className="p-2">
                     <p className="text-[14px] font-semibold mb-1"><span className="text-[#F6C700] mr-2">{product.discount}</span>{product.price}</p>
-                    <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.title}</p>
-                    <p className="text-[12px] text-[#8D8D8D] font-[400]">{product.description}</p>
+                    <p className="text-[11px] text-[#8D8D8D] font-[400]">{product.title}</p>
+                    <p className="text-[11px] text-[#464441] font-[400]">{product.description}</p>
                 </div>
         </div>
   )

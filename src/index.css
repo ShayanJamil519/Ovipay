@@ -15,9 +15,13 @@ body {
 }
 
 input[type="checkbox"] {
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
     accent-color: #fed52a;
     color: #ffffff !important;
     background-color: #fff !important;
+    outline: 2px solid #FED52A !important;
 }
 
 input[type="checkbox"]::before {

@@ -35,8 +35,8 @@ const VerticalProduct = ({product}) => {
                     <p className="text-[14px] text-[#464441] font-[400]">
                         {product.description}
                     </p>
-                    <p className="text-[18px] font-[900] mt-2">
-                        {product.price}원
+                    <p className="text-[18px] font-[900] mt-2 text-[#000000]">
+                        {product.price} <span className="font-[300]">원</span>
                     </p>
                 </div>
         </div>
