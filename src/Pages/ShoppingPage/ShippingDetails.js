@@ -36,16 +36,16 @@ export default function Shipping() {
                 <div className="flex justify-between my-4 rounded-xl">
                     <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8] mt-2">
                         <PiMagnifyingGlass
-                            size={30}
-                            className="text-gray-300 text-start"
+                            size={20}
+                            className="text-[#AAAAAA] text-start"
                         />
                         <input
                             placeholder="검색"
-                            className="text-[14px] text-[#AAAAAA] bg-transparent"
+                            className="text-[14px] text-[#AAAAAA] bg-transparent flex-grow border-none outline-none"
                         />
                     </div>
 
-                    <button onClick={() => setIsOpen(true)} className=" ml-2 w-[60px] flex items-center justify-center h-[50px] bg-[#fed52a] rounded-xl mt-2">
+                    <button onClick={() => setIsOpen(true)} className=" ml-2 min-w-[48px] px-2 flex items-center justify-center h-[48px] bg-[#fed52a] rounded-[14px] mt-2">
                         <img src="/setting.svg" alt=""
                             className="h-5"
                         />
