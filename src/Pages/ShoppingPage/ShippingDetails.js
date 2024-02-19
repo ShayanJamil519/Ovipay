@@ -34,7 +34,7 @@ export default function Shipping() {
             <div className="px-3">
                 {/* This div is for input search-bar */}
                 <div className="flex justify-between my-4 rounded-xl">
-                    <div className="rounded-xl flex  gap-x-2 items-center px-3 py-2 w-full bg-[#f5f6f8] mt-2">
+                    <div className="rounded-xl flex gap-x-2 items-center px-3 py-2 flex-grow bg-[#f5f6f8] mt-2">
                         <PiMagnifyingGlass
                             size={20}
                             className="text-[#AAAAAA] text-start"
