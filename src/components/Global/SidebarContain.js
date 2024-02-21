@@ -74,24 +74,36 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                             <MdCoffee size={28} className="text-[" />
                             <h6 className="text-black text-[14px]">커피</h6>
                         </div>
-                        <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
-                            <AiOutlineShop size={28} className="text-[" />
-                            <h6 className="text-black text-[14px]">
-                                오비페이 가맹점
-                            </h6>
-                        </div>
+                        <Link
+                            to="/affiliate"
+                            onClick={handleToggle}
+                            className="hover:no-underline hover:text-white"
+                        >
+                            <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
+                                <AiOutlineShop size={28} className="text-[" />
+                                <h6 className="text-black text-[14px]">
+                                    오비페이 가맹점
+                                </h6>
+                            </div>
+                        </Link>
                         <div className="flex items-center gap-x-4 py-2 px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
                             <ImCoinDollar size={28} className="text-[" />
                             <h6 className="text-black text-[14px]">
                                 입점 및 제휴 문의
                             </h6>
                         </div>
-                        <div className="flex items-center gap-x-4 py-2  px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
-                            <TbCash size={28} className="text-[" />
-                            <h6 className="text-black text-[14px]">
-                                숙박 예약
-                            </h6>
-                        </div>
+                        <Link
+                            to="/reservation"
+                            onClick={handleToggle}
+                            className="hover:no-underline hover:text-white"
+                        >
+                            <div className="flex items-center gap-x-4 py-2  px-4 hover:bg-[#fed52a] cursor-pointer hover:text-white">
+                                <TbCash size={28} className="text-[" />
+                                <h6 className="text-black text-[14px]">
+                                    숙박 예약
+                                </h6>
+                            </div>
+                        </Link>
                     </div>
 
                     <div className="flex flex-col  justify-center w-full   text-[#fed52a] gap-y-2 ">
@@ -145,7 +157,7 @@ const SidebarContain = ({ menuToggle, setMenuToggle }) => {
                     </div>
                     <div
                         onClick={toggle}
-                        className="flex flex-col hover:bg-[#fed52a] mt-2  cursor-pointer hover:text-white justify-center w-full px-4  text-[#fed52a] gap-y-7 "
+                        className="flex flex-col hover:bg-[#fed52a] mt-8  cursor-pointer hover:text-white justify-center w-full px-4  text-[#fed52a] gap-y-7"
                     >
                         <div className="flex items-center  py-2 gap-x-4 ">
                             <RiShutDownLine size={28} className="" />
