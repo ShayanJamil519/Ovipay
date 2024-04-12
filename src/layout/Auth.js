@@ -7,12 +7,13 @@ const Auth = props => {
 	const history = useHistory();
     const { uid } = useSelector((state) => state.authUser);
 
-    useEffect(() => {
-        if (uid) {
-            history.push("/");
-        }
-    }, [uid]);
-	return (
+    // useEffect(() => {
+    //     if (uid) {
+    //         history.push("/");
+    //     }
+    // }, [uid]);
+	
+    return (
 		<>
 			{props.children}
 		</>

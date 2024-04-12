@@ -7,11 +7,11 @@ const Main = (props) => {
     const history = useHistory();
     const { uid } = useSelector((state) => state.authUser);
 
-    useEffect(() => {
-        if (!uid) {
-            history.push("/auth");
-        }
-    }, [uid]);
+    // useEffect(() => {
+    //     if (!uid) {
+    //         history.push("/auth");
+    //     }
+    // }, [uid]);
 
     return (
         <>
