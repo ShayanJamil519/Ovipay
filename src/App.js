@@ -4,10 +4,12 @@ import Auth from "./layout/Auth";
 import Main from "./layout/Main";
 import routes from "./routes";
 import store from "./store";
+import MobileAlert from "./components/MobileAlert";
 
 function App() {
     return (
         <>
+            <MobileAlert />
             <Provider store={store}>
                 <BrowserRouter>
                     <Switch>
